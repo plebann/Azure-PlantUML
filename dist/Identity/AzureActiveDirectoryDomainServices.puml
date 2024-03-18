@@ -1,12 +1,19 @@
 sprite $AzureActiveDirectoryDomainServices [70x70/16z] {
-vTQ7ZgGm60DWahy1x__0DnaiHMC5VfhQhU-sxtwonhJf3wQ-WHIr5nHLrnSGTPU7Y7mLhu-HfdXvW5I5yeGfsXL_Y42ncuh-A3Vt5b9SRY6atDcxAYbtXYgg
-h4G4Cpd2IhJu9KLP2SGk849AzEXDHECdSd4ULf1wzPM5GYbt40tEb4TpnNCaL_Az9LVcJpIVXyD8YwIlB8U8BJL3E8GWktiF3L4Ya2Xd4H6fLLX18fq7GWkK
-0UJ9F11OOSds4G2aZ2NbUQW3AsDfeRsfGzO57sZlqebSiLZtBdroMl6F0iPxbQoECDAK9RY8w4QUK-ohh3EkCZKSY6f5dLnnAEjMn9hR3nJKaO5229Iv5TYM
-qduU2zKPAmRb4okEkMT1bOCwmWYKTMu6JeNI6U7HMN630cRBTeTAwWWXNLbG1Dcfmufr1GoAq1az6brw5LPMlZW8ro4522iJajJfYh7IGbs6TQGhOQGWTJfN
-Hs2CbOKHrE7HcrALb9uulh5Lm18wrTqkE2tpEfyFDbIGCb3ub6ZHaK9pftN43fNL6HZLAJPKQEwaJlLKyVmfn68EFr0MAoUUgsnkYHqb97zcxShiIWfgvAbT
-aU-NKAX6bWB59qIWK8qijIdrznknjchNOZPHf4p_VVu1
+vTQ7Zfn040HGfYFm_n_iPMYfjQLPcgJaA_lotLDfYpJzmT0RI1DzGH4nUG4HCtw8S5UCdY9TiVPa7Wdb2TCa5Nk2fABtvqd5RkxDe1W_G58nkZKFAjQklxAe
+k3ioDOAARx6Byw3YU_G2mg1uHcuY4aY4BysJyU_GzLSsbKoxZgIIcUf8hLYDr4gzDzVA_8dKys00wU7obSKWqKCLWW4aydFleS42HCJRMOIPYHYLY9VpXD3J
+bH5anJmXe8AI_aOI06KWCSu37L0PIWlk3HsgBl41zcv9r8hw-klInwSL-oZ1M5QfwZ0Ycx8u5c7PoNEATcMTuof3Re68KDOf50jbtOlevkQ14dLue00IohmL
+s9UIF8yPwemL3UKJRHPppnnL3kem8g6iysRqQ2yJOHmT5KkbCtlsErHHXm59POaYaSCwgMWgmKGHEAD7etDMGMN5cm5Z7L02GIM1mpgfA2Wz2ige3gVY2ag4
+fdDrE8s1ieolu3XwLqX0oVZnZOq2PfU959MCJAVgV3xeWRAsWGAdH8-C59YxhCCwKZA6mAXEqqBfSnTro4h5wgSGzTdjG5cqdNYkqdcB_r2SwsVML6QJLA16
+4Kg5-vUfP8qwBHIR8XmArAX2cqBVt_2rLxiKrGd2RVhlymy
 }
 
 AzureEntityColoring(AzureActiveDirectoryDomainServices)
+!define AzureActiveDirectoryDomainServices(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureActiveDirectoryDomainServices, AzureActiveDirectoryDomainServices)
 !define AzureActiveDirectoryDomainServices(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureActiveDirectoryDomainServices, AzureActiveDirectoryDomainServices)
 !define AzureActiveDirectoryDomainServices(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureActiveDirectoryDomainServices, AzureActiveDirectoryDomainServices)
+!procedure AzureActiveDirectoryDomainServices($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureActiveDirectoryDomainServices, $stereo=AzureActiveDirectoryDomainServices, $tags, $link)
+ !endprocedure
+!procedure AzureActiveDirectoryDomainServices($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureActiveDirectoryDomainServices, $tags, $link, AzureActiveDirectoryDomainServices)
+!endprocedure

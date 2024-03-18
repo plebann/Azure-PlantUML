@@ -1,10 +1,17 @@
 sprite $AzureNetworkInterface [70x70/16z] {
-xTK7jgCm341HsQgK_QztBF5JgOOvwIyzmAK3FAHVgJeOnrgTZ1pI7T7XHV5uWzBqqzbhAkYbiKANR5sXQAG8NjglAFBA6ZrMaV-oHemK7LMshf4yJB5k4kcg
-b74a6aqfP4r9DYZ8yqeVwK-vABYYS8RCIqhsqh92uE6ymX0jAf8Wabb5DYXyTPCHzFOeTADmIGyi2uSYwjKhci1BMg_GbIB94TcZqA0C4PBeWa9UNbEyLOKU
-fFmK6o8oHhFEh_LcRHdIMAaeCHGWYPrRK_fI4rZVNYaP06Y_egYLYZnO6TtLZYf3Sgs8Z1NHKfM2E5QYj55XDbFLUyKaojiLRwGCRLP8l6sApYeO7LHCewFA
-q77bf-2iujUwehJnSGblnzJimKYfI-4kRdR4S5VIUaGJZ4gviWGFwTS_
+xTM7egCW48LXoZ3d9Fh-pximfEEYoFQzVthKpwxkb_IL7ywr9GodZICuaSmkYfKEA9TrE_wPIYpvLf5dt5V4QXIDpsQKrApHk88VfgHOuwGYrgm2w_87ALms
+aML8QHF5U_fKX9USzfJcA6YNPRLmHj5_L8axIWekI4T9eUJxYhXIx2ZEwYhgdQLJId8rULozpYZofgGSFjA1PKccAAnX1TwLFCOLUIfGNn0zeqXLQX95qL6a
+5FfARLUHNwLyARmfBCgIh_K0hdd8vQQmdXHUKUEMGX84JI7MtANUIwu4JI4Ox6eFUv2RYbKLciARaZE5D-NHg8A8GKL7bUTTRLQffLT5jLKKkI4bnbQn_8wY
+h2KX0NmgL2iSLH9BZL8xh8YMPfLeJIg4DQlKZYdeA5zA_AvIhdLPkTh7i_W-9aB9DSfOS1ybNiOVwLFnk0m7xvfy6CoxNz9Ntm
 }
 
 AzureEntityColoring(AzureNetworkInterface)
+!define AzureNetworkInterface(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureNetworkInterface, AzureNetworkInterface)
 !define AzureNetworkInterface(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureNetworkInterface, AzureNetworkInterface)
 !define AzureNetworkInterface(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureNetworkInterface, AzureNetworkInterface)
+!procedure AzureNetworkInterface($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureNetworkInterface, $stereo=AzureNetworkInterface, $tags, $link)
+ !endprocedure
+!procedure AzureNetworkInterface($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureNetworkInterface, $tags, $link, AzureNetworkInterface)
+!endprocedure

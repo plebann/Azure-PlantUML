@@ -1,10 +1,17 @@
 sprite $AzureMediaFile [70x70/16z] {
-xTK5ieKm341H8crAzh_VxzQ1mFrkxuu_EGFLvGScFOxgXfGUnwrEb3XJqfbYKcMtIZfIf1wqMmKmG04CK0035C001J100GnG00CKm005C4013508SwDegUYa
-b0nNPgPMp0KewSTAH3XGqa-KxG4PCP8mitBZoFGjPCOOanBHNhxIsCrEbNbuV5VfG9c6H_iU0vJfjROfLq8-GEdwrcT1rofNl0IuqcHvhr8F25Vg0U5AAmU4
-ApokN9HrNHyLAvD9kVbBhVIeKwp4GVOXpo9OMQJgnY0Aw6iLiJBzufcMoqn_fg9jpkL0uQFRk9APrPxkXPAPjTBgHSALcuhffGhjzSf5SNrLlgkylgqoteAC
-xQtx1aIN7zWr
+xTG5SiD044HH3IpD_G-SCWZ7hNGOlvbUbPUcRvZKTbOrIfaHr716QSyfuPnYWhAB4aufWWVjeX0CfM26LmY6KZ33AmH3AfZX5Spm2iFm2cPu1JEyWXbUmGol
+00Oeva8euL2PdpbGCfCLdP_b0xAr7e31oiMHmwUGmSgbCgrfkpWfEogzzuEo6nxllRTqguIo6nwj_K64ClyjaF9AatTGgawlL_Aml5vn2F1A4GoG2XuGNi43
+mYi53WYlyF7AlpBwc1M3oLuPMHcpKXjEjyeO0olj9AELUg88hKo2cWrAmNsw8WPJe7pKJCl_J7-aecMVoud2ZsxXbHY1zdH5IcGbPgKS5GDAH23b4fXULY5w
+fVAlkBueVwIyegpqro3zg6X_1QBJD-m9
 }
 
 AzureEntityColoring(AzureMediaFile)
+!define AzureMediaFile(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureMediaFile, AzureMediaFile)
 !define AzureMediaFile(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureMediaFile, AzureMediaFile)
 !define AzureMediaFile(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureMediaFile, AzureMediaFile)
+!procedure AzureMediaFile($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureMediaFile, $stereo=AzureMediaFile, $tags, $link)
+ !endprocedure
+!procedure AzureMediaFile($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureMediaFile, $tags, $link, AzureMediaFile)
+!endprocedure

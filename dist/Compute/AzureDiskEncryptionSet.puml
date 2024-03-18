@@ -9,5 +9,12 @@ dpg5nspyf7cQwFMPgnLbSxLYU-LakKtdjiNkbvH_gly1
 }
 
 AzureEntityColoring(AzureDiskEncryptionSet)
+!define AzureDiskEncryptionSet(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDiskEncryptionSet, AzureDiskEncryptionSet)
 !define AzureDiskEncryptionSet(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDiskEncryptionSet, AzureDiskEncryptionSet)
 !define AzureDiskEncryptionSet(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDiskEncryptionSet, AzureDiskEncryptionSet)
+!procedure AzureDiskEncryptionSet($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDiskEncryptionSet, $stereo=AzureDiskEncryptionSet, $tags, $link)
+ !endprocedure
+!procedure AzureDiskEncryptionSet($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDiskEncryptionSet, $tags, $link, AzureDiskEncryptionSet)
+!endprocedure

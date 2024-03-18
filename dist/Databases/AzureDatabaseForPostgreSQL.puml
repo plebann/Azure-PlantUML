@@ -1,13 +1,20 @@
 sprite $AzureDatabaseForPostgreSQL [70x70/16z] {
-xTO7Skiw38NX0u14u_xNco91oLLUP4FZAQzzqrB_EMJYWdy8Ei5TzC3j17-G7JFV27q5HCPVY70hL1F60pNgsH0PJmXj7WuP3JNdkZ9QhYjqjqBjMz4okpSZ
-fuoQUvovLUpuIVmYQCTZciSLKs7Q9NwnWhuwwXUDANI8zMjbBQ5lOwgvLytTLVT2aRMkAYkOMZZMLMKJGa_9rhYgb9XCbtXMuc6bf4yvjPXbgESghKh9irNk
-LR9V-NzBlvAc7_mpOtFCQPc63spPhkH0YI3iHWHl7MzMab5qYnIjhrklCb3uwEr6VUgTIk9WYXFRft6dOZWauuHoptOgYZ82FynrlwA67oYbJjIlXAfd61s9
-wRaTIMxTorgXCZCg4ZR4781sAe6o51WqK-gME7Lwzo-zK9O0qxWgqo5G1MYrAlnT-NHiIG0wWTchZ1-L_NFA0UW0ebSnxA8g4vlXW2fuzIfvVCx7YMeCVrQq
-MLbSd-CJ7nLCWofbjpB_FD5C54gseQjR2MnKyS4DXs6BLxjIH-9WG9BnHSrkL1IRaGCM-8El6vMagcmOXx7wbUD-ELTc3ZCSOgYxURUI3D0M4Sp4mG6GPhUo
-WZdMScLm9WxfxlqJbPmYcjyLUU5r-kLAdYlpXIqlLt97sDbBMmGxVsdBn2vVscBOIAkILriScyXrblY5FZoIHFwiA5fZyeldfyOKWFBEUymWND3-Uyo9Q-oz
-BKfuRCIpBJ49pz6mlDeIAkWZbZ7D8tVXxZQ5y0_m3W
+rTO5iiCw38NX8yaMxd-z5s9bBgPr7hzlgFYFh2B-9-WBt4KFt4xm6rcO-KQ86ekC7qHuAzGZZ0Twg6U3o7X2wF1maB6XnxckZ2tN5RfReUsjQ9kxc-4l6JNt
+-CgjOnqH_29euJ7DuugfC2s9NrHGuw5-qPX2fwXVArL27yPKS--QkwkkGfEggqe5qnQEkgeSGkWfYQhhIel9T8bd9nvMMlgKBorc6UfPRQlIygjg_xVATUH_
+VA8qVUFl5PjZJiiql67BxKeEj0Z2CYBuwFXc9HbDLsJHljtsAWEDgtlBw8plL18dKtnXQpJUgHXEoVY2ScLtAees0j_CkbzHmpUK0e1lLKBLCupEnFHC1I2t
+zb8LAZEZ8s53p07eJYNGIe51CwMtnAdJTr_fGYi1fd5NfaEW2b1jLVYZykwS9G7e1EPUPNohhEkK0z01n5x5i4HN9Wx30LLmxLKII_5veXw6tokwMIdkwtZ7
+PmNJe4gvMvcVJpGJZP9jQErM0WTLl773QLXnRLVwI1mCI39mKhCR5SLXv805Fl6wKKdgoe5n6dMZqllbhCmSPZZ5K7VptKeoG5cLAPY9amCWpTrA1NDKkJ8u
+4wTqz_qJjPmYcXyL-HE_i7zrPVwRbLm8Y_sfMGIB_wdAn99_gg8uo5ObBoBfE4Hza_Y5rbLc0f38hAyKkyCqptSRem2KT_uT1k62xaSchf7jPPJms8XdbPY4
+vsXONbL21JUmZ6aUkOIxsnJ2_y0h
 }
 
 AzureEntityColoring(AzureDatabaseForPostgreSQL)
+!define AzureDatabaseForPostgreSQL(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDatabaseForPostgreSQL, AzureDatabaseForPostgreSQL)
 !define AzureDatabaseForPostgreSQL(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDatabaseForPostgreSQL, AzureDatabaseForPostgreSQL)
 !define AzureDatabaseForPostgreSQL(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDatabaseForPostgreSQL, AzureDatabaseForPostgreSQL)
+!procedure AzureDatabaseForPostgreSQL($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDatabaseForPostgreSQL, $stereo=AzureDatabaseForPostgreSQL, $tags, $link)
+ !endprocedure
+!procedure AzureDatabaseForPostgreSQL($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDatabaseForPostgreSQL, $tags, $link, AzureDatabaseForPostgreSQL)
+!endprocedure

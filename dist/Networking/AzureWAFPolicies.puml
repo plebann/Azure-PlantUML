@@ -10,5 +10,12 @@ S2YVt2DVaUyKYtw9qlujnTUxME7x9rHgVxkShkcx2AUe-bubfVy
 }
 
 AzureEntityColoring(AzureWAFPolicies)
+!define AzureWAFPolicies(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureWAFPolicies, AzureWAFPolicies)
 !define AzureWAFPolicies(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureWAFPolicies, AzureWAFPolicies)
 !define AzureWAFPolicies(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureWAFPolicies, AzureWAFPolicies)
+!procedure AzureWAFPolicies($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureWAFPolicies, $stereo=AzureWAFPolicies, $tags, $link)
+ !endprocedure
+!procedure AzureWAFPolicies($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureWAFPolicies, $tags, $link, AzureWAFPolicies)
+!endprocedure

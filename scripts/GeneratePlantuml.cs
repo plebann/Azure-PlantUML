@@ -231,6 +231,7 @@ public class GeneratePlantuml : IHostedService
         }
 
         pumlContent.AppendLine($"AzureEntityColoring({entityName})");
+        pumlContent.AppendLine($"!define {entityName}(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, {entityName}, {entityName})");
         pumlContent.AppendLine($"!define {entityName}(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, {entityName}, {entityName})");
         pumlContent.AppendLine($"!define {entityName}(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, {entityName}, {entityName})");
         pumlContent.AppendLine($"!procedure {entityName}($alias, $label, $techn, $descr,  $color, $tags, $link)\n AzureEntity($alias, $label, $techn, $descr,  $color, $sprite={entityName}, $stereo={entityName}, $tags, $link)\n !endprocedure");

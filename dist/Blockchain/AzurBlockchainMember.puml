@@ -1,10 +1,17 @@
 sprite $AzurBlockchainMember [70x70/16z] {
-rT67SS0m34DHTTbazbytlHbd9X2S-WTu9mhfFvLRovUHsk-hrupIdojNZkcljImVSwXgnq32MRcVbhKFmLhMFWIhueTWHJX6EGkCq16FmOfgeAD-27uFl-x2
-whcBvSEN30tPsq6PKt0sCrJcN3I6sOcowEmMANCi77EgFCSU4ocyO_QvCWTnJAXmpvbch18x1e62ZHQiIoZuFNWCes2uhgRC0SVG2ZgmBgjW9yUuEw50EnWt
-3_cgWiXJBYY8k0iAdkEgWeYk-BDnMN6_h02YAVxSNrFixoYcAu282XYYWWOgUJ2AeM5Mqg76ADX8MEwhobRIIMMiA7jDGPLNUlgWpYapHq2u5lKXM4K7FwGb
-9bmTrsNBFLAsp1guEgnBXgl3kekrepB2OwZLYNM9xu5rnRF43y7LS_fFtG4
+rTS7SWCW34HHgZ0YzxzkgbBmh8aMzt-0DrcKvl1CnLBYsKYkx-NpZ5IjTCwO-bE9ssEcykuOQtjMhB38FWYkHFP1S9b-45pYncpF0WPqw36uH1Yq4qibAz5_
+NUBgaGRGDtEIFQINIMbjmpce7YdlaOQe0eLqkYBbCo76GCLoZy4AuQYk54jyOx3Y-tAQwahnEQgCqgJ0wnAAEM0CfLZekhpI18nX5NFikeG20cF668HYzIFZ
+vQF1AW1vZrKGOgCsbM46hs1aNnbcdAsCSROo8RlAi1vDqSTHz4p5ZFCLFLSn12jH7CedetCfJ9MrWXFm-O5L3Yc0aZ1Ap-54sQ_KiAZwb1ON1hwMyq7cigoL
+NeAhibA4-DHuIZb45m2kxhdk_rS7roKgioB4671rU5twUT1r-LdqW-2hn_1ClG4
 }
 
 AzureEntityColoring(AzurBlockchainMember)
+!define AzurBlockchainMember(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzurBlockchainMember, AzurBlockchainMember)
 !define AzurBlockchainMember(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzurBlockchainMember, AzurBlockchainMember)
 !define AzurBlockchainMember(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzurBlockchainMember, AzurBlockchainMember)
+!procedure AzurBlockchainMember($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzurBlockchainMember, $stereo=AzurBlockchainMember, $tags, $link)
+ !endprocedure
+!procedure AzurBlockchainMember($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzurBlockchainMember, $tags, $link, AzurBlockchainMember)
+!endprocedure

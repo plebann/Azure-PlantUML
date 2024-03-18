@@ -1,11 +1,18 @@
 sprite $AzureImageDefinition [70x70/16z] {
-vTC5TiGm38JX2Ap0_UzRRYSJRvMrjjp_SU1xnkb79JQQNa1yFEiKyqATecsylwUqVw3OvogcwhSghY8YTfkYyfnwNJ51wZN5LIWRLs0WjNCbzc4ox7ZionKU
-23ljMgN1I8UJAsu9OrShQd0uTRzUKJMxP9YFAQhzSCoTbJXNrDXHzuhow91HKp0jDQygS61K5JKO5GNExOe8dB8Y8XXFKP7754n54O42PqmHWK8EAP8h0WMP
-7PKb4aM45JX7POlt5A6KiuC2XfNmR2nnLC2mmiFf1i8ACHQSGO7HebV0G45DeR312Z4sTxdk5GzwkQphjYj8uUnDiTWBMr-GmZLzKgmb11XMs57po0mmh71a
-P3cKh3L55embQpj5eDGHA7K4oX2ohajhAo5doih0CZ_sU0E0d2jB9q01SgQy6I2W0CcLXGnI2CcLbGnI2CaLCbWX95KMGaYHQKIP4IbShgmpgYjpKU6-MD62
-qgOkRwEvJ3-uUm
+xT45mYiX303X9GdM-z_tIMrQM27yBbEN_R3bKnNKcwmWvayxHMsYJf7exrVPw2ShAc8lLKp2ltHKqKWauPBOlAA1nFmAYo7rAnWawbKq48aTAOcOI9V4HBjA
+nEWJ6rHCTnWTLaIt734RLqHKrmmrdoBIJ-TiE1MMnMBy2il2E9TeH65PeZQhu60u5LAC2ONqvKe8EDDAE2iu7WNZhC1u50mK79SI0WfEguHz9Q2GQgkKjADW
+d1NILZd1D0e22awZd1aKihsvf5Q1GUcdipeHb3k3Geg24LElmA1G51ICNZcNK79wVfWyAlRuMywbrWi0SrPw9kjTqPGW2bStZEQqSejoLZJUlu4W6CthnVFf
+vaiOgmnAtu51Xh9NtKNACgIS3X6KUGHb7a5n8RMM62l8W5AVWPB_bvQbW1mhfHLGG0wLkm610hAl58nM0JbKAaQhW1mg69q2SgGKa5O9YqV9ULsXOwLccbVo
+2nHwPqMolxXqMVHcOVd4_GK
 }
 
 AzureEntityColoring(AzureImageDefinition)
+!define AzureImageDefinition(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureImageDefinition, AzureImageDefinition)
 !define AzureImageDefinition(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureImageDefinition, AzureImageDefinition)
 !define AzureImageDefinition(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureImageDefinition, AzureImageDefinition)
+!procedure AzureImageDefinition($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureImageDefinition, $stereo=AzureImageDefinition, $tags, $link)
+ !endprocedure
+!procedure AzureImageDefinition($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureImageDefinition, $tags, $link, AzureImageDefinition)
+!endprocedure

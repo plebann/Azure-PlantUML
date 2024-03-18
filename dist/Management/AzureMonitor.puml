@@ -11,5 +11,12 @@ _eJ-0m
 }
 
 AzureEntityColoring(AzureMonitor)
+!define AzureMonitor(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureMonitor, AzureMonitor)
 !define AzureMonitor(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureMonitor, AzureMonitor)
 !define AzureMonitor(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureMonitor, AzureMonitor)
+!procedure AzureMonitor($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureMonitor, $stereo=AzureMonitor, $tags, $link)
+ !endprocedure
+!procedure AzureMonitor($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureMonitor, $tags, $link, AzureMonitor)
+!endprocedure

@@ -1,12 +1,20 @@
 sprite $AzureApplicationInsights [70x70/16z] {
-rTS5kkj0241X7ARxN_2RfCJQ47j-hbN_Z-4w_2-nkRzwxiRF19GHM7B1suY-Tj9x1hVNRerl834zQMbYuwf1RKLyGK4ta9PzEusk8gti8hCWDNEA-0Q9kGtZ
-9uYiaDYsPkGGmHhfBKp38yLc92o-ifWPFLvj6ZmCje6S080ycGPraeZZEuaXZvxXEyjXv7mKwe3Ay1pF1bVD237EXg543CV3A29vfXs9NkVpJ5Gfd8eWHiyH
-qJFf5wD7oAbmfLYkLf06PAtGS75KA8-abHApWXtvLdoS9H_bbV8-q7WKsLDoFJdCcHACIBskK9ON4IdEb3OfpbX4FYdjJEdfhiFgSKs9CVVjNZWlnjWVKFn3
-8Q9PoOkBufMYTnIj5BwZC9mj9XLczapoug90cPmf2oArWhCIPmeSf6yb6H7nJ4KsYi1HaSokiY01X_5w65NriRmOiy9md2tCMZ7L5M9mLinAcDcicCMi19n6
-ESoUagCGdAVh1UUxMAzMuKgHpFBKvMBvRLX_xNtNUWZNqegfl_JhNocxIC3bkFvRYk5wqOe2RiILmd2d-BbHCjt_srlkAVZgVHWzX7krrr1QyyK__FzHHdiA
-mTty6t6u7yb714yYtYJmaugecVjZ9O6UgJvJLe1mxvao0YASFLHMW8ZQqxqiGC_ieR80AezFf3CmHl1pYqdaQLGWJnc2_wOV
+rTU7bkiu281XYX1WEvFtVzjLT7195BdjxYt_zFOTnAJ2tn9drQ6aclcUWAa2QvhmCYB3b-IQmJvypVa2OlCVhSsidJN8DqG36Lr0F6eTfxE8Tpl9h4YVEKJq
+3R6bDqOFaBH1xBqjatOHx2EbbN7SK_A2MBQcR0iZ-wiDWr-3lK5A040QZ4E_58WY829WibTQvq2ityinJ3eUXH2J94JCEeU8aZCXsj4m54Z6UXX198sa85Og
+V9o9UWg7aX2jf8YeKK9KAn5oADnJijSi8RsGhKAlJwj2SIJfAROeM91MqJgBUKrxok2lwb5IgophYM6E56D4AXM5elWKaUn8yLbHnawai-97Iac-EYngvnIh
+pPSq7yPf6WVdM97LBYhau_HuJECLHJyK8Xh6n_Fv60Sc-b2qfqYh-FZu-NcCdXf5UWgtohoNLc4uMamep6o5AOWbvWy5kgL6qVedfg6iIEehk2WsAr6Zm4vI
+bPb9AMaaAQrAZDAlpjzJLiHWDzuE8o9QYqzjKHZsookpLRB81ibmb2sAvPmN9MTR58F3oDrxIen2S9ni5nplRBjQWJDPCEkVhfzshuRzorwRbn3E9ItJl-Zt
+Cm-dHGnEn_t7KWpdC-zaS27kAGnNiXkZjCdtnzxfce93wSCe8LpBXxaN4FalVduKqJU5u6hQ8WhNe_GHmPs8jwKC_quHzUdvVDvM0YWzHh-dh81bBjrJ2Z0D
+9XpTL7G5n8RfxbvMuDLqKra1Lxbxec41QdHFmG1k8n5raBiCmL_JFm
 }
 
 AzureEntityColoring(AzureApplicationInsights)
+!define AzureApplicationInsights(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureApplicationInsights, AzureApplicationInsights)
 !define AzureApplicationInsights(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureApplicationInsights, AzureApplicationInsights)
 !define AzureApplicationInsights(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureApplicationInsights, AzureApplicationInsights)
+!procedure AzureApplicationInsights($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureApplicationInsights, $stereo=AzureApplicationInsights, $tags, $link)
+ !endprocedure
+!procedure AzureApplicationInsights($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureApplicationInsights, $tags, $link, AzureApplicationInsights)
+!endprocedure

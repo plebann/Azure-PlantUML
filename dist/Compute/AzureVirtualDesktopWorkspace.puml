@@ -1,11 +1,18 @@
 sprite $AzureVirtualDesktopWorkspace [70x70/16z] {
-rTD7ckCW48RXdrXfxd_T2SZo68CGY5M_guxVK-02FuGFAHEhCkKKF1vmaVGBHOSbYRMBqq931oOxKNH8udQZa80nqYc44TP9x735YKwJgumNNI0UNQ9BPEzE
-JemMwJ9QsDU5FGxwIDYwsPDCdaTogcM-EfFJIp4qI3yulEN1msjLW-UPKMXKgOUXSILo_NtgBusCAwGVcehWu7MdeXv5sgia5B9NaH9nLtkMPQgYhlU48avn
-hXAElwrvlCrLObbSgtrKp4h5FlohMAsiB-rMojx9ReNBuUygsVwJJaMcAf7anB5JqTiAXyPgnPKJD7Al8hqhnxa3gOb4wTqBsnVbWnv_GpLMwtr6P9led7jB
-Ak_8Qknny6oc3Y_UhXpFrse19r-cFR5TGC63VKdt5KQHzYe9XT-hU1nqfw9uePrAnelVgJYSylDAnfjhbgW8Pe8t7OpI3YFH7yhZfVH2ur4AjKSKbM2F1DJI
-qzTS8rj6Q8aj4dGujINgqEDjYKUV4vic3fVeoSMseas96FDijzZZLb0Rqe0fQM5V1rnMwzAC9Jxhho-QFTQvHCIYPYfCb1n-XZy
+rTC7RkmW483XeKwx_tbVmLWs0MFmgEMBIdON_QB2B-53oaWYX3a53n-uY2mDnkXWIo8PehJHa8d5JcIPucXiL1nW3cK9mWp98e97ZcKPEnZpB6BFi6pX-PvO
+zWPb6wxVrvrx7EIJODZP2o-kXtDgPNfSapoAeODouwv8dZoyNZFn32SdZt1MQIU3yqgazdCQNngULr1kkWh3mOkb8XwAPAiaADXMuUQ4kdkMUQaYRlI48fpY
+MYNKiTrkLMkLU5nSlVyr5IsLsw-bqexNSdrHMxUArifDgRIm796rGcNQRvMi5nvKUAaIaKyK1nLvhL3ex5PSMK4dZohSRtcLLJLraSYZVI7zGUWWnnXiaUZe
+Z52DiCxR9fNNg2toSF2aAWughqy230ufmCdVjnf87tG_T_SblLS8YcIhr27UKhd6YwKYKA6bag7obeg3K_vUoN1_l9S8ft2yj4ecK-admz4VokF5LE5iAfNe
+9mADe9y4QAMlhxc5kWsXnxg9OS29OMSlNhTuUC36vLJPih6Ng4iYp7dIL-JXLH2TaW1Bqlo-hd9PT4WoRF5P-eI7VIvb91PLOSAS7FmEVm4
 }
 
 AzureEntityColoring(AzureVirtualDesktopWorkspace)
+!define AzureVirtualDesktopWorkspace(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureVirtualDesktopWorkspace, AzureVirtualDesktopWorkspace)
 !define AzureVirtualDesktopWorkspace(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureVirtualDesktopWorkspace, AzureVirtualDesktopWorkspace)
 !define AzureVirtualDesktopWorkspace(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureVirtualDesktopWorkspace, AzureVirtualDesktopWorkspace)
+!procedure AzureVirtualDesktopWorkspace($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureVirtualDesktopWorkspace, $stereo=AzureVirtualDesktopWorkspace, $tags, $link)
+ !endprocedure
+!procedure AzureVirtualDesktopWorkspace($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureVirtualDesktopWorkspace, $tags, $link, AzureVirtualDesktopWorkspace)
+!endprocedure

@@ -1,11 +1,18 @@
 sprite $AzureStorSimple [70x70/16z] {
-xTS73gGm38LXjpZEu_xdtM8o6aKB8jxUVlLH-EIXG-N-nymoOsOgno9gNwJ25S8kgacizj26mxRH8wEsaT93jXKz9BRaixOxYowCzuYn5drYCbVIHOCfO_6-
-0gkahtNZKW7JJFs6wKrfnhXM3WYzq-OUCRM8S6z2x-muRfJZwB9vTe_ZLldSK7uqsf7TAjbemdS0IyjrZqg6Q2gyRAxcSyckCiFQaLKLN2Y_uIp_PudM-hVF
-maJqpRC44L6VI5r1JyRoDf1AHrc143lWb3aGGeAgalSqfjcyoMfLQNHHgogWYr1KvZ3QcYoZL9MU2f2QfnLrHVCtn6V5pjF6gWeyHu3JESKvKaT5wKePG3C4
-PThtbMNRB5wU_385YrTKmYXpDCfyNb3MQqSwJnV6oRHpAAwVkvBp0uW0e3dHLvwxUNS0EiyLPSLe9bAwZfwNeAeONMHLHN8hNV-Mr--x904CFbydyxxht_OC
-S7nkVEFpQAHoVDkpKRxzEJqYnaH-Y_UNdpvBhyuIT95LPp6wAif_wDkPeBlQFc9q7pTiCKuFQNz2ej5ErWTkcE5AXLXR3xmwluA5wG_e8m
+xPS7hgGm343TxPZxdtUB2HgXXGN_tjvKm7bABz3c1qIa2I8-8JqHopymOKSX1_HCo7B13G_A3IurVCV2S87S0YuWsM4JlPiNtcdC8yQUy2cZ6Ga73DmQsdml
+s9juYnk7baIOi9reN1accCUM9GaUi9f5J5j4c2d10rcM4ykoEDtitMCvjVnbC5uwT2bEBSLGmZC1abRSfQN8K2RS9MUn6NBNCiazo_B9B1t9Jxs4gZ-xNcgW
+Fxj40N_m9rlIoo8r3PJ4isr90hHCWy8oWu2oQ-4QWp2PaontBGe7QDUIS40sBJCph4gxh7GjNfRCibcvec_XkfVnro9hjv6k9MrjO8Cr5skMF3iMPoWoOP81
+1Vjzoovj4PkFtisI3r_V4h8D7zt-MFsAzrhQrtt1gj4rKzZlkrJvpyo8pEJAqHFxRiqEcOupecqHc10zVHoD5ndJ0WT8rqALYlV5iYVCknIP0zVjPCsxzhmr
+mF8luvdhqSZYUMiZFN-T7X7ZM-zVl2bPuhXxDpK2HqJFCk2Ow5W2pj3x4ldleILlQGmkOB-IXC8Tn29FDCCO6Y2hHswifs12-0Jy1W
 }
 
 AzureEntityColoring(AzureStorSimple)
+!define AzureStorSimple(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureStorSimple, AzureStorSimple)
 !define AzureStorSimple(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureStorSimple, AzureStorSimple)
 !define AzureStorSimple(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureStorSimple, AzureStorSimple)
+!procedure AzureStorSimple($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureStorSimple, $stereo=AzureStorSimple, $tags, $link)
+ !endprocedure
+!procedure AzureStorSimple($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureStorSimple, $tags, $link, AzureStorSimple)
+!endprocedure

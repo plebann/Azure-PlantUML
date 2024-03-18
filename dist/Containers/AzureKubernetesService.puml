@@ -1,11 +1,18 @@
 sprite $AzureKubernetesService [70x70/16z] {
-xPO55jrG24JxBFZ-jziSFj5NVjt3ySjaeapuy1NrLFtEuyi0LbCSTMwG2lJFNi22ekQbH8IZHADvO-DBU-k2Bw4mkTgDglEjuVmpHcXCg8o8cvgPgQzSc7OU
-3MYf2m3SNHWp_jqkvFpFkPRdMfvhqUkynBZCyqLCexoVwMDsGngSZrbVlVDgm4U-7DAwKE0zTpvR0qLD9sdtC-WSBNcLdgNfPo-Zr-JGdjn_lPyQMSmORhVH
-5n9T-NGR7LxwlkaN58lYywD3qJFVZGQoddWOlO0myKgzi9VWwYXu66rwlkXD2SaGSLSpCwvS42PEDT4RmwpcLVrL_0ztULmU5yfSVBAkrEFMJ4Mk77mQzLDw
-7tDl1Oq8SEvP7doKu84t3YsoEHA6BybS1XuyaZpN7-dFSp9N8B7vtrFwfDzRMJ87J_HvrU_TlPlVTkpOq-xDO_BFVuqcbzMu--uT74VmfEHuwRBdjVDeYFFF
-_6D5cT08aJONPeQwkWZJZLDg90e0TnSU6V_NN1wNnyM4yQQ6zfeloEReypEDBWqkJ9TPJohoUiwNvZXux7sVZIhILHtIU_BBr-pUOoHdMCBxtw-F
+xPO7bgGm44FNiVBzhxj-RboayK1l3kZbRo5Y2NzvGu_YTnuV2h2QOedd1LA1V7a15KMjIua8IrWMKbyOlAPFK_1b5ARkxa6nyx7G-KKG6XCg8-9m4pFbneNf
+o25DKm1Wv-OcdF4xAMx76V-3hkMvbkTQz3Gla3wUBohXyvbUPxTRdJFJu2rxhWJi_RAnnaeBzjwvL45HqvCrzpEeLyiDXJnhqylBo75oQ9xSVpoU6bdC60wt
+aIk9DdwwZGmlVnx-YcABUFleK7JBFQWWwuOlGIyWJDne5-QmSErey1xaVjxvJGd94D7Tp8oD2yA9KvpuZU7ivkP-Y__XAK_AaqBJ51Dcfsipcwd8daEVHlt8
+hsEtnPrw1Om2Lbbu2Sux7XpIqirYNRnhvb3GkJVvtE_jp-TcZa1YvtzFo2U_BysQsVazloj-xzuxzTlsFVPXxyt5ywz_ZIQxhN6kA3eubiwdalMbY_UrSrEH
+pY_-iQ9CQ8H88uMP8ROKOJfmcWQ90i0nXSkC_sifJygJOi9uS4DwpHVCvkXwfh5PdGlJRjOdyhu-zajoREBxlgkg8crkj-wRNwZUBzDI9cUedlslwoi
 }
 
 AzureEntityColoring(AzureKubernetesService)
+!define AzureKubernetesService(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureKubernetesService, AzureKubernetesService)
 !define AzureKubernetesService(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureKubernetesService, AzureKubernetesService)
 !define AzureKubernetesService(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureKubernetesService, AzureKubernetesService)
+!procedure AzureKubernetesService($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureKubernetesService, $stereo=AzureKubernetesService, $tags, $link)
+ !endprocedure
+!procedure AzureKubernetesService($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureKubernetesService, $tags, $link, AzureKubernetesService)
+!endprocedure

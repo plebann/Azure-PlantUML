@@ -1,11 +1,18 @@
 sprite $AzureIoTHub [70x70/16z] {
-rPS5bkGm34HLWjBU_y8BJPfuF8vZzz9_rFX5UGRvdx5i81OiaItSiHGo1jYs84ZIzop6Eu4DY_99R5Y2Bqm-uXSiog991a_ir69a8NrmpO9LYxub5x3m9KjR
-4jOj4ZMYPKjbasahbaBDb9dSiTHFERPGpl7yiYQr6v09c9cGJQgc_VNQPPl8J9Ljc4cekMsvD9DtOiSJVE4xbi9a4UFPebN087rum4_ZQKSEuu4OIqe3g9b7
-C6_moCGA6So6UKibdHrcAtAs6aQ4cG6OxsvPmWp0sgIrVhFprCKmNHjsfK2CViFaWwGCiGZNhzSfCm_RMh0oCsejn_fQLxLbhAvHQH-BqzNridbtcOhUPZQF
-UcJJYRYQ3AApdUFgjE-Igc0mRRKREhh4e6rtG8-VvOFHnK5xTg9pbi70OltZZrspQ5lH0qnOjDyNonSSMyOpAaujfV7smq87ba8z7ArwdCia_kt5XaNoPR5F
-5iE3Kvq-9PIoVC9FDNcJk8miCRLY66J3KloZ5dcFXM-neDNGv7_c1m
+rPS7bkiW34LLd_x-D_odELPY3F90fjtJKk3c2N9aeB-CnW7mXCNZ25Oi2OrXNhQmunLRioW-S5wm26xuWiMnetIFHKCTfGt3DxIqA93GEVmv2yzQv2bP68bD
+MDgIUDv2dbiqRSaq4JfZILYL4O4LImx5s0AgiUZM9FeEqmKG4KoBP4th_TfeWMmfGiiW0YngohI0HE03Nybas36Qnf4eJQAecbR2oaMKkYRjBHwpuW6lGyis
+KrJD7V4E7hdG8HtHSDMIeUE4gnKPZXgukweoCn4Ui0iMssRExBJac9L_dG_Zwd1L4lRH60GsgeObvYRzFgLYhaiDAo8yUpdFzxgiBNosHuNU5oUp_RBphgRp
+wvdiEgA-Bssk4gQEwyrJpYOaqPvLkVFCbj4bfbbkvyFus1XT7EJC3Zuvo_30ekV77-rRwYo8d5DR94TtxdpeM-ezIafBQgn_jv72aas76tMTfSR-xInOA7QB
+DXRbZL8dDmaeBGrMQZxI68qiJYLYhamBbkINMkWv5Zp5maSDbFuoBm
 }
 
 AzureEntityColoring(AzureIoTHub)
+!define AzureIoTHub(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureIoTHub, AzureIoTHub)
 !define AzureIoTHub(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureIoTHub, AzureIoTHub)
 !define AzureIoTHub(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureIoTHub, AzureIoTHub)
+!procedure AzureIoTHub($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureIoTHub, $stereo=AzureIoTHub, $tags, $link)
+ !endprocedure
+!procedure AzureIoTHub($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureIoTHub, $tags, $link, AzureIoTHub)
+!endprocedure

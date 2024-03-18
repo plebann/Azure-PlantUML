@@ -1,10 +1,17 @@
 sprite $AzureAppServicePlan [70x70/16z] {
-vTG5kkKW343X0Y62x7-xSrr3ctHuVXRmVsYMxrNAsq7SG6As1DwbwFrPXQKg2RcKsbljMiMXb4u0K3I6x4elS2XhYfWLwWB7cg9KxrhW_zQIQyS3mfg2TYMt
-NgNfIt4eMQfMeR_wZs2cGhMhLNGer1kJg0xQbTRW46cAc1NiClm1nQJW8LfJy9X5mTx6ay6kI1S4QWhIqAuS6BrA3kKGQn5UIYd6O526qIs4i5EXvmPEzXY7
-CBWLqefEXVIYIw5HmQ7GCBGhj5AQej2RGdjADeNNGul2Mz6smeQs53OLrnMsXKbH5CG1AOeZ62Zi2wSeZ9h2xc2Amc6AWcyAxobCKUAR8Zk2AKf-LMYFWWx5
-inOMV-bD8V4NtXLs8wnD1hS2ciBkfIYAcmcAucRYeYXEXiDoAH7jTV9oAsHIuYDKnWaZXEKxzWy
+vTO5rZCX38NX0k4csFwt-xjowIIVorixrkUC8RUtLQdNIRv0SlKaqKFXVLh5sY0r3IbZpR5OFQ3qfIBI6QD-PNNvMcLASokwcdnh4cL4ZqKUTonrB7n5Z2dm
+AtMkqIO_b81Iss1r_QpZI9vIqR5e0m55rpHjr85VcLE-fanfRWMh7KT0Toa0gjvJW0eu563Dyym0mAcqrI0w2JBXLxuolA4H1J2MucUbvEnHpkcl8Ec1YlwR
+SAL6ZAyXXHLbvQ2Yl1nIz5GAA7eCJw9eSIjwBwfm970mLRy6_T7sNplyObD8TfLUA-ReIZ5N-RvYlb28Gf00H9H0Sb0i5g8A3qonS8KfyTAJADWKUqXFe-HT
+QV6NR4fxGFL_HH-Y8A14ZiLQlB8fskAbNOaVZB6P8Qm8KS87esGqnfb4b32Jpok9sx1q-rdHFGiyRpzALKds0-hVNlJN-4xnzVi2
 }
 
 AzureEntityColoring(AzureAppServicePlan)
+!define AzureAppServicePlan(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureAppServicePlan, AzureAppServicePlan)
 !define AzureAppServicePlan(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureAppServicePlan, AzureAppServicePlan)
 !define AzureAppServicePlan(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureAppServicePlan, AzureAppServicePlan)
+!procedure AzureAppServicePlan($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureAppServicePlan, $stereo=AzureAppServicePlan, $tags, $link)
+ !endprocedure
+!procedure AzureAppServicePlan($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureAppServicePlan, $tags, $link, AzureAppServicePlan)
+!endprocedure

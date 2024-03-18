@@ -1,9 +1,17 @@
 sprite $AzureMobileApp [70x70/16z] {
-xT25WSCm44HHPxIegFzsms2suFZy2tWBtI28PYNeLXBDJDOK7KLuH3hggvLnNw_Wi15obCDckx8hkx8h83GhO5KDZGhfBGuDIX1zngXKmDgFQXIGZfAGgvWz
-bA2zHcUfMQOYffCaKgaIuzYmb2gKwDelfIhbahqMEQOYnVhAuoo9AVKKArDktHxIh4HFlrYnNCMs5DnQK73jgnMQKno52Y1Z9JBA5GJhAqS5QXI0_AKOKAi0
-SbUSqA806lt8GAE2842x0ln1PLVSSnJttwGuDlDVfWHi578KquriI_7i2XM-rAneTqd_akB2B5wc1FEiB7I3pW
+xT25eICn303HzHWaEUw_tdEO4yDztYdW2PQhID9KOdbHaiRIAqLk2XmASjDdAxTzle9x4osAUzkghCggh0hXFoXHHFoa4cHNz1EAJt8iCgWGvR8meX3afkIR
+5JqeNXuKEIZwMj6ZalGUIJdi5PLM9UTRGqivAjgkPBjIIXbIQdfQP5Ew5BrGQdiZLs5ubrsxXrmfshrBpSeFLhI6m_5KmT6cu80d2WxGMiCklDW5N9EoApnI
+Z5tj2gHR9KVw5RnUAXk14GM2dHI5KGNINh70Z0AIRHDXKi4dc5VW5oghOjQYcFqonTuhzfqKpvjyYwBo9crG6dgds7snPlVrARBKv3Sfbc9CrgTujQRKBrVz
+0m
 }
 
 AzureEntityColoring(AzureMobileApp)
+!define AzureMobileApp(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureMobileApp, AzureMobileApp)
 !define AzureMobileApp(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureMobileApp, AzureMobileApp)
 !define AzureMobileApp(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureMobileApp, AzureMobileApp)
+!procedure AzureMobileApp($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureMobileApp, $stereo=AzureMobileApp, $tags, $link)
+ !endprocedure
+!procedure AzureMobileApp($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureMobileApp, $tags, $link, AzureMobileApp)
+!endprocedure

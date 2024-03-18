@@ -1,13 +1,20 @@
 sprite $AzureSqlServer [70x70/16z] {
-xPK7OgGm303LBCdY_l_UmzQoR85WvtgPz80dun8MVdFm4PW6pvas415l4D64wIvWUOTvKmquqd329hgGa5oHda79EVo11ZkIZDQCfynRaELEKLLBLBN8pWSx
-nG-QekRr3KiLRri91mJUOAtdc10czT3o9GXlaAZNTzmAuKPT3YtBiXHyG4HLFUdhGeyNrxkFMzOB8JW2nt9cMHAd2mNPafos92vq8k2oAIvQDi9KcEZ-BwvM
-busHbfruOXcnd4WkBFzR_hTKzxfBV6Mw9GfqIjUuG8CqBGp08os1a72JA6pGe2LRg8qGuNwtTLsHPkQ9bcYITd_LzGC1q6EbkMsynNCkYRQnqQXDFjgI5gnB
-Ggqh4G2eS-i2chiA0199spWVRScr041jtxRzZaIRUxnbgNcHO_4NYmss9DulIvyHJyueMn9DAm5W93owkii3-QVBVKgUSSFdHMApz9LEJM_pcVE2eYPvzd8q
-83GaSY1oe-GFKWeUdjqaZruOR4YavGRd3sOc1ot1q94ksPyC7aSMCZCzVhwucRSHgKaHfcMdUgoMOYlzAK3NpztMOqyMDpClQXsXagwBvovrpR9ZxroqDDf6
-wECLUqMlMwBwoeSnz9dNesf9KKi-zNfaZJmhnHeytnBrSMJFKPvigI_RGfOepRJulYs9tU3pbciBxfQ9bjWqaB1r2a5QXlSeSjpZwaBYC-V5KuC0f4-dZcRE
-Ipqxko0JBVPAWGsAqPPgRo3SAJ7MOkyGFC0MLot6W6fAkR3vJKeUeU9nrXAM3ttie-WUWN045JMF1wgR5YPunbRW6aHg81mZkJdV2Y9yVxu2
+xPK7aYGX30HbG09n_t_l3LGmlhTXpviCirOvXOIXtno-XxRXOxOD8g8J4TamNGMQNb6TgWK730TCqOb4qXdmB4gEqGyqF4XWDSrwb7qBQxgIpSo1cUKxomUJ
+qZjDDY_r1OTAvoZf3S4CrEendeH1UMlv4Z8zagpKLufduKbjRosjjSntf6Hc1Oo-m01IQuUM5ebNq6Y75b3aH27UmFk-j8adEH1edegJB9DmIofoFUBcjO5r
+2uX75YthakE-_EGilxul__jIIwatIRcmtPV8DCX3Kn9rnA1H8bt94an0kyHe8bsoR95UaPAE__QXowcRTIDBT4dqtbXhbObuzAIxVIKB-bAm5c2zDZeLyhKi
+i71jG7efw4skUtqXmrI9A0NeWolhbZfcnDQ_xVCEODszrXTey4UDLfuilfW5uD5BOqNwgHK1myz2n05qhxi07vslIoe8jxnVKapBw3Gq8rlPsI-Sp1Fs7gg9
+gPC2XQoTZ1zIplpM0h3rmccIvfa62ekxfpUMK1ga8RdT36L8dYtYxlR-VYdkfLT00n6NW6PIIrmisI-CMq3ExzsUnnyanTrBDXyaoN2TtBlohF5N5ju0nZ6w
+4lwCBRn7jLn0beCmyfdtg3h8vk1Jxv5ti5UoTtG_IzJxoX77TFEThazZ4GScErdAqrXeMdMfBmSMlhEiPucf8Q0-oB8xeq3TVNS9b3K9AD0maTZ3hfEseQb7
+UvVIHXP_9jD4wggc-WjCLt8i7u239G7rEDEu4fkReB7u1f9x99SuaeJZqkTH9TSGJE-GR5xYZbhSiWezqYrq3hDqcDwJC9nlXPc-Fry1
 }
 
 AzureEntityColoring(AzureSqlServer)
+!define AzureSqlServer(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureSqlServer, AzureSqlServer)
 !define AzureSqlServer(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureSqlServer, AzureSqlServer)
 !define AzureSqlServer(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureSqlServer, AzureSqlServer)
+!procedure AzureSqlServer($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureSqlServer, $stereo=AzureSqlServer, $tags, $link)
+ !endprocedure
+!procedure AzureSqlServer($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureSqlServer, $tags, $link, AzureSqlServer)
+!endprocedure

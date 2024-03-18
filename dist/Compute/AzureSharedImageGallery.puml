@@ -1,10 +1,17 @@
 sprite $AzureSharedImageGallery [70x70/16z] {
-xTI5SKD130PXIx_W3FtNcv4dXeS7SZXRm3UyXsyVoh6UrPJpfQKAGvUc_6SeegfshbHJogcbSqKv_IQ5ekD-LKMyfMD5yRQ-b_Alw0iKPM9DAWQAO0d5XDvZ
-6LQKwH7haAAWQR1knK3Bn3eLC2rZwLGOM1WGxLLuxa2aNud0T8j5HXK67iQmSdCWIIKSaRGIJ5uXGZWvXK9XHaQX21nXL26wAJUdNw5Ru1lJhO2M2gDNSUM5
-0XjudV14WOuTq_1G84tV9LppIQOYef5FEpvoH7H5uCaGYcOL3SN-Z28yItmzsr7iiCZsbBAQhoXbjJsbA7WIjEmeNXBzJiMloZ7PBrNATr9EoLwZb50qgsWe
-f5uIUI3VgJS
+xTI5SGH130NHbRvW3lAFroNJOks0pkmEu1NtzEr3kTIpcdAxjrHXwDwK_mn5LDLkbMfAkRPqgoZNtwHGT3clgeYtTAaetjRtKluLVO2YJAn9nK0HBA6Oq6ii
+mueopR4EAGfQ1-jM3BHFh5C1qpwMJeM1dG7HNeMt3aJwbGXCRx78gCB0R0mgimD9Ak68f9LWyWeHmiaf50epCWf5u0YZ2j6iX3EY46qKHhS2sYkCNiMLTmfi
+u7N2AmKwTap3h42Qlaj0vAjCHKGZNtUPSqGqHV1a24MpYePYVqOHtYH-d9qeDksoCwKSvWTAEUnCAGfU1IqLPRHPyT-dN9BvxrJATrAkoHwZb50qgqWef5uI
+kKxVgoS
 }
 
 AzureEntityColoring(AzureSharedImageGallery)
+!define AzureSharedImageGallery(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureSharedImageGallery, AzureSharedImageGallery)
 !define AzureSharedImageGallery(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureSharedImageGallery, AzureSharedImageGallery)
 !define AzureSharedImageGallery(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureSharedImageGallery, AzureSharedImageGallery)
+!procedure AzureSharedImageGallery($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureSharedImageGallery, $stereo=AzureSharedImageGallery, $tags, $link)
+ !endprocedure
+!procedure AzureSharedImageGallery($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureSharedImageGallery, $tags, $link, AzureSharedImageGallery)
+!endprocedure

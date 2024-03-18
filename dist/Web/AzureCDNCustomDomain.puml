@@ -1,0 +1,17 @@
+sprite $AzureCDNCustomDomain [70x70/16z] {
+rT5BhWGn24FH2j39_bVyFioYAmNY6hKNS8JDyqqPDjuZzf_tHcQyAfE18nfwBMEaGvYX6hfZfqW6CxGoT2I3aSemGpFeI6KOpM2ACbgjS0dnkIkXE9y59UBI
+YBMeN9xZQr69EyVdEYWHpK7MMGdl358fT5YcLZA5qLJ2Yq4A1Gu6AHGwB5Ch30n92SSWFOKE1waL1cKanGF8lU8MyPct2cU9W7Ebk5igwQXA6gdWd8C2OrE2
+3XKQKE10mI1KChElf045vq210OKEbQqC53YLiXbGC0yK651G2meCA7IWO10gpAH2WmhFsPKqQeLvjfWhYcy6d9u20xLgPL383EyhzY37MiKWJQSOf5ch6AJf
+58CqQs6GVXmAojpLKigm5if8Jl7TvZpA89m7WoYnyEUhyWi
+}
+
+AzureEntityColoring(AzureCDNCustomDomain)
+!define AzureCDNCustomDomain(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCDNCustomDomain, AzureCDNCustomDomain)
+!define AzureCDNCustomDomain(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCDNCustomDomain, AzureCDNCustomDomain)
+!define AzureCDNCustomDomain(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCDNCustomDomain, AzureCDNCustomDomain)
+!procedure AzureCDNCustomDomain($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCDNCustomDomain, $stereo=AzureCDNCustomDomain, $tags, $link)
+ !endprocedure
+!procedure AzureCDNCustomDomain($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCDNCustomDomain, $tags, $link, AzureCDNCustomDomain)
+!endprocedure

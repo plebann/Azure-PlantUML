@@ -1,0 +1,16 @@
+sprite $AzureCopy [70x70/16z] {
+xTD50WCX44HHnj7c_gUDUurMFEc_OlLmiyddiIep7IWqupF3eC8ng8ZjJu0PKwBfhpmmZ89CIIZ8I4ae10CAmO12CA0G32WyWqeHePHtp7ROpbJAF5hBA5X7
+ASZCLhpj2vW9fJPzoO6nToh0a8eS65v9sqEnEyRTgHXWY1rP0mob04Cfm12An6tvm90AVeRx5Vy-nSUB60MBxrLKKKKLLLGHUv7Z54WLYBaZLLJfwidIX3Ap
+trNM
+}
+
+AzureEntityColoring(AzureCopy)
+!define AzureCopy(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCopy, AzureCopy)
+!define AzureCopy(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCopy, AzureCopy)
+!define AzureCopy(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCopy, AzureCopy)
+!procedure AzureCopy($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCopy, $stereo=AzureCopy, $tags, $link)
+ !endprocedure
+!procedure AzureCopy($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCopy, $tags, $link, AzureCopy)
+!endprocedure

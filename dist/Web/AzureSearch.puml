@@ -1,11 +1,18 @@
 sprite $AzureSearch [70x70/16z] {
-xT873jim38NXnqtr_lVjS5tOYYJNJBgR3olpXqKHVvYtDn9pZt0t9Jo7DSvSK4SU0qMHnfIWmcB1IgTPSheRYIkEUs9KptWCwbSbyLtqr7dSesFbHJ4X020v
-bxZsA4hJ-tTSOeiJPvoHtPcC-coAf6gcrA-qO8ui7_7syJVREy-l75EQ0mN0Rbs6SuS9yXpH_YHTneulXqZao02eTG3mkX8v8G1PJm1uRcp8UCu047jm7c3q
-8SrLnHuu0Cc37ntEsnKRVgx3K6gLVd4arnLTp6NCU2u8m9EApJO2kMBZaNWw00Oubm3mv8e60LWkySDad1Pt8OYh4tMBvxpSBSHr123phQ4NkyNho865hXTK
-rv6Hv897cp7ip0WxjhOItYOSE__onkGpzRQMDalJ4RabfHuP1R8S6Vdmswn7ce5RJ-kHna2qZjGZ2O1QnwkHVRjip7Yhm2PQBrh1CSbiBmZiw8LCuk1FHmWd
--k9nTkIjJZ4WorRYc2Fro0ytj7J1t-_jxHC
+xTS7SYj120JG8VL8zx_m_oEASLYpu1oxakChcjMcyRr2ecQOC5MXbn6ic2kO7hm04gn_l9_rFJ_Rm35pMdyUmf7OysXt8HinOQOLPjqGMkDeb75W9w3ETYWs
+8dICEurMveZINSOEiJaZHPt7Wnn6TUQqbFWal8bZh5mnrKWmbYiMI6v4gRmJns8taZCJ8mbkIY1vvCR8sIYyaJmnJBeLIv3sC3vA8FKmbXUYbg9BcMaXRI63
+quEDTg6efECGyaAEz2eXMqiJyQFqUYLPhop5NEckbvw-icY1z1IyLX5NMaRiXPBjTXN5Oj8pkgdOGf1zwhIfm9Ni6lMSvMfw4w5dh8NJAuCq2wLpzol9oSt4
+slj5MYYE4gYv5PpUrAn2E1_5X-bq8aUiU68ecFgf0IL3S4NFAazdZF9Z77toN2wk99y-CZY2K-HwtOnnCaWi9KV-npiT7H9iH2faJHDEFF0oYnWs0YeH7sSY
+ovmsIiI3b9cGBYA3uVFaRm4r4cybzo7_blh8exUi2CIDDX8XKLKpKnKd-aYIxupy8NWBX0ga5okGNgH0-ijzFJAeGBhCceR7gqCqla3-0G
 }
 
 AzureEntityColoring(AzureSearch)
+!define AzureSearch(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureSearch, AzureSearch)
 !define AzureSearch(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureSearch, AzureSearch)
 !define AzureSearch(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureSearch, AzureSearch)
+!procedure AzureSearch($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureSearch, $stereo=AzureSearch, $tags, $link)
+ !endprocedure
+!procedure AzureSearch($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureSearch, $tags, $link, AzureSearch)
+!endprocedure

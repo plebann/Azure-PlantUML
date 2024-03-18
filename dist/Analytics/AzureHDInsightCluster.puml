@@ -1,12 +1,19 @@
 sprite $AzureHDInsightCluster [70x70/16z] {
-rPO7pkmm28J15NF_-xxg92HZqCQhzd_gkvEX2GlwKJ1z3UVoXqnVaUiaVMVolGrN0zCcfHeoRL8jPRUWTeC-H2SjSX6TC2rfEf7Z1qkTFmwTT5gHzEJeRZEK
-A-59eWLY_yUIC9OGKlJYc6fk9saXAmIeOT0az_-S9ZH0PgcggoXSQk-rc8mjbUwmtY67M2Pwfz6IYZASClO_28RJ7lgWq98CqM3AqFsNoMYKQ5pwm0Lwh0XB
-ctQvTKzRF7zbcxx8RHmWzcgjnXsgB6E8z3-8Z76fY-S-rkFe5Xcg74nvkkEErdvdj9MBU0qOaCna5JCvmnYzcKKtb4LtfpIXIUyy0_GRy84_E34VSBSamkJh
-p7ffqZCcqvuRC4JwUigZJx31RBTH2lllo7XqyboBtYjT90wVD6ZbGQeKW4qve1SaBnMcNHi1ansRs2Icue3oX-Tapam7M118_KimFPF1LB9xf1KuuFZfWjBY
-P6ApaKTRVEc4g-MGtrsoBvsa6f-siHHBZK_RM5gQnNU9fRbP4dd4qXJVnxwKoLBX9dK8fRn8fSbV-a5TI37HAJwJBBW1A0LA_qChuJQY566ENuRYI0DMhnIz
-HVH4TcsIwCNOVBsJtf0z6pmNTegIm6QZ8gmfqUTqpwRH2rWT6wOtrBLDfNUCfGsz9G4vC_q0VWC
+rTPPahGW40JWMg7W_lVzbt4hEy5G-sc-UUoSf8J0a7uLfg-nsZzANr5VoNSbtzUm9qmlcITABtbcz0wN4xgfhyfLI_GLqr3fgw15oPmMhQygZKZVqS9AOcdW
+XT10mEzS4bmh25a_A2sqx6GGCm8zQRJIkjXBg44iyvuPhTYyLhSqSUPqnlsC9gvZqSyA3VbbJFg7802BmMct_i5eI64rE6NO_OV3TFnjGkRhbPwaAy9HrZej
+TPOrx5zn7Z_YT1mGdZshftPuIcijeluJqTgHjbbx6nz7pQBrpfDJJkruHxsUjJ9gYTa6D1XcDLfJ9eVHQaaNFR71xgvHmP9QULq0Ho6IEmSNwH-uPaABWgUi
+mvAgE4pvl04jeevFkTKLRZ3dsnZ6T70ioJkvNujQdGx2bwyqsCgDE5s0JTdH0p8RXUbjJK39cneikS_nWFJcvwGgqmOV2A98tNx-v7CO74LjoU9i1Xzm_Dc2
+KOD9yACqFhPb6CtOior-Rj5XD1FFcC2jg7cc16v5hMJGSZEg9HC2jw9ICWBJA5Fcy4qARaHvC4g9_-h61r4Sj2xs8Grl04Q1__nWTswZfIXWldups2XwRVIM
+egUYx-9jZKG_j9TlR-adyQu6FXUIDvk2DI-U29z9wBuwgodq0FT93TCJFgvnUgODQ-Wf0QfCly1V
 }
 
 AzureEntityColoring(AzureHDInsightCluster)
+!define AzureHDInsightCluster(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureHDInsightCluster, AzureHDInsightCluster)
 !define AzureHDInsightCluster(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureHDInsightCluster, AzureHDInsightCluster)
 !define AzureHDInsightCluster(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureHDInsightCluster, AzureHDInsightCluster)
+!procedure AzureHDInsightCluster($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureHDInsightCluster, $stereo=AzureHDInsightCluster, $tags, $link)
+ !endprocedure
+!procedure AzureHDInsightCluster($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureHDInsightCluster, $tags, $link, AzureHDInsightCluster)
+!endprocedure

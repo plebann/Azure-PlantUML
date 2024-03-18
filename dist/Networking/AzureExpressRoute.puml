@@ -6,5 +6,12 @@ x2Au2949RdeHDucs2VpVT7lLZp9Dqpq
 }
 
 AzureEntityColoring(AzureExpressRoute)
+!define AzureExpressRoute(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureExpressRoute, AzureExpressRoute)
 !define AzureExpressRoute(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureExpressRoute, AzureExpressRoute)
 !define AzureExpressRoute(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureExpressRoute, AzureExpressRoute)
+!procedure AzureExpressRoute($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureExpressRoute, $stereo=AzureExpressRoute, $tags, $link)
+ !endprocedure
+!procedure AzureExpressRoute($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureExpressRoute, $tags, $link, AzureExpressRoute)
+!endprocedure

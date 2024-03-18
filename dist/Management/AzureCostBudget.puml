@@ -1,11 +1,18 @@
 sprite $AzureCostBudget [70x70/16z] {
-xTK7ZkCm44JHphBlV-4T5MJGWGMnFLh4-GZE3qrQGJxpHFAxulyfVueUYgj-IrZKI-bzmsjIMC_8cfUjGMZhI1IlWLoWU5sWQ5sXn2LArIYpa6TJiHhPOx3z
-_KDgByXbA7kMtoZwfi1fRuiCfLkzp9A_L-nx9OUIboWLHEcUHTygMfEaNJQKtZ3MPw8ckHofkY_TM6fQA6uksr7uYQAvJOlNzq_N6HilzmfFyuIn8eGzvWsC
-er-iAlLjOCvm9-GrtnavIuCZoB0tfsbjY6mbfh5pPgogsEVLKNm-BFc4AVp8odKb14qtU5dXO_zyfikA2edyInajfJ0dmPULfChue4uLicStjAL3mNECnnLZ
-2ghmmfEJVrgvCe9IH0byjAfiHl-Y9ChwC05_LI4xOvI_CSRdbnyZoYe396LQCELzKOxtxYhpl1XJ_dwlkTyf8nhRXr8RIjyBF0S2XcOULGSHfhCxNG8P3EjW
-fZVUL772S0LvFeXGlEOCLv3-96YLgJiI4cUuqcUumfcMqcSqzaoMc9iquenSmPHSm1p8Fm
+xTK7Zjim48NXgO_M_IySQo1tFeXa5DJyk-xsfuwHtpmh-RlYtod_5JqKLvN5BF8pb-aS2NpVmkQCHB-SGK2JuGAy5MHTSLoWAAvGuX85RsMYyfnK3AzCulbJ
+EwJf3N9vAfNbYg9VIZdJkqL-51vNz1B5rfN0irnN4gz2Sb5nlBUgA3h9T3cXpAsCoNI1JYv7gkv3WmNTeeOBsb6ud9IjMto-VxgTqNYvXtgQ9uo14FQSlRKw
+kh1L-V6Z667qnmdvp7T6pjBWI6MrRyv3gyYkhBKnaV5Z3lOvPXINNae-OGe_it9S2QcwEtXSSI6rrdHOKI6HevGnfQ0r9_Y4abHfi66b4ULMVrcVePxViydz
+Sdk6SDIJaoEjJFcCNxiIzT6eqemUeYJA-Cf4-QCAsJD6-HjZNBvJi5NXIlCUaj8jE1FodhUzJQMVWp7mxrcpRPGHZVQZe5NfUz7QWHJ3Cm_W8CAqD-coa2T3
+EvZku4qL9mnNAiy74VLBod3bIEz9DSfWk-r_GXfai5Kopt1bdk7AFAEnPpB4t6GYpiWL3EG2va3-
 }
 
 AzureEntityColoring(AzureCostBudget)
+!define AzureCostBudget(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCostBudget, AzureCostBudget)
 !define AzureCostBudget(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCostBudget, AzureCostBudget)
 !define AzureCostBudget(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCostBudget, AzureCostBudget)
+!procedure AzureCostBudget($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCostBudget, $stereo=AzureCostBudget, $tags, $link)
+ !endprocedure
+!procedure AzureCostBudget($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCostBudget, $tags, $link, AzureCostBudget)
+!endprocedure

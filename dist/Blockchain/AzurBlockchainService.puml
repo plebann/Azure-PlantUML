@@ -9,5 +9,12 @@ mFmuKoYuFarnHVSuK-fwlgxe0gJARhxCpHLz4j5-ldbJs_p3wny
 }
 
 AzureEntityColoring(AzurBlockchainService)
+!define AzurBlockchainService(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzurBlockchainService, AzurBlockchainService)
 !define AzurBlockchainService(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzurBlockchainService, AzurBlockchainService)
 !define AzurBlockchainService(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzurBlockchainService, AzurBlockchainService)
+!procedure AzurBlockchainService($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzurBlockchainService, $stereo=AzurBlockchainService, $tags, $link)
+ !endprocedure
+!procedure AzurBlockchainService($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzurBlockchainService, $tags, $link, AzurBlockchainService)
+!endprocedure

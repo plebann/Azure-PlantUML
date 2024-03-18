@@ -1,9 +1,16 @@
 sprite $AzureSystemTopic [70x70/16z] {
-xTS5pkCm48RXRtZI-zztmP7MsL_kn6LyAchW3HFUa3Hq5ca0ZIjGZolmkA4lNncTnVm_XhEyJkLR4MiO0Ajr3C0s52DiZQ2BBVavG365wegXzgtGLIh1anNZ
-DaJ6bIh3yK-VIWUdNP-Wh11AKMLukql88boFLu9sAWv0id4UoR-EPJXN2b1EE9PP0R0yFzFvCcCl4ykKdItogGZjxTtbi6jXL9K0e8Sc6GE7Xb5MKW2m_sau
-Xdg_gYIXz3S2x5QI1myStLGIHQLp8G2asNcl9EfAfm0oXvN4DIfucSgoolQxeDArohBbc5DN30NTl7cOTmB0Dyet3_sKzxflvJfVDl7ilbpZ2WIGXYw0D_GR
+xTU5iSCm403H5Hmu_VVxGPwC0ievpA-0DOfuGwL9PoaDLBk2gdO5QZVqfJD9Pn7LJS9PNgVohHHfCf2hT1cG3PMHB4sXiqq5i4sLewIu8iI-bNILYkKZAv81
+KXbNB1zLoQpLmMzdKIRRMY9aFHDK2f34JElXYgM5YWB56yqZ_kzG9lkiGl9Gd9a1uiT8n7GwnbB6Zgj4JtJqlQIbjpkj5as9g690NJMU6PWZcR3Y1SZwrr26
+UZ-gM2Bq7u6mqkJ1WbCtAavGwRGa85Nlj5USkD9Lm7rOSQvHuMKgqwRhLQPDod7YYX2e6piFqQu0kY7SUTHFsTTzAzSvsTYp-z9gLr2WDEa2lA5V
 }
 
 AzureEntityColoring(AzureSystemTopic)
+!define AzureSystemTopic(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureSystemTopic, AzureSystemTopic)
 !define AzureSystemTopic(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureSystemTopic, AzureSystemTopic)
 !define AzureSystemTopic(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureSystemTopic, AzureSystemTopic)
+!procedure AzureSystemTopic($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureSystemTopic, $stereo=AzureSystemTopic, $tags, $link)
+ !endprocedure
+!procedure AzureSystemTopic($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureSystemTopic, $tags, $link, AzureSystemTopic)
+!endprocedure

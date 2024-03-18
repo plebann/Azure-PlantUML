@@ -6,5 +6,12 @@ uGKXJfWXzm
 }
 
 AzureEntityColoring(AzureSubscription)
+!define AzureSubscription(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureSubscription, AzureSubscription)
 !define AzureSubscription(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureSubscription, AzureSubscription)
 !define AzureSubscription(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureSubscription, AzureSubscription)
+!procedure AzureSubscription($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureSubscription, $stereo=AzureSubscription, $tags, $link)
+ !endprocedure
+!procedure AzureSubscription($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureSubscription, $tags, $link, AzureSubscription)
+!endprocedure

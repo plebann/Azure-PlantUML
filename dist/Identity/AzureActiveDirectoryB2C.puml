@@ -1,12 +1,20 @@
 sprite $AzureActiveDirectoryB2C [70x70/16z] {
-rTK7rgCm40DWJ_4CSFy3Rt0CId7VhbV-cky9H0d_LUYNAAg_137vQKHKpUZd4RMVPLYVYltKF7efyUUGh9WkAmfbdP4tnNWPWR8u52kKPORqMx5r18hxxDxw
-fVWPNK6WU8xCpmF5x_0YeY1c6DQMuZGvJrcnkJCBPPxHdZ9osSY0ikayeb_8jidKF510fF3WF4W1sPmc4NKGY8_E0mK8OkE8YB30U4jvRoa8Pv9IWhGtJmQW
-52Kf80K1IbdYuZm2eQv0sZTwLr2Xhm3Q_RqAY46bV6FAal8r4ykqOk-VHvqPHTA7pUvvg75sf7L6ulaTDWufmufHm1j6SFUWpe2YGOwKpS-mP0Hr1XG9_130
-M62zmwZJLZXinvLhx-ywqb68ZZkRKKWfrMah3WKNJQbEGp7Ve32KLXtnGg1K7tM4EXK5PMBz3S0PhYk-vuK2Kgy3HQEVCNrssLCRqyOB2MSPYj4pbfiuF-B7
-pc6W3abMd1F2z_6S2ivChywbQ5AYNqnaZiSPgR_nKITwJb8mzSwyO-nE7Kma3qGSZCY1eTfrsFnAJ0U4gSrmvNNgH4U8s943uRA2EkQ8aZgoGz6oWJhkY94L
-RWACNGpd0qBUJ6yV4I9gNa_CqT09jnG9esaf-eSLRIWSXiDI2uL_Cpy
+vTI73kCW381XXXScx_-yHoag2GvSXkRTtwNv2KSkxlyh08ItHfHQV8M0jE3jITwU9iYky13nSiW_KuI5kNoazH1foGk6sIXy6w4JHUWcWjoJ7jv2W8roV_iY
+6-N-zWMsYkQjb3M5YuXde-ZsIoygR9IyxKgF49OkN6ROfDiGNzWsekC7C8yCkNL8GumHo32mH836C4O0siRYSjjeB7uKu579OOfuCiKI8fumVeOm3N5i2c8Q
+6Pqm4oJYXBcET0NpTc7xo23GbND6B6A2E2YuZP7PjZ6CHldRziK5qXLSRryaKuJwYkM3FJ5Cs6qRbWXhzPTWLqV8CjbtP8ZXH27-97d2J95MDsffOFGS8R0A
+hUw-AmXGYVSbits0znNE0mE49hBAsKsSLNFZ4fv5LZ4ZwRUgP3oDSAb8HJgJ2S-ZjP9_IYwAuYoYnKI3Wexc3iwVhkuLjVjlnwAHaUrm5l6k10Yp2DjP4k_A
+1mLSQyuWVPHKLi9kIosvNbWuMF_6MNP8PwGRox7gbQB5y41C1A4wMHE92YKyClwSeS-M2vUYhm4pYvPY205LDHoT22RKNAe8ewznJLMfA5_E7SC1uToGMaKY
+_vWGejP25-nJ9gr8uXRu4l8tKOL0MXCtXem78ojpYmeIc5j99IGrXsbvKKtQY3PFAtWF_4iLjKNE5ZNluXvuJ_mhwIznPr574k_oaNTfpvqMaXse576fsB0F
+rAk87Ic1c-KbbvJdeRjIrBL2xbgK4ozo5mlo-YmrcYF1tSXFSlzqVm
 }
 
 AzureEntityColoring(AzureActiveDirectoryB2C)
+!define AzureActiveDirectoryB2C(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureActiveDirectoryB2C, AzureActiveDirectoryB2C)
 !define AzureActiveDirectoryB2C(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureActiveDirectoryB2C, AzureActiveDirectoryB2C)
 !define AzureActiveDirectoryB2C(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureActiveDirectoryB2C, AzureActiveDirectoryB2C)
+!procedure AzureActiveDirectoryB2C($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureActiveDirectoryB2C, $stereo=AzureActiveDirectoryB2C, $tags, $link)
+ !endprocedure
+!procedure AzureActiveDirectoryB2C($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureActiveDirectoryB2C, $tags, $link, AzureActiveDirectoryB2C)
+!endprocedure

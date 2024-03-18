@@ -1,12 +1,19 @@
 sprite $AzureBackup [70x70/16z] {
-xPDPeYCX24K5PR3slzyUZEKZxQt1L7_c_6Nm21TCJ_X2EOkQIE473h4V2dtaOB5tyYSIcv37aeOkIhBPSmqPO3aRiIFeKIZh2PFQCJTp5GEi9SDg5yY3L5U6
-hNwDhKem9gVH5B_DiOTy0JbCrbVGXF4r2jusNuHE1cIgeggstjEmg9GTqO-ACRVc09w5SVSw8kBr33JjboGp4n7dEngR9Iz76j2rnh0alS5DKu_HQLbcIIz7
-ZorJkbs2DCSzeLBGt38g1ZV4ekvcb01doSG3MhTE5LoCRv1Gky1VtfEnAybqZGAB0aSDizYRSRNTPoYOIQBqRoNEFMH7rVGD3YAt4dDzLIeX991DwN32K3j3
-AS3jAsWf6LiC34LYTOsVzrsWfVMunwmXgWhN1bTJHl5kkctYEdfg6O3tJRYX6kTjeq9KE-EUV1oqpRFiSNWB1W07DVxEjLsk_R2EbG5Rd0yjv6rI6WvZ3YtM
-jwyM0Mc0bgxJrGKBchJQcFIgXUBze12SxeI71MDAYSuj6KswhsaDLX0ls3hu7Elm-zcK23waC1mTbcCDZqSDUsgu2JFxTg0XBWqOND_-TxH0XWHZjpNf3FOj
-KgL0-7gTpF_I92K3-B0Pk8MU7kD0ieu3oJgQ_XTVVWC
+xPD7WkKm24G1YI3T_xuJr6qSfXpKdkL_EwTdA12zuGENekQgLLuur5Sg_GXHtrDe7l5_q5UIn6YEulvUmmwOpaRz37vLodp2R7xEx9fWv8d3736tmzK1iyEs
+kCTc9HZNSjbEFERSmp61qWaQCnXXOevAY1AJyCM0t4pDpETxIejfNL3xKJ4UdexqJ8_Rj1xHQ5UWQNz9YWWpItcY0S5yEIZXUurZ2UsGePdfg1mbMOwrKmeg
+XGXgpdj2fGmpk6_FmXMr27Scm5Kosm-izM-QucAYGmebUdY2al4xIVG31Ym67DlvBCs4-U9p54m_Odoi98G64gYQPODxubvtkOwRUWof72q38GoFRvWsoBW5
+BRKGnC5GTAakMSzt9SJ8P8dPDb4rk3Qucfh5Xrll6fOzZGp0-MRSKDlEsxD2LBlWdY8_z1v5UzUyhGI0WyhNfOsVs_V7bYi3jhYSMZZ6f6ppCIOjk2FhhIf8
+0xHqdwvDMD2apNFIinRU_XyKyYnTYis22HCnNLBmaPI-t_Qe1C5Rb_ZGf3zwlUe7DvJ3iRISQoGFDUnf4AuY4lr4mr87J1Xf_O1LI4em_bX3LqZqBKqhHExN
+oUClGr8BG9WU4xq7lIQ0P9u0adcC_XSVVWC
 }
 
 AzureEntityColoring(AzureBackup)
+!define AzureBackup(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureBackup, AzureBackup)
 !define AzureBackup(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureBackup, AzureBackup)
 !define AzureBackup(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureBackup, AzureBackup)
+!procedure AzureBackup($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureBackup, $stereo=AzureBackup, $tags, $link)
+ !endprocedure
+!procedure AzureBackup($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureBackup, $tags, $link, AzureBackup)
+!endprocedure

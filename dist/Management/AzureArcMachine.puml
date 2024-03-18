@@ -1,9 +1,16 @@
 sprite $AzureArcMachine [70x70/16z] {
-xTI5WGKX38JXLP99qd-x9yyjot0k_0LyECDLYx2LUKXAaAGfKqgBidohqXM5-SCCIYlgaUPWb1nnAKKyGcNNMb4IP5rUMZsyfkYkU9WkkpH2TxrDaPE2ToZQ
-fYIRYxq2TaNOM9946ATaryK0Yt0b5JMF93UjAQBdy3XLNidxvmei2Ro2pV-5LHuZhlkl1vnYbV-5KDx_fgNs65yIGY5_ALx9_nUyOtUZB2-Lu7OtloxOxPcZ
-fc3VzgqxL5S0Im88XQyhNT7VgfGFKRhI5Mle4vMkTAKhfKMPCsKK7f7XecS
+xTG5SiC034JHeFZ-rorpjVQw3FgQ36QUMRjddPHDZZiGG407fCWMvVIjoYZcaHdP_DnenR9WwOo2aLGHpIhZ582SJrUTit9DCRsUQhFJJLPr-wypLcxg5NrG
+tAvxcs8RbMmLlrMyoYZ55ov9gu9JqEiIxb6LHYeMMQ0C8vMRlC-CLt24edzOyG0vh_ZYVc6L7acxNJtEAR6oNmZb_T-q4lj5twjiFnUyNrWbUaQk4IdkxkBN
+nMyMMFgQudOpAs_TpImfZqMVFqGei0zMHXd5tg-C8j-ZZ1ByO2NuHkaRPHJPeXoHijStdieb
 }
 
 AzureEntityColoring(AzureArcMachine)
+!define AzureArcMachine(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureArcMachine, AzureArcMachine)
 !define AzureArcMachine(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureArcMachine, AzureArcMachine)
 !define AzureArcMachine(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureArcMachine, AzureArcMachine)
+!procedure AzureArcMachine($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureArcMachine, $stereo=AzureArcMachine, $tags, $link)
+ !endprocedure
+!procedure AzureArcMachine($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureArcMachine, $tags, $link, AzureArcMachine)
+!endprocedure

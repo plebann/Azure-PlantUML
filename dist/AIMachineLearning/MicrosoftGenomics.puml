@@ -7,5 +7,12 @@ YA6VzaLiq1SXLXRd_uxwT9XM95lSukHtoTRKMB0JPxwFyaGIW-75Jfzxg-bw_R8TPB-Woa-mDMVoB-7t
 }
 
 AzureEntityColoring(MicrosoftGenomics)
+!define MicrosoftGenomics(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, MicrosoftGenomics, MicrosoftGenomics)
 !define MicrosoftGenomics(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, MicrosoftGenomics, MicrosoftGenomics)
 !define MicrosoftGenomics(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, MicrosoftGenomics, MicrosoftGenomics)
+!procedure MicrosoftGenomics($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=MicrosoftGenomics, $stereo=MicrosoftGenomics, $tags, $link)
+ !endprocedure
+!procedure MicrosoftGenomics($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, MicrosoftGenomics, $tags, $link, MicrosoftGenomics)
+!endprocedure

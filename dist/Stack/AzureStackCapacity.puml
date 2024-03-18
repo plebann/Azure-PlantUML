@@ -1,11 +1,18 @@
 sprite $AzureStackCapacity [70x70/16z] {
-xTZNqhCm38JXK2pj2hZ_oqqrywK8PydVotkUPy2sd1aEtwsX28rz6-cALblfHQKJNkZlL3pBTYa-Btcpwuejiu-5gMEomiN6Sv4fb9LOnakUATDU1PaIieB5
-lyCRbMc6EpDaBhfYiUHDzXrEtRyxZLO3is0rIMbCumvbcSfr099qXKiPpp5JA2jJQnfbfJMDkbAdSVhyZUehqP4Ya-dAvZI6gKeDhxcPg0ZzOEM_KagnzGuT
-XWyKVmcmiT-ZE3BasgWg3cmg9Fg6eYBd1aLvG01UmvSIxAgYFahCQzEAC69yhrGaKoeIHL7yhlKbS8T8pnADfRqgA8eIQ25a28f71BSHQ6zaSOd8520kTOBY
-KIFk40SOjmPj0g8LUtKQiOsKFJU3CoEileoid0F9g964Fzyl_cas28gGzO8YrEzNSCllswk0Q_VEyBEKTA3zFXi51VukHU4xXbKPlH7PT4XL8P51Pivpw18b
-PQfajlxUlZPiE2YAWutGc02LkV-txpn9W6pO_Hd7pZbhiFm3arvtI3e1
+xTW5jkGm34JH2LXIoV7-bzled2RPAG_J-zXqm_ZbkxMiwRXrxYDJukehCwbC_vYof3sDaY55jnAtAQz8sNHD21sX5HHPBtcaW5QyhDSqKlAeOf7Yj695lyCK
+fRoPAY9aIxmYNkAoV8UrZbvtYVuiHTBjImnH9lNr8-LMPskKQvnIScfi08LNKD9w2P42MiczhP5MUbiZhzIjCN_R54akK0kHBBpIt1fTMALcdwa8hxJxASf_
+9QKa-pvqcSSLqO_CP9r75BK8kRNIYbbJ0Moc5EqYbvPTeSV43BVieJYcgh2ZujjUtX6uhyTAHIAb8fuOHP_Q9yAU46fSl3bhgsA9KTnw2E24ekwEbk9kt1I9
+NuD5Y9bVcmX5lGPxGjGCVezOwohJ3ZExDPetIoDx1eK7IPqOMhba0Bm6m7Hq_z9CbYT5HRNvqq_cX_8jpUEAtTFdHXN3thEp_2mbtA3rELa9nVGeHi4H0q9H
+eEi0h09O18aeBjaKA25J9P7zy_9OO0ktlXWwMNCBu9dde_saGGGao_1D3xcag9d4DvZufkZ9Cm
 }
 
 AzureEntityColoring(AzureStackCapacity)
+!define AzureStackCapacity(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureStackCapacity, AzureStackCapacity)
 !define AzureStackCapacity(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureStackCapacity, AzureStackCapacity)
 !define AzureStackCapacity(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureStackCapacity, AzureStackCapacity)
+!procedure AzureStackCapacity($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureStackCapacity, $stereo=AzureStackCapacity, $tags, $link)
+ !endprocedure
+!procedure AzureStackCapacity($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureStackCapacity, $tags, $link, AzureStackCapacity)
+!endprocedure

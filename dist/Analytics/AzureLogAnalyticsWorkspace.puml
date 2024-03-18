@@ -1,10 +1,17 @@
 sprite $AzureLogAnalyticsWorkspace [70x70/16z] {
-xTK5SiCm48NXjoZb_XTkj-ICN64OlW7pRxRnW8X5LOMPi8ZL_8ZAGabypsYjKTA93fbNyN34MmH3sDjq8RAM8UzZz9WF8BIf3raxdvAE7ihwEP6FCjHfgd8D
-spIXobEL8cpJWXfEunL3ZOvM0cfyfiAeI0s6iClkqV65ezKAJrNieXL9ttIeujUkSB2vCyhVlYiv86YC6KBUw6J5BbZXc6Ofp5OGp0kJ5JjBHSvI0OAbmbn5
-pr91jsBqYNFW6FKOSmhRLUbM-X8QbSEWJEUeCCvGKRGgEXOndA4YMAoK5tRZInK5JguOIfuBlOeBzaGB0Dl_L4KOzwj-NJWN53_UbNVbK03uKBXM9LsmygxO
-UgNrAm4e5GIFumC
+xT07ii8W58NXSplkVyFlNSqCOvg0lNoMz3y0tX2nYAem4mQncdkbCb0INr8QROnto7mJDqTyZw09-puTY8nboAlnjJ5lGDYdtcHaFaiwCfGbQXpA-60q8dpz
+vvhgCM6JnoP5giU2BHpj5SCMxQW4jdXFXR4XUYgATHGdKWygQwrmLyNkMf4wreQAFxh2oVfcLEBucIgvZwIvPqYvL-_Qg1nDbPAGBFUcIdMR2kSnoqnl1Sby
+fhDYDwd8JIeuil0ucRPz5SLKgGOgk5Wn-iSbSUvwxZcbCf6zIgl0JkNGgD0jAemRL1Gtg1XsAzeK4LnVAOJhAufpFb0np7cPkL0fBbWIdG7OrgcAC5xNzhfm
+cL5CVfLVvJ03y67clIhngwoocrHWSGwWc16yZpy
 }
 
 AzureEntityColoring(AzureLogAnalyticsWorkspace)
+!define AzureLogAnalyticsWorkspace(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureLogAnalyticsWorkspace, AzureLogAnalyticsWorkspace)
 !define AzureLogAnalyticsWorkspace(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureLogAnalyticsWorkspace, AzureLogAnalyticsWorkspace)
 !define AzureLogAnalyticsWorkspace(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureLogAnalyticsWorkspace, AzureLogAnalyticsWorkspace)
+!procedure AzureLogAnalyticsWorkspace($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureLogAnalyticsWorkspace, $stereo=AzureLogAnalyticsWorkspace, $tags, $link)
+ !endprocedure
+!procedure AzureLogAnalyticsWorkspace($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureLogAnalyticsWorkspace, $tags, $link, AzureLogAnalyticsWorkspace)
+!endprocedure

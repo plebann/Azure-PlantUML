@@ -1,13 +1,20 @@
 sprite $AzureCORS [70x70/16z] {
-dTQ9Rkmm28LXjWEvx__2ToAhSK8CzVJJqlqNmMuxr61HCtoOgGhz0QiXC_uo0LzG_g1DOhvaF6mru6iGFWdmUyUyZx2vkr9BlAGZeYF9xLRL3DrIz8fkdR8_
-OKJabjqyARoN0gyoDL7uC3Tx0_hkxiXSIf_XvknL1izoHjgZ6n7uYxtl2KoLkUp05uHk7ltbN0nVukRQcr2cdkJLyFgoKW9VqVxB3jaQPwwsO7avpJ3m0kIr
-Q5J3S1EHLyTkUxqFOsLaK5bcC0UZZrYx8X7spCJ9Y4XZ42A92sAo6ObmoHcZMyM8R4PalgzNP52waL2wLvp8xp-9yPwh33DhzCOHWt3ySFdm59dGL4oUwzIH
-6n1tg2kULs4puX5zXlEvp0ckmvcHClEkG1uq5b1LF9rjtci_I-PoXtXpfRwI7yZhGVgAob1irfbsAlBazI0Jv-r2seppLiMapuHBLq5-eFgShAvOEkSk4n2w
-qtasSos9DfScLtYr5ZLuL6O7LvjYS0TExXw_SCaL8yJtmCzB9wJn5_QedEyV9OZ2ZwLGaklRYCZgYb-xNdtn-gGG4HyrbLDAPK4dRuUvKrsbZ4xQ3fCTBqoR
-mqmuCj30-yDeiPKJYhKvB5NYoFJvCZH-VlI4-VFzypXDiaVBrGugExmuvVrfwlFPc4ODMZwFKyOvOmQF-vs99ZAfcU4KfzUTGN5JCkyki9MHpDQL416DUh6P
-HFLhuDMLtH_71SLUAxmQ1_KWzJYjKDgZtZNsiSLgFyRq9LOS_wO3IgN_
+dPQ7OkGW34HHcT7-_nVVsHjMja64pRiIrvTXK4fR86hk0E1kfkqFY3cUk7of02UOY6oBr3d5vSsM0vm3bGC5VlSurn9nahOPPCJan7YmZ2DcxbYLOX_frYxp
+3kH4BzgsWnh6Ki2rPYtAPY-WVJSxcgMiDNNfVcwFPYcrHfTRfoVWWDybfzdDH4eFE47RXPj_cal0AR8OUzUnPoRJQeGJV4W4ph3rRU8Po3YZo5gFfop2W0NG
+eMXKOMGXqS7ZURlX4iPhoOdfL8CCbhDIIvxr-ASooz7JOCJx7oAFlKkES-fD4n6dsFgpnxKED8yj9IVMBkZFQR_9rdXz4t72Bacjjn7fDqMYG_qF7v842ujh
+TD1NGFq1SGMrXSygV93K6ibRkQ0tdyrX98Lcj42JbAmrsUbpRxFNxIm9zGfYXDPMbd51YzMiBROkXT9sB7g7TP14dkr2bnhAbiLrhGdgoe9XGUK-UMtntETA
+a-0UoA9ZMSi3AuTcjCYi5dCmAjA3Zxlr0-A4PFm2vMdnFFm2o7tej6dy1RzPpkDNzGTguFnUQDD-V2ZzLS9FrxERx4V7_ikhnhIJge5e1ro5kM46l0Qy7UX6
+cEGr86qpJ39cGNiZ-s6iQEK0HMs4FomnVfhxhw7HNpr0lhzU3rkYUzYqsiHq1nQxl9-ctf-DDEQmSZriJ-IfSGVZEZEna2JcxZY8Ws5cK4pA4xpcu8msIWgy
+c3vLjHYABT6elWnOZUn-72gANYja5WTra3hEah2sXt7bs4TyjZ2wj2yHmxsRHOf_
 }
 
 AzureEntityColoring(AzureCORS)
+!define AzureCORS(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCORS, AzureCORS)
 !define AzureCORS(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCORS, AzureCORS)
 !define AzureCORS(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCORS, AzureCORS)
+!procedure AzureCORS($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCORS, $stereo=AzureCORS, $tags, $link)
+ !endprocedure
+!procedure AzureCORS($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCORS, $tags, $link, AzureCORS)
+!endprocedure

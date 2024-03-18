@@ -1,13 +1,20 @@
 sprite $AzureGeoRecovery [70x70/16z] {
-rPO7WgKm34D_WYKRxd_WNPXu0WJzklLDRsya0qbk_m5bCe1EmARodg8Q0E_GwctFz4mCVE5xq3sLP7dACMeS-PSWYVkI2L0QRqMC9E-MCa1Rl2NWIjKIElRG
-Jx3aO4WfGSH1umFidKpLYJXgV0IzanXiRBWerB3i9C94d3H-oJOQg32O8sb9mbrrgk9g5v-xnd-IdmpKEs60I4qYBCmmuprJ0PylDA72N5QopV9S6iYd2S2y
-4Tf30Y3Tj_lYOZ05ZFaBQK6opQDS3CQQesa8-Cb3T4mC1lEEm8eVBTZH1ZDOkBSuDWwjC5XiV0XyR-5euLEM61jHMr2kBVC1dgC41ilLfOxbe0aoth8qJKTR
-z7GNeT4MZ1OkzpN40N7NsN9VuzUMUhIKHMl6C5C-H-Ls91vfi6DufXCiIZDsqkjBNPxNsBWm9FwqfXSgWwKizpI-lh7FLXu_g3KEC0BOD68_QfHPQG890OZj
-A9cMRvG5pAdeGmEKXkZeCqFYGXDTyyoPB1vfIlOPegXIuGJfaPgKrE5SfqSSIDWqhKvX7wsaS0j2x8XLWxgJG9tQWT8ylYp40P-zDQXQSbwwAixKBCoDeg9m
-1UMxc26nFaXBYGBKepy6WPJq_yD9fnrc8dvDNSKoOVYXe82DRHP9gSO4GsFPFB4LDaHRuG45mY6eu83keYdLFbHqqpJPXdigFg16_0ABHKoVMnZ1ZoLJnETX
-gg-M3-ThqR2t8jWA3jXAUSL2oGkIGiahOOm2k_tp_
+rPO7bkCm34CZcG1ft__0k_QZHqeuIDtwfvTy4v2BBly3tGnq0hQqTmq0V43hbvdb2KS33dm6mzD9jgSSLUCuNmcIk2zP0ANn368aUJUKGLWESWBkT2sXOuP-
+0xEO7Ib1X8jP4evCfk94f4PQCXJrC4iSk0mqAkvwc4XSZ9Aq8xiQ1ckSv2GHhZ9riThDrw7nd-GtbNvd6226Pk0LdiFKSwO3lcfD7URRI7POdjD0Naq0TibT
+3Gc0T3_E2zPY6XZh0mrEZZuQQp6MZjGGy1iDCJ1H3DQ9050qcCXYYeMpnN4G4uvYiNeH-6pXkvQeYHWJVCeoItAOcC4rxVkbZcsT2JBkMSG9urjg1jgYszs4
+HbjGBToqfhOBSTRP9ZHwfLclWBPfJHrcoUkeF6ZZaKOiKOaaD3MJlh_qxNcDrHl32P_MPA2ifVQhDRv_S7Ghjn_K6WSO0HmQyJnAsgeqWUJGgCTHicnVA0iu
+Mb6R1YWDCL1xXe4BJGpDCtkoUAHfcQUC8aE54wJ7fCaDMJdZPCNJmgGc9OsZMadZCGWn4Ri6VP90xTg1bXxVDk8ANpqJz9G8vjexRab75iic97cCzXNCS6BZ
+DIOb2QYhlnu4KZAEmqLFMpeH_wPMiIqeVnGqC85DoLetdg0ariaJss4YqWeFA10EGIyUbKMJHNoe6APbiGFtL7n2Z_W55ejOFhSmWXzBbeZFX-c-MpxiroAn
+jqQm7LnXE-qL2oKlI1ebhmnZ5DZbd-S7
 }
 
 AzureEntityColoring(AzureGeoRecovery)
+!define AzureGeoRecovery(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureGeoRecovery, AzureGeoRecovery)
 !define AzureGeoRecovery(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureGeoRecovery, AzureGeoRecovery)
 !define AzureGeoRecovery(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureGeoRecovery, AzureGeoRecovery)
+!procedure AzureGeoRecovery($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureGeoRecovery, $stereo=AzureGeoRecovery, $tags, $link)
+ !endprocedure
+!procedure AzureGeoRecovery($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureGeoRecovery, $tags, $link, AzureGeoRecovery)
+!endprocedure

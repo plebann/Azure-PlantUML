@@ -1,12 +1,19 @@
 sprite $AzureActiveDirectoryGroup [70x70/16z] {
-xTM7ik8m30LGTGdz_mSlJbWSa98PixsSD-srYtIT0d-g_uW7X6_0OW_wSH2f7J5yGkoDuYSX5Qs7T12MiBKKLg2T45YWLgplH5Qqm-1YjTFyfCZCkDZHYdBQ
-cby5hdKxBs6CF92bb5bCv0lgKnfklj7HMxwADgNywpHICDzfb-8NT3OxtLPJ6C2pW8RvEGAuPK5GYPy3WAm4Al9JsgSGDFHg8OZpNgxxZV5rfm3z6RNa-Syl
-70OgAGOzYuOZREnwbEiO9tYuDTtsj9-asKdX3BAQnv49mHF6N8TFCyJkK6QE4Plf8uSYmt8Nba5NJqn6H1Op5KBSWnMtZ3iYKbKY6XqPdh-V5OzinvGRfHtt
-1RCz4KxpnuywQ6VjEObDWfFQMmpJfZrkiIDy8Zl8mMcGxh79DZGhYHru3ZH4SnkG3TrAziAV_UO1dhtEg7Ix6ySRHAHvO5qf0yzkwp1CTCio35fLkzsDFeou
-UK28LuI3UB5TCbwV4EWDnS6y6CD8y_WLRnZUiNi_JFCgyDReLxrnoyg0l6M8vAsi0iHxX7AMKe5vJsgtvokXds7lHHPElggc14eiGoWibZ4K7ilqkwGO5F61
-7vMYtsKZ_2udlHx3q29PmF1d-kyB
+xTK7akDG20HGu4E3kV-1TnIyyWYagk_DuQdYZDs6Lg8_rNyo5apVO2XszdQG65uDUeVYnFYTa4hcGpfCKmPQHZCO5vGc68hvdGH5EmpFjxAZdI0oCsvsn0sX
+bULJy5otnoNCaIzqDcKl9l8JwLCQlXmVZ8WqFulx58UV6H7dcL75ViEEPW-FsPH1v5bG0tvDY1vP25NgruWeAwLA_9BrAK8Dkrk88Wlgi1Un7654T-Ue7oPE
+d1QIPw0Uek5CAzoFSX_ZGhj7qstF-acQdOoky31ul8BAox_ZM6TSPYW-i1uva07OdYEHWTm4CkJkPJIOUIXWAinRiF6QyK54p4n4bex0r-zdurVO3CcLoMRq
+1Gzy9NmOUDhha0soYr4Sb0-6KyoGLJv92Qah2N2ASLbeFaLPfwwaUE6va4Kqju5WLrO2Ienj2nsODZYJqktciQmW8jRSaugpKRjT-Txl8yimZAfqkrlwW8pc
+0Q6ePE-sM2yPhqy8zeRo0buimsZp-5LlOEtM6yjlDwy2RotzcZSUMO74Ms0MRsKLfDuJrgkKYk0zBTtUhCH-0SDxaOMBJwkri7hC7am5OjhuBYb6XSSqK15l
+-54fzbqsufZ6z1rY1hL49mpwC_tt1G
 }
 
 AzureEntityColoring(AzureActiveDirectoryGroup)
+!define AzureActiveDirectoryGroup(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureActiveDirectoryGroup, AzureActiveDirectoryGroup)
 !define AzureActiveDirectoryGroup(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureActiveDirectoryGroup, AzureActiveDirectoryGroup)
 !define AzureActiveDirectoryGroup(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureActiveDirectoryGroup, AzureActiveDirectoryGroup)
+!procedure AzureActiveDirectoryGroup($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureActiveDirectoryGroup, $stereo=AzureActiveDirectoryGroup, $tags, $link)
+ !endprocedure
+!procedure AzureActiveDirectoryGroup($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureActiveDirectoryGroup, $tags, $link, AzureActiveDirectoryGroup)
+!endprocedure

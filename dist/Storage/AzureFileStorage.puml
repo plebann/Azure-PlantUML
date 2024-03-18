@@ -1,8 +1,15 @@
 sprite $AzureFileStorage [70x70/16z] {
-xSo54O0m3030j8t1_WDpkBj3Ve27TOpnj8k75CKxKRhetaNJ9TgxH6iNMsmHtKdIXNWd-iSYRPiNPihauTObLiX9RjkYx39UCeIX2nSiRGXzRks2C6HsOMf2
-sBGWzArVmhiNMsonXVSk_Ch55eG5N7-H5iO5I1gAPOT7BYGxKRe4sIb0oeLT7AnZJ08
+xSo53S1034FHWr2x_xvbPiPyoM8_iovDSxWhbo4OxWnJHVOgaYh1NYLOgwYY2ilEE5MGTeR_KBZTPeK8it9mgnAAoUEyROgGpN8vWk2xmRpI2Km_kqx9aNwp
+2c4pC9kKxcsRuj-jgAAAAlGbXHOhgi0InFOL9ceE5eJDJw7ix74AxbKmLVnUnPiqwtTbpReqBGO
 }
 
 AzureEntityColoring(AzureFileStorage)
+!define AzureFileStorage(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureFileStorage, AzureFileStorage)
 !define AzureFileStorage(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureFileStorage, AzureFileStorage)
 !define AzureFileStorage(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureFileStorage, AzureFileStorage)
+!procedure AzureFileStorage($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureFileStorage, $stereo=AzureFileStorage, $tags, $link)
+ !endprocedure
+!procedure AzureFileStorage($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureFileStorage, $tags, $link, AzureFileStorage)
+!endprocedure

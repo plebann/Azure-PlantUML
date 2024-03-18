@@ -1,11 +1,18 @@
 sprite $AzureCostManagement [70x70/16z] {
-xPRd5bin28EPmdt_1-xqQSQD3Dtp-tiv30dYoC_cFtf0PZZg25nwibfIEb0386UYHiHPrXgYtoXABuszYey8r0Nx8ccJP8SmlAuOczI5G6Garb6NUIzZjvLl
-XcBiDeYdRe7n1djzCTQqCWFJ0metCpKB9belBUmk81g1XrPwUqv6ahHfj94MUskpaAwiOJHLOej-2xQiupdnPRZjtax1pudBRzKInmDIyea9d8VrzkcFfnsF
-n34x9pI_pnRepya6ZuLwDit4yELod6p2-06CWxue2dIM1irp2DV1qvdzHY1lcPnRNQjb__4XiVMnm1gmqu1_mngWD1HxEHVZRW2ZMKneduLm4_sSfcWlAHjb
-5MwQEGsyhKBmQR4zOd4XDugw8c8gGWKisH2thtzpZDSwh5CyNr7J2d4RTl_0Bkh1ZNozC1aU4RbJK9U9smJcCdUx9-GAwReYadoH2-osmI_DvHNS1NxBLumB
-62DfkTl6Rvd1LaBN5RanS3lDl8ZBysOQbyTkC-iuU3C2SaJN9CcI1bk392OTYdOSbG7gSS1L_WNU0G
+xTO5SYGn30LGiPJx7tZHDUJ-bfRnXUCksIE8Gp_RVtn0Cnfv54ezpvPJ9t8WwCnonEY4SuYRfCmuOP8xDxF8ZNnHQXr43q8qTu9UgHA0qsYvWrN6PnbNct5d
+S8oh7Q2cAXRZ3fRyOj8SPIQ60nIc8i82NfHDKXj2DspPL7jMIct7IK2GDWmtgOtLjPvXokZ0qUnYA-dtXyNpE4wu6UwzvtdjN6KUjg8T1uZ14agm7zfRftyy
+vJWa4jcHqopJ8XRzECdWic3rvZ0slBaqJcKwB4xlJJz5oU1Pc6Ykmr0UN9tUTqJuFPBYKkT7bOc_tl_nkLx_l45LTHyhJE2rg066ZmPz8eLatGYC8aHeBSDK
+YBEMX6TnMXZkeBKeVF3U2ePVxQVTG-5pHdTP6wL5c0WcCEc1rYQLNiXfBvXyUvsYvYYWsY6F5sp16jnvNKatDJDV8M2LGRK1L6LSxPxH3fmwpHoiq0MjAu4d
+JUaAhWAUvHtZ11fSsVcNdCK9gPsZKn9ajNCHJL1beAQI3hI6X4xYhIPlGMVrDb3Ka1e44UfmT462QO3L3fJfN_0U
 }
 
 AzureEntityColoring(AzureCostManagement)
+!define AzureCostManagement(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCostManagement, AzureCostManagement)
 !define AzureCostManagement(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCostManagement, AzureCostManagement)
 !define AzureCostManagement(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCostManagement, AzureCostManagement)
+!procedure AzureCostManagement($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCostManagement, $stereo=AzureCostManagement, $tags, $link)
+ !endprocedure
+!procedure AzureCostManagement($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCostManagement, $tags, $link, AzureCostManagement)
+!endprocedure

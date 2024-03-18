@@ -1,11 +1,18 @@
 sprite $AzureDevTestLabs [70x70/16z] {
-vTVPkfWW30JWW90PbFT_tIwSnL8XnkMg_U-TBnDt-R-4cB82WEOKv9wOqKbtviWuoE7g81YASaN2H18_nLJsXz2Gl7LeMiGZyaGG1_14bdEPV3vCu9H_c9Xv
-3kOOIUaJvnbAjsHS97vgNAv-i4Byp10_JS7QYPz6wyRnIyuRnt-k5ju7QnG_EBQ2WzcTcJW5FJZ6XBD2UeJ9Xbcce0Si1osbM6XdD8k8X6BgwvIHLkbn2esz
--5FQOl1AIdwbKNYQ0ZbTpFUnn2mbjvHqahBLPfsbH6befzIJ5FcmU5DO1f9ymeCKofV0-obHTdIbmEZJQ1bYbwA3Ex6NPgEmVXfSTddmpJ1-JAtrKuli1eqo
-47JGfzHlw3jbcOb9sVL1tMr_tWwBEEb--U-T5hac0IYrGm11hWW0M7iR09Kh5C1M_x9U_2t90DRQtEyKzpw7JX0l06nzHftotJwxulxnMqYMEhQHXEyaawtF
-D4QTVtnhdLf9Biu-Srjn_2C5jZw6rT49nINPVOeFnHABavYoRvH5_cK_0G
+vTVNrjiW40JWfUqC4k__l3duhuGkV9LylfNdxA2A_6Ui3me06hnv6X5GyF90G2MOtK7GP6M7HsM_bg8hx8MSJkCvv6I5vHYCB00dWim5Jis7CPmByykUSnYE
+uPLhR3z3kSm_k4XgActA7JWFoHw5rDIRUasUKBjyuwoVAl0fbM-Ep-5yb4mNLWMLtjfuTcaDdSS43bDKCZBsVj1AusZ9uWYrmDZWHCJ4eR9ER7bLEavXJk5f
+IimfU4kAVqiZSve2cIxCzt-9NagGp4zIxlHozLAil72SaiOfb0_kACNB9noaKBuOhgMmloelV3gBbzyqDh58gGzIAVdUA4oVj1ucoD-CnWfKzKgVNf75e5Pg
+TGvpYVGDPQSWFTOhoii__RY_En71oIBzkVn_EZdPum74L2008piC0ARI3K1bXmB8VGeN0B-voRfIPQ-J_UvJTuAiGjcdx1Hs-zJYyiRFaOofxIQ9jPDCyaw3
+69Kv9Ncbhekas-nJk-F27icmx5Ex5ZeXBl4oOkCQdgTaCXJY2Zhvb_q1
 }
 
 AzureEntityColoring(AzureDevTestLabs)
+!define AzureDevTestLabs(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDevTestLabs, AzureDevTestLabs)
 !define AzureDevTestLabs(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDevTestLabs, AzureDevTestLabs)
 !define AzureDevTestLabs(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDevTestLabs, AzureDevTestLabs)
+!procedure AzureDevTestLabs($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDevTestLabs, $stereo=AzureDevTestLabs, $tags, $link)
+ !endprocedure
+!procedure AzureDevTestLabs($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDevTestLabs, $tags, $link, AzureDevTestLabs)
+!endprocedure

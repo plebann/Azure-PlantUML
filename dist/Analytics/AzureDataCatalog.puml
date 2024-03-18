@@ -1,9 +1,16 @@
 sprite $AzureDataCatalog [70x70/16z] {
-xSvbWiOW38HXaeaLxd_U5JutcguBpyyMNgRyH6AUO3gEU98C8ZZz7Y7pmHZkVnFWEdh2ohihq9IFgV3NLMPbLcPbLcP515GA2zvQ4J3Ts5OH414p03a0mBsR
-hlI6t8FUILNurBZ5bndO0q94a4UGh1WTCcOU1-vsY10dAelqa_3bcWltNvQfj63ge6QnOwQW7MkvIciXJ7UnjPQiT8ihGESWqRfavQHMD_UejRQJxPMJzrT-
-qfQvPMxn1pPjaK7bgxUGFX39BMEMt39c_sJBtCAhMr0IP6MBb1IAmPRWaaKQTxU4Kjc6HIFgGOG9bv_g6G
+xSu7ZWCX44HHEj0qi3BtF-q6B6V3rER4aqPXWAyAFr5ka0f403cCMMk5mYRTjOV9QUkdstnoZrlRKK2aIKKZGZSg724qhqY4C59PbLLPbLLP5LMX42IbjrPK
+c6wyhg92HCmYeWSYmhqBLtf3x-XrmYhS6mDycP5ePlS-9IBH4Rcgs0WTCcR93rAoGuGOg6JjDoNbQqcv7nbIgSxKIJJpFRCej6SLgzJgodGNMwrWfSiMHIuA
+ebuxk79GIhAKSocbTc-idBo_ylUsh2rhIne0jc0LV0l50GUtp1cm1Qty_Irh2szkaG3GZIqQ8EIJBSu1HT7lRl58uNLOetivS3Vby5Cz0G
 }
 
 AzureEntityColoring(AzureDataCatalog)
+!define AzureDataCatalog(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDataCatalog, AzureDataCatalog)
 !define AzureDataCatalog(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDataCatalog, AzureDataCatalog)
 !define AzureDataCatalog(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDataCatalog, AzureDataCatalog)
+!procedure AzureDataCatalog($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDataCatalog, $stereo=AzureDataCatalog, $tags, $link)
+ !endprocedure
+!procedure AzureDataCatalog($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDataCatalog, $tags, $link, AzureDataCatalog)
+!endprocedure

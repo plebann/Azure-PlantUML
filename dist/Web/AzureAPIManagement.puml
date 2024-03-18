@@ -1,12 +1,19 @@
 sprite $AzureAPIManagement [70x70/16z] {
-xPRRSlCW48Ft9B3p_W_y_vIwAbEoW_5jlgis1w6LjKnaZm-gPgho00kKR-2RIeuo07kYGN3NJvGfBZTG6a6uE_E96oBb6qQgZfioYgbzloU3Dr4g5hFXcNXl
-KfT3GJ9hh3vZf4VOeXLFpmZ9KQELEQMnqFhSSgoydqJRiNGam-AsPCVuykgMHZuDt7IbsPa8RFdE2DStu_YzcoTqrdcLTPN9iTonHPLP9On5Mq7D0vHPMusy
-NfJXF3iwdbLw_MBDrok7KmHLP0kZcRAdmexO4nLccgWmD8IbrokuetDikZE45f3KnRERQx3WILyikxleXOyhDTFH91T93FFNmlme7skNBv9oWqT00rhgVo0P
-g5-O37XjwEz_GZAYDiQPj0x75_uxOXvkD3oQKT2Ay2D5fwiFfM7yJfOZTAnsO4Ec5qh3qb55vOoKkG2y4uK8aq6Z_g1_aXefbUWr4c460wWZgCHfbypROQDE
-EKZCLDxrtQ8I7CJ-JWJFocuM7Jz96p-E1g9X9gl4UT7lnACXjwbdftwPF1f5xXFdw_KwGsZ5PGkJZXySQ1lh8f0de8lKHqQkc4tsq40zBtnNv2JR8XBKE5IU
-gq38vaH7o3C2PhB9Xty
+xPPPTkmW44DhfA3tl-3tw4aXs7Km_itDJtfIIM8ufZt-O1PXfXk8UNdZkgcaNWPSxcW0l-h7oY5A5s0OCLDLz6CNHCeRLChg5sNO3-thDHa_gP9ziHlCj7EJ
+l5oA9LbjTOqz7I6BLZITOPJ3abdfbCxQhfSySFxv1wTp98qaldXQiZ6wV7HB9q_ZAhooipCHb-KxmvHFukYrcyT67KORoohpM9onPPLvImWssWeiQWwPjQEH
+Ro_88C-EZcPRUlrYpOzN3b8OL6WBWPcofu8z8dTKq6cYWjBC9BrU7MSqcOKparmJdcmNpMwkmO8c-qNIkmjUi5ovcGudlL1Y64yB1wEG0_DMdaHyhWK6Ilp7
+ASFZYT20HcTuOPHXqHaTSmpZ2rwEY9hAp-_8R92H-pM93u--CmpxpsP_Hv1uuJ9rsc6OmOH0HiXySDSt1H2QyKvyuQcfaHA0lv40EfYx0Xv0fpbe2I0gA1KO
+GeEpQrOCCS8ha3cHAvt38lP2Q_l-zVXMEsuT4Lh5seVNdLWxT9beB-9fidOANSVQu_5eHh2Yj8NG2wq8j8rWnVVnbqZSCX9zkLkhGdkmURGFkYlImBO86JGg
+qtqL9x2PA8pkOIv2c_pn3m
 }
 
 AzureEntityColoring(AzureAPIManagement)
+!define AzureAPIManagement(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureAPIManagement, AzureAPIManagement)
 !define AzureAPIManagement(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureAPIManagement, AzureAPIManagement)
 !define AzureAPIManagement(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureAPIManagement, AzureAPIManagement)
+!procedure AzureAPIManagement($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureAPIManagement, $stereo=AzureAPIManagement, $tags, $link)
+ !endprocedure
+!procedure AzureAPIManagement($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureAPIManagement, $tags, $link, AzureAPIManagement)
+!endprocedure

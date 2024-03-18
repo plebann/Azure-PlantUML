@@ -7,5 +7,12 @@ kKWGbEnpH49797H4GaSaT4H2HoHqH492_p6_0G
 }
 
 AzureEntityColoring(AzureBlockchainConnection)
+!define AzureBlockchainConnection(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureBlockchainConnection, AzureBlockchainConnection)
 !define AzureBlockchainConnection(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureBlockchainConnection, AzureBlockchainConnection)
 !define AzureBlockchainConnection(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureBlockchainConnection, AzureBlockchainConnection)
+!procedure AzureBlockchainConnection($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureBlockchainConnection, $stereo=AzureBlockchainConnection, $tags, $link)
+ !endprocedure
+!procedure AzureBlockchainConnection($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureBlockchainConnection, $tags, $link, AzureBlockchainConnection)
+!endprocedure

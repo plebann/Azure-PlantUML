@@ -1,12 +1,19 @@
 sprite $AzureMaps [70x70/16z] {
-rTDPOYqX20HGA0Pv-z_mwupQeI6QVENyPRWbXLxw8nWYQXSLWEadeEOtfg0pOlx8v3JZTpamRnbsCtwPexv5JqFEOyot6HMu2SdhCZwUn5Wsfr6lCS4JFGmH
-8jvQCRphK_G5tR4tKCxA-tUizR16A_46DzCABRoXNOfjZcA2xX9bRxK2S7VKrbCnNBgte3iN9BXmCx5j55AyfzI7yRUxDRpfYaikbFlCOT1LuhRFk-uVxqTa
-0DPXkg-PZ8BBbnGTZsJvMsQOklEKBjQEiWw37wGeReY8YvdfubsVYSi3dIvjdudh5TOfYg_gnPID70bNY_4oHP2L9rPtP7Z0p5RUaNQhdSmTqFAzw4OVyN41
-f4p1Ttt4vk_70n1THjmDIMEy0poIGQyyxdGTmoEMsM6HEBsIk9bFHVrjpEKLQIH2h_YnZzXikgmz4gOt8_KHzPXcZcFajRopc0Q06P5YydgDA5UIjKcECSs5
-yZ33OvLp98qonPQd55heTenxh9HMiHrZQPH9ebSi3dIdsp6fpyhZc5Cs_XqQz83ZB2I8VXyJJ8LnKgTcko567TaB4Uhns6Z3z2s9FYE4jcWNehJDefZ3w0Wi
-SWJe7AlvY2iiOhWfqz_m7m
+rP89ikCW34IbreBc_XSUbvEXS6JqvKbj_sNrzkW6w9V0WAWTg01C_mFK_88fw1bYVel9KyTt7fYN6BgEBptgBRGX-L9ZtiPe0nSIMDBmuoJ6qaoZleS9dj27
+4Y5YxsZWLPzDNz0LzW9iit9_ZNKVrcX5l82Bj48BNg2LnPfHJ50jelIcLW2kXcfj5SL1jHUqiq220ouIMwEGuhHKW_6FSsjuKHMNMQZgCyEWgiHbdpVLZSKG
+9vXmiJT11pBy_kNoOT7x--HrRODYuJNUBLfPPfGP1eN5oYXh61wt61tuvXgky7P0fuEwpuJtvVSMnIVxYTasSYHuDp6-jGWosn5tQsIuWPbjkqPQJkt4t05z
+ikkIHCugWDosfmFyr4TidiUu0VHUwZXV_tubnNW3-Bnl_WuwyRYYQmoFooQoI3YToCVPwL0Vvvbb5saaX4uu5cOViLDnrGWYmVHYf3wY7pLdc14V37fZwqa0
+Kv4rI9UCA5UIjKdMcEP2ESp8CQuUoL4cqUBEGWlQrlWrhD9Aj3MMeqma6kI90rtHjYRrMV5uZ5Dc_3c8uzFz7NG3dtVq2QBlDS6qOVGbW_POLs9K8Js9K0sF
+HXkc7v6e7I7KGYk7KXkBZSFe4MoH5KpFOJKVSSWYXfio_Gx-0W
 }
 
 AzureEntityColoring(AzureMaps)
+!define AzureMaps(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureMaps, AzureMaps)
 !define AzureMaps(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureMaps, AzureMaps)
 !define AzureMaps(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureMaps, AzureMaps)
+!procedure AzureMaps($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureMaps, $stereo=AzureMaps, $tags, $link)
+ !endprocedure
+!procedure AzureMaps($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureMaps, $tags, $link, AzureMaps)
+!endprocedure

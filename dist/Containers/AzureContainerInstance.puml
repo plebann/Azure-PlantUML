@@ -1,11 +1,18 @@
 sprite $AzureContainerInstance [70x70/16z] {
-xTL7ci8m44JXKkeW-_xN9QFFdbOQn99_HteKmJQwd0-9c9aeEdme41zGm0SY6t6fKP33VoHk29X7t1I_4PbVaxZBOuRd0SpWaJZx6_Sv3B4C3SUuA6ECda0o
-nwCfIHtn_4VoB7K9ZknzTL6Q4S2ndD7uqzZjDkF-5Gb0FIFsf1Kw4PCfsEF83oCsOxzaxaJw6JPJkf5nXlgHVeRm8beJO3bM8-8XQ0sXnglbS9VKiB6eJGbt
-f1qCZDvASCUB5VMuaTLA_CgMjFozb5yWhbQu_0UMj-0htmlIOYNWpYrMy4IzYWl9Tok45yqDMzxsFJF5b9iyNdmjiEqlodUYzGYX2EVNbq2fD4E2WvZVJe4j
-vqUbq3yXTJWAUgxSvgZAJQcKq37YSURaNTcogkY-YvXA2PKbHjHdvJ71Lco6K1LPfokI79hyL8K2-gOg9lAh_2g_ogz2Vbp9sgrGT1WgLn1JCJDwbMBRicgf
-c1bTBhBk9sfcJ0easwbYPqoF8drNo6D5I99rFECA
+xTM7TeCm38NXwwLXUF_dRJauKv55njdytItzkD0HJ4kvD69cQZNXmmhnNLJmGPLDzKjZH0dlrDYfu7Z4RlKzvDirZQTb72bp48x4KHLnbSCImbZ2mZ6fIXnZ
+Lcboh0mtZo0-VacP7QGXaVtSwwgu291O7gFmQknsot1w2oc0OVRiFwqoGLn6EEE-72AMiJUPVIHWs4m9a8WX7uaPmaXKnBxiY67CSNLSaBwA3E4SAmbRJKqM
+g-hMi4KwYO7eL88j_bBHZF_aMwN-P4iR1todaBdzhX8Tat-o1J-vBsXVAWLRwKi5UpHJKcbvgX16sfsMlgnhPwgjksMCyYjWMKVAM-ASYd2jF7p_3RWf7YIu
+g_PB3y3I-r16-WHfmdr57vN_EQhotr0CP96j91TbwQgYwofYb97U45FLNTacp1MMsusrLTPO6MEa9RZbGmeLp3ka6EHKJkLKJeLoh7ITAbGJmcwF84OnCm9b
+fvQkEXGp8oXLrlKXTMQ45PBbfWGpWb6aGmbcX9KcNUCPVm
 }
 
 AzureEntityColoring(AzureContainerInstance)
+!define AzureContainerInstance(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureContainerInstance, AzureContainerInstance)
 !define AzureContainerInstance(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureContainerInstance, AzureContainerInstance)
 !define AzureContainerInstance(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureContainerInstance, AzureContainerInstance)
+!procedure AzureContainerInstance($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureContainerInstance, $stereo=AzureContainerInstance, $tags, $link)
+ !endprocedure
+!procedure AzureContainerInstance($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureContainerInstance, $tags, $link, AzureContainerInstance)
+!endprocedure

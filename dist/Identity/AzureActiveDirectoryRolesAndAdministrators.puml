@@ -1,11 +1,18 @@
 sprite $AzureActiveDirectoryRolesAndAdministrators [70x70/16z] {
-rTO7KYmn38HXITsokF-5Nt21InEi5Hc-YgH_RTAq_0e6-3-0oLifFO6y2NnwLqVzYl9AvhVqNITPv3LyXzB7iGNfib6GBXy5jezIaXwCalKlzFuhZPfBXuu7
-UfLuuDTLv4igBYqU9KWBegJI4vKXJNmgGBfY7ndIXcqaLFfOtQVFgqWVgqWVYkz9au8EFqQSXBxwGKzHnZe7HVqVlAOnsJoL0QRftVRAvppkdxgSJJ5jhfRT
-050HDRDzXvxOBcylgiYocH4mgphOZnxBZKmV3YXSZqARzXtr_MDGnqJO7KbOFDanex0DBGS7ym9msXRAgN1u1H9spwFSFfPVWRplC2BArU9vZ72o4upufvvX
-AlyWLnoMUKprE4NQHNo1V9bSgJQFvKgw5d2Q01Ox9iAOSiLfnX6d2gk94AkIh4QgZDWIt5M0O-RHViAuLW03wUDOiMWu_en0pawge5TPZLcPF5KyEbOZLSYn
-AgDR0UnGMTTAWwKMwo2hiZgpyjGHi0JCF9-bDh2jwAeqE6uhjjPAJ_1QGRa7wskjYiYYAzFjO5qcC_O1pnN8ks1MvBqKLFcn_W8
+rTP7Wfin28PXu0FX-ryuXHHm4J-EqkQPrRJNaZP07m83zWN01mahGBya6eSTjcTARn9xYKzEakWT5WulfMiBD2MhGLEs6dfob4GpM2sPN-ZyIgjdDC7hmj-i
+-8M_MA6_KZ4QCM-1HiHRJ3FUMJIa9nTAVjjQD8Pjn9dcT5S1lSDE8abF8Wb7Rn8OQdYubQdY_K6lnEe_pw74EV67ZI1nAW64ou-59dYtQJmCMU7XrhAf6nEn
+YEmxQeNiyl934qbKM898ry5-wP7QgFXoWSABjvNGT6m_1da5XRn2XJQJ7H65R72xS6WzfgbieLqLwYUOAkGrytRtaVe9ggyxcgFEkZLZ1Gto0Ck_w3U5U3VK
+Ya4ggsDNkyrqPIMWNgPMravvCasH0FodYwagFwTShPYAwF9qCGwLoBEIif6LvLk4LnL0rrF5zx2UAu10rKfdi6myLY0YK8rEgM1KoKPKWfMApIiGoKg-SdtS
+diQ3F5RYMb5nlms-uY2rafset2OSKa0hgyjJRs5RuM4b65vM9BUL4TVd2hfziBzMLYXnPeRNGbwcO9q3lbT0Hn0LEiLGfl_MPm
 }
 
 AzureEntityColoring(AzureActiveDirectoryRolesAndAdministrators)
+!define AzureActiveDirectoryRolesAndAdministrators(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureActiveDirectoryRolesAndAdministrators, AzureActiveDirectoryRolesAndAdministrators)
 !define AzureActiveDirectoryRolesAndAdministrators(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureActiveDirectoryRolesAndAdministrators, AzureActiveDirectoryRolesAndAdministrators)
 !define AzureActiveDirectoryRolesAndAdministrators(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureActiveDirectoryRolesAndAdministrators, AzureActiveDirectoryRolesAndAdministrators)
+!procedure AzureActiveDirectoryRolesAndAdministrators($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureActiveDirectoryRolesAndAdministrators, $stereo=AzureActiveDirectoryRolesAndAdministrators, $tags, $link)
+ !endprocedure
+!procedure AzureActiveDirectoryRolesAndAdministrators($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureActiveDirectoryRolesAndAdministrators, $tags, $link, AzureActiveDirectoryRolesAndAdministrators)
+!endprocedure

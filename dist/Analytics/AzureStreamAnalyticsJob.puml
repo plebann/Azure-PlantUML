@@ -1,12 +1,19 @@
 sprite $AzureStreamAnalyticsJob [70x70/16z] {
-xPM94gCm34Cjomx__ySxD2q6KTPqzZvUxqoYIB6XzelvZ-U3i6yYSkBs3I0dtsQ6-U9R0qred-3dG6SppcxpS0sav-kH6Ls2qa5a4Pj6SzorocjwGTyFndLP
-YyYEQCfw4s-ytAFfZljMljrCqweDVJFd90XCTs3qLXHMqnM8pegIWNjDO3S1i5ECSI2i1nulw5i1nnxhy12UGWSPjXfdS9B9hsRPWc35NveyXK9dXD2nfnqV
-Ey9D8ET7QPnr89b4QAvsU1sbCENLZ9uozHmDJWP9tyrOFyS9EyjGwbG1VNxcKCxHlUgqWrR4UnNV9a4QXax6f5JuLWNFlJIS7t_sAhMcZ6WVeaaqPKW7y8f0
-BNCDv11IwYF5Zbn6kWcY4LXjL0gf29T9Mg5TD_SOsoIdT4SkBweV953WwMwT19i0ZktxGoGZrXbNLcfibQ4f7Ai8fnmlJgNAYCVquH9zAO-5vAb5bJy9p7-V
-b4CLaKBT2vMI1p-GDZd2HU5spyzDnxNTO8B7A1lXnwqpIAg4cgawawnQMomTi0wEfKNCN0HiSRi0O4bqZ0kDfQSt4n-gXBqbTtObcOogYCfKytfgLRn6I-HI
-XdMr5dKFoHAvbWderQ5x8rH48Qp0LQ_2Fc4qtN4FtmNw1dQ1le6iGD-0Lw1l8IUmNy5_lW
+rPJjakiW34CjowRl_yPtKjA8wuHXklpgsUyj72GWjH_dz_5y4xP5P0Us0V8aTWjrTWjrQD_WjP0g2UTgyHWyJE5oXAJJ1l8WKeGSi-skirp31NtyPyoFLKJE
+M6YOt-7pB6jMbUBhAFjXR4RiH17P2GTwEdYierIeIoSGgoYL3DW3Feco1W36BMkP-WfR0uyFzEi0MslwiXKUXLCKRO1BnvrUBPj8ipcuYk30FJeyImciWX0s
+u8hZRI3S2cJ_8SVTWzAfYFfiXsih2rrVmzHTPjr7WvD1qeSHnyzsm-uQbdDIGUy_SshHFDSv3T14F5ly6eHoOUXaT6JXemNdMe9AfJ_N5irHa7eFiMZKDQG3
+-5HWFMREzoMLMMZXo5TBjq9n18uOvLmLXAzEcgYthg_Hha7ESZlozQ7PI8unpdJ785W7S5o_loKPSOoOHT7_3WsjmdP8s7MSx8gE4U_XpQqZjpBE-cYI-YU1
+TojcsTGY4JLzGIq96y33DH5yLNWjdPV7wyCCAtWqnGZ_V-aCabLHm-YSIJg6v-Mr-81DqMujIPkYWclSPe1hHNqsAXgn4IQ-j8GzaaFSsap_dKkaqUNrhAVY
+-gyaKmtrj0gzXwGaSqtSduuo3L4b5M9oQh0_KTyv_uuFXJROB5JFtdPm5TeXEx1VvFVv1m
 }
 
 AzureEntityColoring(AzureStreamAnalyticsJob)
+!define AzureStreamAnalyticsJob(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureStreamAnalyticsJob, AzureStreamAnalyticsJob)
 !define AzureStreamAnalyticsJob(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureStreamAnalyticsJob, AzureStreamAnalyticsJob)
 !define AzureStreamAnalyticsJob(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureStreamAnalyticsJob, AzureStreamAnalyticsJob)
+!procedure AzureStreamAnalyticsJob($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureStreamAnalyticsJob, $stereo=AzureStreamAnalyticsJob, $tags, $link)
+ !endprocedure
+!procedure AzureStreamAnalyticsJob($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureStreamAnalyticsJob, $tags, $link, AzureStreamAnalyticsJob)
+!endprocedure

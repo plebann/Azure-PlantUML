@@ -1,12 +1,19 @@
 sprite $AzureResourceLinked [70x70/16z] {
-fTG7Zjim44RXdvoctF_2KSJDKWJ6U03yjjXgdpf5MPK9OwHgVeymmyXFzZt232FCCC8C8ymmqZ3V8immmWmZp33232DJ2c0OAKcpFZACf5TLwExPE3k64Mdu
-sc9zdWmZ_MZWjHb6zh6SLI6pTtSUpB08-_Y6CrBsUtjoD0i9sVTuLBgPPqeQsJ20-DHTbFtBrpR33uQHq5EcFVsVhdSE22kB0QHogZaZgvRfaNquiyBkiiP-
-TW-6aAgv5cHMsQVXmWbPPp4pCyRdbHoGwjw0punVRQuTh-TNNqYokG0pINdr-KOwncfPkZ_BJkHa_8A6D2u8aSl4U-8gioxAsU5SSNLbkDsvUoGZ_KqgjrTH
-Y6pcG3ooykuvfY2aPTAytbEMWBICMvsJ0KZBcEsJ2v_-54N8oTHMGgzc0N8oPYza_YHf5207uvRNqzf_hCaSCa8si-zHIlNSexhsP8VqJ9XvP8RxyRnCvOaW
-irl8Klnurv6fZ0XtZyYwjXA0R6ON6iVqK3O8CkUqBPGHdJVJfEcvYYbbX_3HJBsB_kum4tDeDQoE8s6c3n1W00464Cu0-OvXHCmmmWmZp33232FCCC8C8ymm
-mjcV9q2OsSYN32D_0G
+fTG7okjg38JX-TJ6sV-6hs_4ZoCGPm2_gMwFkw5oql0suvszHvfvZMX68vhHo7l6EVBNY6OqeXcDQ4OZCt-3Q4OZcj680IaOZN1SVGkZa0gIYJlUUMsCHe0J
+lKJ_JaOZ-uqJd8n6Ubjcf636wkR6UAQF5JGZa3cdzMQTPQ94EW275UvH1U3KmWWa37T9_x_ePKuCHYE9RrN-xM-OluL0fDA5G5Y6PO-S2xCXStECwNV5yrox
+Wr48QJsXglywbq8XlHTMLNambC48XC2C_sJYulOAFAdvUkArV1A0MmFk06gVxue7MJxXlFf2uKNwGCOdRaHqW7E9ub8vz9fqhEAb2kte0ZjJ6NuN4LaQ0JQ6
+uJy59V8m0uairjrtcr8XArDZzULU0bcPSCx15CZAk3yxbs7nBQcGoV1H4ZyP1J8Pzn_4h0DmA931X5V_wVLd3zQ12sGmvT7B0JTIxhp-1WKoc7IFhCg8SRqO
+QYAIUMgabHZtkcHOcHaHcSNhKN8WYkboFfzuK0kY6CvXnz58vzTO3XRLfG6r8PgnCIbtH3Df1ztnMX3Dx6b4CnhHZ4Oqen7DQ4Gp6j6CHZIZ4SreH3CQqVb0
+NZCQqOn6DFFHYCu_7uty1m
 }
 
 AzureEntityColoring(AzureResourceLinked)
+!define AzureResourceLinked(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureResourceLinked, AzureResourceLinked)
 !define AzureResourceLinked(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureResourceLinked, AzureResourceLinked)
 !define AzureResourceLinked(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureResourceLinked, AzureResourceLinked)
+!procedure AzureResourceLinked($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureResourceLinked, $stereo=AzureResourceLinked, $tags, $link)
+ !endprocedure
+!procedure AzureResourceLinked($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureResourceLinked, $tags, $link, AzureResourceLinked)
+!endprocedure

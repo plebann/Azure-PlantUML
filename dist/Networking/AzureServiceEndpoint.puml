@@ -8,5 +8,12 @@ xYde9c4D1P-z_7VAz0RJdye_O1my0bg8WNjlYv5w-rLhCQwvItu1
 }
 
 AzureEntityColoring(AzureServiceEndpoint)
+!define AzureServiceEndpoint(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureServiceEndpoint, AzureServiceEndpoint)
 !define AzureServiceEndpoint(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureServiceEndpoint, AzureServiceEndpoint)
 !define AzureServiceEndpoint(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureServiceEndpoint, AzureServiceEndpoint)
+!procedure AzureServiceEndpoint($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureServiceEndpoint, $stereo=AzureServiceEndpoint, $tags, $link)
+ !endprocedure
+!procedure AzureServiceEndpoint($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureServiceEndpoint, $tags, $link, AzureServiceEndpoint)
+!endprocedure

@@ -1,10 +1,17 @@
 sprite $AzureBatchAccount [70x70/16z] {
-xTA7SS0W341HWTLSzfytcEZ21HTCISyVu54a69L3gWdXD4Cw6Qhj0vL_XISuIUUwL0HTjp9B225BwkyIOfSfkiTOJZGcYSaLX79eYZ5T2fCnrACGU9QORrB8
-572l31yKmM81CGMSn5pxf0b261NC5SPocXHW2N6k89H3Kz9bNBF2iEUZuZiLYChKe51HKIn6yusYSqMPGhaYvKm12h6yHKaXACUceBpBHsNPUwBGiiU1ov0s
-1JX3sXJW3355V3bD2d12JAdA5CU6M5of81YJa93NAaJ0yeRypIQwpS6ZwBvfY8BVIE6GVw0ijwrRo0rHfaSAmcbQf_WXoZH4cVMqodzHEeih5V-DVfVzQLNA
-JLKA5Uxo_Nzt_DRXaDy57vBrgYqfnNYxwKSgRhv35Bv__xq
+xTG5SWGX48NX1zF2oltF6uQLhgN8eF7y1_Xmi2f7t1EXc24p3FVs0vIVgyY6Gk7KLr0bjq294R9qH55ncHBsXEffIAankKAeHwR4P4eHrbiyep2yQCfFAN0t
+Hf0hIjKuF1GuJRdnasR4A2cKAqBrWYaGZKck4EhHNR79k655iEUJuYSL96KRKBYg1Ah6fuhIMgvm_hzelOV2CT5dR0gZdjmLqfTyKivxBGgVzoHo6JAcG39a
+J85ao5rHNo-O0Z74bCPCSVA2G3eLmfCn14wx4CKzRyWVREF379hYuxOb2dqZHMA-GJaVThd6t19bQr88nKAVufSesnBb58frxalWKjAf-6-qk-ABTIZhRXtx
+Ok7dxkxyhQCbkmiVqyjxNKsf9jU3VgJYJaT8mFVllpS
 }
 
 AzureEntityColoring(AzureBatchAccount)
+!define AzureBatchAccount(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureBatchAccount, AzureBatchAccount)
 !define AzureBatchAccount(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureBatchAccount, AzureBatchAccount)
 !define AzureBatchAccount(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureBatchAccount, AzureBatchAccount)
+!procedure AzureBatchAccount($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureBatchAccount, $stereo=AzureBatchAccount, $tags, $link)
+ !endprocedure
+!procedure AzureBatchAccount($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureBatchAccount, $tags, $link, AzureBatchAccount)
+!endprocedure

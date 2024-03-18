@@ -1,10 +1,17 @@
 sprite $AzureLogStream [70x70/16z] {
-xT87aiCW30LGeMhV_yAxyCFWSPhONlYf27WHJEY7HhTzAi5q7TcdKwuGhhfmEhLpFIEb8fGEUhTpRGCoasibzdsZzoeM4MxfADzMV2xsNWNv96KfIrcAFyrI
-kAZVYCfp9QA7YKXZP9JBMFLCaJeiLqXRpra5TRrMK4ygfV-cilMQiAF7mxg7YlMHZMDf-mfVKefS-lR33aS9Er9Alrf1RT3zJ9PL69zQsx0sKKOpcb3yS23S
-20cQ4HH94efTchR3XQAC1YSKRKrmLnneNkaB-pOcV0Br2GNxK78kuj1cRZVuCYWu4cAeOIwZQ6i66ot63ix_wp2Bmql5XZncKeeIeOr2scjjp6WbfqJf5znB
--6hGiqgWyNCSvPo2zHpNOPIp2ivo7TF8AVaiPIbBuOzGolP-fI4xdvHjBj4GetSg-skKtgdKJeJEiNdb6g4IimhJ3yqB
+xT85UiCm30LWMPZS_y9h8hz1O9N7a5Sq_PNrbNveT9g74apxo3oSjaDuqONBMIhNBT8MX8f1xKQRJ43gsIinpnEzLx68SAs7ZnKVYts8ulz0kPHBkHJ_eGet
+zOEet5V2lR-OY1JZfnSJDNm_Ly9ZVSaoR84nNkj-nlXSoUIy1d8oVqTfouWZGjam9umQoKkAOMJBjJ9ArE1BIP5UjszEA7uWUbvLq5h176ZSoIeAkj8xwUQz
+MIX62ue_kr1sX2IBaRue1SLwqOQ6fcOeS43HjGY6ua2h2ZRY66UlE-e3IfxBAUScdjf8TuFxeEMLCfPpkLPHj1TZsUN02HxwrpdroqlU3B9ZfQ3aaIoZaK9U
+nunz5IKQ6eof_6hGQqfauTiufekA4t7imvYkARZBDgPHK-gvb4kv5Fu8fKtlLrPavdSgAsAqKQOOUyotAEsKmTmGeMriNDaZr69KOVgXUG
 }
 
 AzureEntityColoring(AzureLogStream)
+!define AzureLogStream(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureLogStream, AzureLogStream)
 !define AzureLogStream(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureLogStream, AzureLogStream)
 !define AzureLogStream(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureLogStream, AzureLogStream)
+!procedure AzureLogStream($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureLogStream, $stereo=AzureLogStream, $tags, $link)
+ !endprocedure
+!procedure AzureLogStream($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureLogStream, $tags, $link, AzureLogStream)
+!endprocedure

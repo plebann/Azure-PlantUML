@@ -5,5 +5,12 @@ xTG5SW0X38NX1n4WzxzltPYrfAJUVtJjMmFWYaHRDxFUL2hU5JMRKqAmehQN5WHwDJOElB6TD0YknCuJ
 }
 
 AzureEntityColoring(AzureLogAnalytics)
+!define AzureLogAnalytics(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureLogAnalytics, AzureLogAnalytics)
 !define AzureLogAnalytics(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureLogAnalytics, AzureLogAnalytics)
 !define AzureLogAnalytics(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureLogAnalytics, AzureLogAnalytics)
+!procedure AzureLogAnalytics($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureLogAnalytics, $stereo=AzureLogAnalytics, $tags, $link)
+ !endprocedure
+!procedure AzureLogAnalytics($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureLogAnalytics, $tags, $link, AzureLogAnalytics)
+!endprocedure

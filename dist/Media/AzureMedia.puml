@@ -1,13 +1,20 @@
 sprite $AzureMedia [70x70/16z] {
-dT69cGCX241Xy0BHwR_TDSiUuaXCyXVmFWuum11YGFXOA5pRzKiu1tXNulvm6QqcU1rIwshDY32-skX_BglBK5_fvAxyZ1Gu2E95L9DluPL1_4mNbS77RcGT
-HXWSoAr96qp66KQg4w5_BCr6x30ATZ8jP9lfyWVX9j66U9THRcJ5spSv9uxaAk9MfBYNjKf0J7OUcGIO5794V0YbcyDCNZXAmb-XxbUIVDed1vp4jgs8sMTt
-46CwZ-o6GVyWLg3DOQe_IiAzK6yLILevBcFFirPu_o1jk79lOY0CpZA-m6AaUwM6SoNARQLe8nB2eP5I4clv48j869xDaUwL160YMl4xet6lS06O8rfHpZAR
-2X60ZMX5RPRPLLWh9Y9XiZJs5HeLN28IZ7KPjOn269U81CiqDfLAGqXQ4LCnT1clGWz1PwcsOYN3LdYgi4oL-4QbabQG1Z6LRuUAYUYdgqoYCIBHhLIQA-9K
-b5kfD5VuiqebKv7FAlId06J-g5BfNm88OiKq72jC4mI0UgyelrB9WA68aPErgMGo2WnHZDxISx6G5G1kAxNhucUDJ2lubfRAK9A7RZAekbI6xZTM02hBx5BY
-7iHA0BjX-lM3d8DOy2Ul5TMplunzaBeVHhMa8ZaoJD0SPjAh7iHH46PbNKdrWGgv42pUhzGVMZqSPNiQ4r7LVRA5xaggLUUoRcQA64qgCsk32spXPfZk4l1K
-KUqSOV0LEuoVoV1CD1alKX4EIjET_4oBS8RyFyokaU4rI6v6JECaSkktI2E4TyN2xI_JX3Dy3ECGuEGB
+dT69cIKX24LXN46qyaztd4SlGadNyWTmlYl2bH1Z3F1QBDJwyOsfH7Wgq_ZlK7hBS5_0FeJDC5EusnW_3fqPFBKxdJ8M4Z4Phd0XievOdJ_YdI5-Ph0euADJ
+P3XZcFn8xzodDUEDuURzpI_YhYDwZ82TWWPlCuD_13Z9kC736IFSY4NRRt9EdD1LsQrmTI-hrHX2rdju4M5HqP72Vx4ETPZ5ZQFay2ss_PEuNBsdnB18tLJi
+cEeSH5dEmxinmJ-85d5pcEPFoM4ljbE5irGk7wFFOokq_o1fkCheh0IOdCVu8h6IpvKMhok9JqzAEi8nNZHopgoP7o9cZjDVE_AvaW5KH2f-vzEm5Qe0QqGg
+mddCfe88e2DI4Pl7x2ea5HNXk32DVGLd9PW8HyK-HfWf69A9SDHimrOQJZ5BXLL5qO-n5VnKP4lJ5Irdlq9BXNYff0ULXb89EB6gV5nKL4H-kl4YBJwxabjf
+k5POLIotqd2jqBjAGrNXTnNyKG4AlQeq_9K18cifJvSLmaK0W7Qk2B_IK86fibAojgaKL2fCYPNHyzzIHIq2d9xKZuF-QXIqu2ERobIp1qyAY6Ogq_0R5e0e
+l3e4kmVHCi1kp3Y-e7CG3NuKMn6Z-8_H7oJEXn4zYuIE0ejW3oF6CPewY5K3hAfzaXWJLdG5q6ZtfF79ZDxSerZx9trhtYVxcM6sE8CAR8JDcA5rRaGa3LAH
+NMQeBNiCdcRlErm4lgh7-5iA_2MPp5uBSA5sUPE_fIUu5kXtpAwHuIQKp6OB5tWWKJzlwHZWgLHcwIV0LE2raAO8L_u1
 }
 
 AzureEntityColoring(AzureMedia)
+!define AzureMedia(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureMedia, AzureMedia)
 !define AzureMedia(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureMedia, AzureMedia)
 !define AzureMedia(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureMedia, AzureMedia)
+!procedure AzureMedia($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureMedia, $stereo=AzureMedia, $tags, $link)
+ !endprocedure
+!procedure AzureMedia($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureMedia, $tags, $link, AzureMedia)
+!endprocedure

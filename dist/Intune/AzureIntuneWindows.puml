@@ -1,11 +1,18 @@
 sprite $AzureIntuneWindows [70x70/16z] {
-xT87RWGX341HNC3C_G-SOciafCKqRtf-whP7JOyXvo9lPQPq6XTfuYC3pIZlsN-qZsGLh1lAcmOLGzesfmFSCOoHmZ3zE02Hdeg3Q2KJ0NWOYcQ4WymFBJkV
-Tn0fZbByf9Ed-4HSaQYYH5JnaRgXY8kiA-8ZwufFQAwoW_ZA4h6i-CYw8cvrNPaOSqKcYrbK_6fKKIAkrAYYHbofRb8SPHsvhYgvgz06igvKjqiLxYgmF0zJ
-C7LRdOSc0dqbzn1X9u9UAM5l8WnxfLGwYw4z15DYHQ9AKYIiy5FcaifJ57oOJCbRyNrdeihZcgxhJ06H1ZbIcgrHuronupRZLeZq7UDkfMMkHa40p9bX79dI
-Cd6bPLGX07x_WyEuKHeciBiD4rVqmEDAWY8ILBGYKbKXEm3SszrsSm8dVOT5chaSALhMVI6sHO_ozaNZwEvgzC7AluA0-IsSnIE5x4enp29ViOzpMCc4Thjf
-7F-CCy8z1Ly1
+xT87hkGW381XtE7-1zvYb1LIS23nxEk_ojHyCgMSGnQrFmbJUHgh3V4Z0xkXV-ll7imZBlGEI6uQf1qPkpaEyDaunb66vUC0HDB_FSiy5IA024FxLqYi3qt2
+6QQ8QQ3ejk55Icpa5SigJcIL6AcnSWFPLomszfNOy49bRv1z9IIixYkBENOK2wlxoi9OAxPOpAOILxEA4tcbvfLgDQ_KCDD0sKTQgoPJXVO7QVjAZH5NUAh0
+5kA4ArYcxSxXcS5SaHbY74GmgnISJS8G5Z0wMGpTGx0KTYIh54VI2hzabg8lKV0qZCgj-BWpMUMyfjQUAJ0EqvufuzQqsXuhnt4xSIX4_e_h3cLasg0W08em
+N4TT6PcyCZAk4C3VUGaluq4PcSJk3anQyGFFAmNKBAbuQbPTeNu0U6ztnyr9dFGHgWspF58yyNqXdrRugcXVFCxkhaV_MVbH453-XAluIg5-fHXMKQpqnpcj
+266_tNGTVuupmdiA_WO
 }
 
 AzureEntityColoring(AzureIntuneWindows)
+!define AzureIntuneWindows(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureIntuneWindows, AzureIntuneWindows)
 !define AzureIntuneWindows(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureIntuneWindows, AzureIntuneWindows)
 !define AzureIntuneWindows(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureIntuneWindows, AzureIntuneWindows)
+!procedure AzureIntuneWindows($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureIntuneWindows, $stereo=AzureIntuneWindows, $tags, $link)
+ !endprocedure
+!procedure AzureIntuneWindows($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureIntuneWindows, $tags, $link, AzureIntuneWindows)
+!endprocedure

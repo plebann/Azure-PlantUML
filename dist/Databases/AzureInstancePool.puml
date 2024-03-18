@@ -1,12 +1,19 @@
 sprite $AzureInstancePool [70x70/16z] {
-xTS7cgqW38PXXIH_SexkVxjtGFFOed1xcs-gxLLWwl17bmMjX5f8ifvoGo7hINw7ygaaufBW8MqgWfuQoeWVeQIVeNmgYRYTj1JYdbeAToN_goBsZZBv6WNp
-z7xFKTAloFGY8fu2vUL8My4C-iWYnOMsOhCK1MTYUi7xzcSnND87HUQ9YUJq88eWlLTOFowQ6eWNARAcTWftQQZ4uJxjLl2K_b85-XYw5EZtAe2sQoZGhjAZ
-0ksBdXJjZGEbXU3oZA0KAnk2F9Q_HRBMf9u_ijOefUJFCqOApa-hfUnR2JwjmHnV7aNg9MbSpavrQtb_KPGk2dP7KCUrRcI_cYwAybdPFUQeNds4sbXtdnND
-HmMsLcxFjiJbXErJDYkAxTAZSlmhD2-RURi6LV4zMnmhjZmawV9fsYaKA7PGpBnrvfEQfGubnOexkMj4Hg5IGxa3wXdOJNIa89oNROwvlizMMbOwKYnKM5oH
-PT1avf_SAl2sfKl4LBxJrBySyl8TOAkIIsHhUgEiSNscqJT7TQMMRKqEYcuJMqgyhPT_7OPAFYWmJy42sm9l_yJf-QOs71LztLQPLvYS5DWzGtUC3JLqCNMb
-Kt0ykzB7n8TfS2LWUij3g41V_MaQFC8tEiZ3hfJFiK3LTkavi1D_N5y
+xTS5WgGm441HKbujzx_kJWg29YJhDhyDVOsDCFtHeMWleHu2FX9s5FAHv7SedmeGvqHliguYEb97IVeZ5FWPogUIYFj9Jo4UgQVmKFA_AkBFMYvVe-ZxzNo-
+Qycu8gy74V6heZmAqbVqhVIHrvGYz1L_IrRqJBnSIz--BQwNx4QHzuk9vBGXffMihR1zhFJg8r5D4Ow7c9_ILbPJ6cax6rRqBlkbYghTFeOKjVlwYghrwoXg
+Gq5R6KUCxXGRZIjA3z7BDYf1Iz6o2ARyvmujabW-iKK406LxKatHyzPQ3iiOQ3cibMDysH-9LI3DIqECpUyNnUYYw6wEnduj8rZMfejYV5Pscvci59iGfPXy
+LWoFYfhFZ_prl0npNc0UpeDi7ehl7aVb-5yesdhluNCQU9conNN5vuqacmTXfr15yOQo77amTnXGOAzuj7TmQ8-SgjiIQVu6ZILqst-fATfMuXXplAFdvZDT
+Kxogi1H5vfqczpBGL5IMnwfCG4mfhelbSa0eDwQXO8vyoK8fRSeInpPbBafMb0XzIGwARGSs1xm_Nt4TrXKyAEebKnRrBUNj9iukTrpJKR57is3gi-IagBSP
+QZ4-HJh4n9c6odmeoXXJdrqEjhQPVjYuTxN7U0PJYLI_pL6STW6Ue_x_30pJ7zeN
 }
 
 AzureEntityColoring(AzureInstancePool)
+!define AzureInstancePool(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureInstancePool, AzureInstancePool)
 !define AzureInstancePool(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureInstancePool, AzureInstancePool)
 !define AzureInstancePool(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureInstancePool, AzureInstancePool)
+!procedure AzureInstancePool($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureInstancePool, $stereo=AzureInstancePool, $tags, $link)
+ !endprocedure
+!procedure AzureInstancePool($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureInstancePool, $tags, $link, AzureInstancePool)
+!endprocedure

@@ -1,11 +1,18 @@
 sprite $AzureActiveDirectoryIdentityProtection [70x70/16z] {
-vTO7SlKm20HW2rXq_nF_nOrdhKSFuqmDKzA_x6XnMNxXo8yWiFT8Sq1VAt00yXfnl6RCDmNj1Q9-A2yOyL1Gh-TJiJeIIhLlX59dp4S5KgY754Shr7DLrazR
-wMH3sJ-l8Xx6GmQ3uZ5MGnn-6KrtJCfpHdskkAGwdYkzUqlMmqeWlVjNnLaPa0I3gTAFGROULlh7MAuULlfbD5CFAtqOITSJIkTfQGHnAIOPt0cXCEI9wnYa
-a0Jkc0HIIAA-bG1IYAA-XGLMU8Q-1IWeV9UmYcAyBi-LjlvTssFOzea-K-pezlnZZJXPfSML5mTBSUQAVcugulzJd8c2sB6rRzFnbO3ZtDVR4Ek7fKN7Ut5p
-9KxrG3PLnZX22jKRnd4nNU8qti5va7Px1IZ5uNev25y1Onogbu9aub2zExAhIouErxiY883YsBw3Xs8KPFBcSBk3Pxq8mvRPD72SiLwdKyt4YNgJxtQyW_lG
-qdmVfTBvjIuR9qh_Nc-YzEoBuMm7-SMx5eU2bE9GlQKuithJfLEzXMcWKosDol8Bvoy
+vPVPTeCm34IHvP7__ukxEX6CWof4tp8lNNEPm_MwlM7Qlq3GxqF40BrDWG5ejo66svXklnJ83OZQfDp1D7CAwdhsb5w7EANg6qwfOxen1QsYXoa6kQo7AMPs
+5IF6bFbz5MBEk8W1KSpJQn237Q9fnqIfODHYYhMKuvWoXab2JqmPNx4_AHPJniXW45B68yZhOShOfMVrC6KSeZazJ1cKbjRZbB56qX3uL4nYy8hWb1La4SG9
+J64I0iVW6EVKjpeWeZ1AsJ5EOwSXtmqeKDPLebSeVUF8TOhyV4vcZVxxZLwZz8VRvuVLwsGfuZFFNwpNIL5qFrBXpwSw8GM7TMIChdmaq93YUWK-_B29EvxY
+8eg_LMVyKXlNQKnPzTgCJwP37Ld7u7aHtvpuwRhKMVKwev_E0Ax3UjSYcJgiTsPCgYUiC_Lo4PnUXKYwF2cTYqGdXvTZyAaNpkXR57bHX_KQlTLS7TURFjln
+69oXGPE9BjAl7kku3cHVv4nlGdhsO1YFGJvur-fGaM8Tqbki4-dDItUzvGZehHQZRNl3V08
 }
 
 AzureEntityColoring(AzureActiveDirectoryIdentityProtection)
+!define AzureActiveDirectoryIdentityProtection(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureActiveDirectoryIdentityProtection, AzureActiveDirectoryIdentityProtection)
 !define AzureActiveDirectoryIdentityProtection(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureActiveDirectoryIdentityProtection, AzureActiveDirectoryIdentityProtection)
 !define AzureActiveDirectoryIdentityProtection(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureActiveDirectoryIdentityProtection, AzureActiveDirectoryIdentityProtection)
+!procedure AzureActiveDirectoryIdentityProtection($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureActiveDirectoryIdentityProtection, $stereo=AzureActiveDirectoryIdentityProtection, $tags, $link)
+ !endprocedure
+!procedure AzureActiveDirectoryIdentityProtection($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureActiveDirectoryIdentityProtection, $tags, $link, AzureActiveDirectoryIdentityProtection)
+!endprocedure

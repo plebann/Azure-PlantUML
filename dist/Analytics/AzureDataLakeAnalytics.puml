@@ -1,0 +1,18 @@
+sprite $AzureDataLakeAnalytics [70x70/16z] {
+rTPNWkCW48JXwa3G_G-yExaiqp02FEdJY-El1aVyUkhk9jWY_aQnmMczOtxBjaOXaxMTtUkeFKaXjpD5X-SfXe3cMKdGI9cMfv6yO6T19EtMblb3SSVAWgRY
+VxsIz24LTtr8nLqkLRA-wLJyKiNvYBYYLog25rfw5OygyIYIjoh2-zShYUlfLUppYd0zYxlBKL8PL41fz4cnCgWeA1uvlwwdZ2eWoJMYhsUe7Ubk50yVMLxl
+gwCAIEAAlQvdL36GiTAEaj-45G5vM35GE5C-Zn9MYW3Z_S_dKSAAurQkKGMaSUNqMKira1NahBISaKO2wR0Y062zCv2pqZcTrfWn8iEAC3AisAYI0KYzKF4N
+fOOKaB9RoNoZR5GCIFLIHVkL0dWTLkYjShI7mNWjl9_afNAqgkWnPBYbSILflL8XZIfIZhaAKhIYOwD2VxfYAnN57Lsfe57c8maDcOvKHFBE92JcPwd_5yem
+WM5IB6WwMADENCjU1-kuGO8jekQc-FN-0m
+}
+
+AzureEntityColoring(AzureDataLakeAnalytics)
+!define AzureDataLakeAnalytics(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDataLakeAnalytics, AzureDataLakeAnalytics)
+!define AzureDataLakeAnalytics(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDataLakeAnalytics, AzureDataLakeAnalytics)
+!define AzureDataLakeAnalytics(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDataLakeAnalytics, AzureDataLakeAnalytics)
+!procedure AzureDataLakeAnalytics($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDataLakeAnalytics, $stereo=AzureDataLakeAnalytics, $tags, $link)
+ !endprocedure
+!procedure AzureDataLakeAnalytics($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDataLakeAnalytics, $tags, $link, AzureDataLakeAnalytics)
+!endprocedure

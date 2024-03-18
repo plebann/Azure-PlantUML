@@ -1,11 +1,18 @@
 sprite $AzureDiskStorageClassic [70x70/16z] {
-xTPNegCm38LXoKtdwCx-rpjSqi1sC6Pw-TAUyYTKMUI__pI443yjdwhptqwv56kKd6Cu6IXsh0nJcWo07G9Gub4Z0-F8ofBqXKACAtZgTXARo765KAcL9ZAi
-aEbxHCXORqw_WWMnw4P8bGtq8d3_ykAEDi8iBqgYgIo9YhSLavVO-oiVJUMZYJZb9NGY1gywphhYRYfFsaPMe2y-V47YXVqAcqgh5o6t5RyMSVYkuZQeeAcu
-4rvLVFwlWDvKt34L8Tpt5Q6lC57n5MKZ-nrFHK2_Yx85Vm9m607z2RAZz1sW7_4TI4NXqugqiizXbCPq9yjRcNuAaXmAXSD4LXa8gHZujaJ2IZokw6P8Wtp6
-k0BixYYaoSuhiT_8rfZlP9kMfAB5BiYoL-oIQi8ExolMfxBHBt0FWstIVgHXZJ9VmNIbxS0wifuxpiTJismhB7P9vgu2kw9mNo7AbKXT8MqQznKXvpjSoOPn
-jjDP7KhW0oOI9BHPy9uhWHkncI4L308B1Ab5S9AfTEIf3fAyaJ3Rw8l6CUGW8x601wn97CxPNY06cQKQOleKmqBb5_dlAm
+xTRL0gGm38NXXDBcdCo-__DknwaCfQpBXrtnuoBott-wP27B2zNvjTUOaZLIZ64v64W6svE6ALqDWEq2aC9U8mBZo8sjdng965Vmqksih2AZ2g5IItLaN27N
+xn4XGtqu_Geo8kj6I9KDz29m__Bc3aDJYVAc99fAJbIyYT3aBVHsvT9KBat4AMzB9sBmgkEiA-wcygAFI0tqxE8PYJVsAwmYFRq8kQquilc8mukAs-48NX72
+guhFxmheTIN3N0NkPKNeDvY8-0rb8_e33qL0VmYo1Ny1i1i1_GLIK7e1w4Uy0AaeV5gILlGv35ARxqJvAD8FmIgxbZGC8QeCtBwm_5WYOIdiLpGdda2-Ohm1
+xA4ALGqxBeL-8rfZlXDjsYeLJNP2b5AoKwelxF2zOdqg6_q2InWSa_OZ3Mka-GgcAsq7rX7rs7NU_pTAsmgJdH9PL61d99OL8fs9r1NIfh6i23dVuOri66Sx
+dRz3MVY4YGG9RNvuZvN0ZI2bo0e6WGoBr08uoLGwubG7gtomOhRH5unZY8kCX0Jki2en-Cxs0c6HMQfBMA_2agdy8lzz1G
 }
 
 AzureEntityColoring(AzureDiskStorageClassic)
+!define AzureDiskStorageClassic(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDiskStorageClassic, AzureDiskStorageClassic)
 !define AzureDiskStorageClassic(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDiskStorageClassic, AzureDiskStorageClassic)
 !define AzureDiskStorageClassic(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDiskStorageClassic, AzureDiskStorageClassic)
+!procedure AzureDiskStorageClassic($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDiskStorageClassic, $stereo=AzureDiskStorageClassic, $tags, $link)
+ !endprocedure
+!procedure AzureDiskStorageClassic($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDiskStorageClassic, $tags, $link, AzureDiskStorageClassic)
+!endprocedure

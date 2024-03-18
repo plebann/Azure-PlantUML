@@ -1,10 +1,17 @@
 sprite $AzureWorkbook [70x70/16z] {
-xTO5OkGm38LXsOfjmRl_TNSBJYdGqQZSVWVu0qRwkheZmgNGra2KqKO387ovxW3J2mnWK4G75dgkEY0KmfjASK0fMnaYqjlbwdubgBr9fV_yIZVSCibK2YRF
-L1fMagWiMAN-2oPBLKfJLJDzbv7-grHc5f7ne1NQivnLT3FIJBlAIQLYyjSgzQJIiLAPbeEAF3f-5qbK7lzBgaA5cLL54fL9v8jMHjyrOfLZnvNQLTNTD5N1
-v18m3lTTJLJQcrHAyekcflSHJLGccRv4HMFUiwBPoho_k6Kg1PDdAWshJ8MJbSbpNpILrdititSTwQzVaNUgy1L_Lmv7sW9aPzRbAnshJALU_Ivjv_xYqKhr
-pVt5WeJO0HHwHgELkyX2prcGEk1CoOhjHKZ35Q-qmHRZNkWh-Wy
+xTO53a8n383XRftKxdzTtFT6A1i9zYT4oVTi1kzRKVEa5A2jcZU1fcncX8zNr0pX9jmW5JmLimJNnOrCu0eR9MmGXb6b4b79ZnUN5MTvYbA-NobYsuH6b627
+T4J9Tem6b6J7XjxB4P4X9MHc5k6NVEc_4X6HYEgf762fT4_XvaiZB1RkAB6P0Jqbtb6A7IE7qhyNgaIxNrSXElwd_rxeMEeeTAfL820YCz6OieteJPLQ5gi-
+fLzVYOMPLOM7bFDuSLIxwouFA7cA4gOy4MJU8poWD5_w3HJszSxAyVoYmexwusL4oNPiHC4f2kYC9uAGIoaYCk5BSxVtL-X52ZxnTcdAbwRUg5DnHDtpouWI
+dxwNl71-KQyIjJc_Y3C2t20Mu2hsAZiamPZ26qGHRX9lImYmMz48JIY-L0EyOsi
 }
 
 AzureEntityColoring(AzureWorkbook)
+!define AzureWorkbook(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureWorkbook, AzureWorkbook)
 !define AzureWorkbook(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureWorkbook, AzureWorkbook)
 !define AzureWorkbook(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureWorkbook, AzureWorkbook)
+!procedure AzureWorkbook($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureWorkbook, $stereo=AzureWorkbook, $tags, $link)
+ !endprocedure
+!procedure AzureWorkbook($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureWorkbook, $tags, $link, AzureWorkbook)
+!endprocedure

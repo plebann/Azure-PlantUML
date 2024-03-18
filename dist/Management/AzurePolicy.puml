@@ -1,12 +1,19 @@
 sprite $AzurePolicy [70x70/16z] {
-rPTPTkiW44Ifdl3R_uBV9EmA1w86z9NxdLntbGPQvUUWeUKf4hNMXnv4lGWfntWbWSD2Qe-V5J9W1uKqN9onzAoG0EVQgrd7tzROh5bYseFkr0o6SPGEeoUf
-nuO2vhyGvGA2GeRqcgJ59wKFVv8drw35ETTiNEIXKOgC5y4sxYo_BCQI6hvrboEY-v-FnO9NTudfB6ws-HPXBqwBksdPmpaABOjfHCqKpEGuiAZzHzgjstoP
-1Megu2JMA2IrM3IKerp8iaKyFbZJlj5LYqG7ZYo87ZzAv47OpMQx6a6O2PS4xvCYzDRYTK3RRQVozLNiTvRqL4CldrlgYCyFdFZUWZhXcyXFPh4bosl0vedy
-nkAZHSkqVznOTBI0LvgBHSZjlHkJKVgxhgYxPa_ZwrT7b8qdW4WdUU7m_O9AYM-_NuYz1z5oO25Gv_HhYNAGj7joafY7Itbmgd7XiTwYPGS-0T9PM6FE_6bi
-64vMwz8mRop5WiVKKiG_oChwWouHKSzZSSj4tov17elhB8OhFOkboNwFz_790cOUazlzljoZ70UR-_r2FSZt-pnMijzd7YGVFClr98MirMFFlgXfUVPrJmiB
-ES2Q9IiahyTOo3bYWVAp-0C
+rPTPTkiW44Ifdb3sl-0t2Rki1r43-ieznt_9TLTfe5r-3XfQdY9HQtteGTIJaBADLnBOBAHUyRr2EcoZa8QBCvRk5HBWN6irQ__T6eirImnxq9MQmJ2ESi7e
+IUgnkmBmKLSvWQ2GBhqcQV5EwTsVvCarQ77EDHeNUMYK8lr5i8Kxoq-BiQI6BztbYBZypzjYmQixnN0MDrjyYx0NfyNTjApX78MMoJIYPWfcScnOrFvnPeSq
+NsQ1cWeuYJKAIIqM3UKe9p9j4OytrhGlTDOYSG5R5iGLtqhaGTZDOhiQGPW9fmIlaoBqrkArGzjjf_BvAlOxItggWVBlBRN7nmTEV6z17V1Dv2Ups9JbE8x_
+FZPEv3SMFpgq3Fl7ZKKxIGMlD1UBaDjxDmQZNE-wekwQFOt7SNnzVA8iF054lZuviFb-GQN4bzyln5w3QDcm4AXp-hb4EKZQtJb9pCEbF3ZLkF3OrQ9bZQWd
+Sh6mnfpnqzWmxApMfM7Uc8e5Zw6bYB-HcVK7bqH4FO_5BHFNTWdoM5ndqLtfKInDzdkyZayMCFAOtExtvHxMerZSxoVgGRxVvx6I_Jxp8Fd1CrrFKiXSFVRi
+5pKjQI5vB6CXcrYpP8NazHWBsKSiK7uMlm4
 }
 
 AzureEntityColoring(AzurePolicy)
+!define AzurePolicy(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzurePolicy, AzurePolicy)
 !define AzurePolicy(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzurePolicy, AzurePolicy)
 !define AzurePolicy(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzurePolicy, AzurePolicy)
+!procedure AzurePolicy($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzurePolicy, $stereo=AzurePolicy, $tags, $link)
+ !endprocedure
+!procedure AzurePolicy($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzurePolicy, $tags, $link, AzurePolicy)
+!endprocedure

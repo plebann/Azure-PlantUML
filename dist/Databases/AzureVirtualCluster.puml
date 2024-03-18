@@ -1,11 +1,18 @@
 sprite $AzureVirtualCluster [70x70/16z] {
-vTK5SkGm441HsMuKtF-uozknCEeAPtxnm3E8mZVin6dd-ckyASJpGWZ8yyvWyQ9ZhLmVesZTM4cbAUjToQKj3PIK6RNKoPCICm5rNtTA5W1eBgXFIb80YAKg
--fMufQI4mFCdqY8epp-HzAyltjzkx5_-UAIrIZxPhFChCJSbyR-NM8IrrDqKBJmRezUVBuK18BrqxgO8WBvrfBqYfUHIbzPhEWz7Mfk4JPby_HhpvTChXCC0
-06bVmKNR2dqHXNmAvtw26hAjv4WK6mQHVGeLx9Saycie9BEcJwI8MgeYoxJDjnl5SYXr9E9M78ZrlCAoqL2Xc2pP2qovy5yfsV6biXc5MmV-gj3_-P9aEpug
-vU-iWp-AEEBsNWH0_Xx2dg1MfEJyzu7KanocL3k9g2ke54jzeIbqJzGLlugYOuNLbOmLKbVqAWfC55PFnqGXYVjXc2casuY6Nl4pPwVu6JN45F-xuH1cYYMw
-98Iki5OiPZx71MkbM67Pwokyw5KK2ji1Jhl28_OJ
+vTK5Tkmm341H9n4Qzh_SZq6DbLgdt7bbc1iof1_OZ6wp-RCj7H7xfPIG_UQqnpTDzyhoEOfUwokbcQgUbTfifQEKogZjcXnAhWJK-RDHgW20EQ0UIb40oErI
+ZYjvI2a5WVqhqYOeBr-Hr6RBvxkREpVVABr7ALzirCMLN4r5ulSbDs4xwawADlQUqTkFbyO0K5urTjU3OMmUwQCYhTbnL-xdTEq-QJK9xuhpvxSOBrzU8Um6
+04ZZ2juqhD0tKIYcS7qSe2iIK6ecoeP1v9X23H-d9FARAF8dbZ_Ph-uLATfjDhEu3TxTB6i1nKOYOIM011IMb-ihbCjMbh5WLnPSAsNVlbG6etHgmZyrsiPB
+bk5uEYlhg8D_YWHYUou28FytuKXmLQJL_-EkQ2IPTkMoaeY6Wekofx5mL-YSQ2X-4qNx2ciewIkaeUXD570KraYJev3ayJ1v2caUJPAZX9Z9KIACpiagyNl3
+AVdAckWzGKioYXSpp_sIoIYsDD2RAko_ZIliHsauGBSbFME_0G
 }
 
 AzureEntityColoring(AzureVirtualCluster)
+!define AzureVirtualCluster(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureVirtualCluster, AzureVirtualCluster)
 !define AzureVirtualCluster(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureVirtualCluster, AzureVirtualCluster)
 !define AzureVirtualCluster(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureVirtualCluster, AzureVirtualCluster)
+!procedure AzureVirtualCluster($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureVirtualCluster, $stereo=AzureVirtualCluster, $tags, $link)
+ !endprocedure
+!procedure AzureVirtualCluster($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureVirtualCluster, $tags, $link, AzureVirtualCluster)
+!endprocedure

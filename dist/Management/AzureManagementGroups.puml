@@ -1,11 +1,18 @@
 sprite $AzureManagementGroups [70x70/16z] {
-xPY7RXmn34J5Dhpa__ytHLYBXC2iURBJFQWtf9wwSDpnRqiWtKGUFn03G8y2m6gEuRkq0z6PQdK0pS4GBka-poLxdM9OuiGs93r5WT5czjT5W7tmczEJxgDt
-B56rbCob7JFmIV6B8sNoLCNXY-4NPNBqTW6aZi8zKvphqxnKntsZK9K5Ny8eH1qAUHATKiIJv9IYZoGzfN2cy2c5FYNHAMLeG7GSKpWe_9QTVdoUUZXEPqHm
-358pfG778GKEoiHdAIGc3CyckzjtczeKzUA6ycLgYn87t-ghAHtAD29Qs2qArOUUbqs_ZZ9MUbYRtQ5eVNKixDPE-yn669lTe-ZZuSMpPDEMBiMTX-GTpJQQ
-59sPS0ahxFQfc-stNbTxTRGeuaYj2fjVfP2QkxxCm2Gk-GlK72ht54xNrYw_id5BmVKZCYpP0NIxewI7HNnFSGeRFvqICugXRxOqPiGfnUBLb6GZqkzsUlqr
-b_WhncPhrzKmxPfoeB-Gya7X4mfl542VXoWGbAWcUgghYLntzHM5ZRzNbRKxSb3nHTrrKiFk9G-VKlIyAXytFLe4Ucjh_FQl5P1t-7AYuz_MLm
+xPW7ajim34M9zg7D_U-Reg483WUHOThf-Llz13xr0hM_EmAf5dBxJXW0QXO0bdiCtw8LYU9RB9lGKv0GUdHTpn5xR36CyEGsJ7dA0gC4Gckx2El2BwGMNPVU
+CK99FJ6dEDR0JujtZwJ5Pp8FTuTto-dHsmqW-LIupnRd_6WUoQVxOg6M13w2beGg5l8fj6iHdoAx5ZscwAw5PmllMkZhu8_hXtOjJJz6j6rRE2pyofu-Ffqv
+7BHf8JWQYPbIWsFJ0WVDncSj92OCdo6xspTCPOjwSePoXrgqIA-t_DIKciMl15fmmKBvGSy3qy-pj54UQC4LY-QdZWMkM9gVrGYmu9f5ZyEJovATMAeMTsxY
+7c36A5hqh8HBeC35ewwFN-OwngkZP177D2h1_D12QkvwhO59dEINr1mgznQUJblhFCEujQ1_Y0gRS0ZTxYpJXKLyBN4AZ1zkYJMAHL-m5DQ8fnABgwPq74Pw
+jAV7exd4enYRZRskXeupoqR-GCj_2-zOUB40-hn4WR14Dr5BtatCVLSzkEB-hYvh9RBHyKNVjTF3hYqFxrfqlojlDtEqc51yGy2llws0lE7DYRQ_Ery
 }
 
 AzureEntityColoring(AzureManagementGroups)
+!define AzureManagementGroups(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureManagementGroups, AzureManagementGroups)
 !define AzureManagementGroups(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureManagementGroups, AzureManagementGroups)
 !define AzureManagementGroups(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureManagementGroups, AzureManagementGroups)
+!procedure AzureManagementGroups($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureManagementGroups, $stereo=AzureManagementGroups, $tags, $link)
+ !endprocedure
+!procedure AzureManagementGroups($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureManagementGroups, $tags, $link, AzureManagementGroups)
+!endprocedure

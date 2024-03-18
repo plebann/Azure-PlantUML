@@ -1,10 +1,17 @@
 sprite $AzureVirtualMachineClassic [70x70/16z] {
-xT07SiGm241HX6WYzxzlXktkjd1wlilq9m7CzX-9PXC2FQDoYaBnuqm1rFWW4zsK0fdmfY1agdzJASIKLYf7c5AGxs6tKeYVKUbJAW-hAugPuVeml3vM24iA
-yLnqJ2d2S_b1HLM8HpK_hgWE25Bt3cNeY7ktyXYh-QPIbvGercpkwmfjAE6u_q6bjPPJGlW12bIPKHeVLA3mH160Oqg4Cb0CeKU9iHvA8u0k9QARmW099TOZ
-RWKoIbGP0R9AjAsuUqu9uNSgLh6_QZSbsJTJeAejrbwpnQJ0IlpsMeME9Wf-iNB-H0nzwIcA-Mi2VVaWWwxGXq5NuiC8EYe-gYLsczelcazJF4Im-NpAUo5k
-wt4UYGYsQvifRAVRmGVr3W
+xTLNOiCW381XJH3A_U_RakrjI-dkx_7uUG8mstzIQhOYK5yHlaJXVj9CDuKXarmLX4nqLGWoyTzKK5JI2ckFKWhfBGehAFf8CAQm3kCLnSnc5T9fDAkOBIgY
+SycyOWiA5ftB3ogr5j5HpGyhxmq8gUu1PUWKzx1oVwpc2QKxgchksmglADrntrBazocjjPpIXH-W09SPfUb11L0dIW4uflIe31GZY2ZziUvA4u2GqfEheW09
+fR-UueQGKNgi191LUjkADyyfNH3tjEBVJZ6cU6nN9TatKu2hPIi8A-dfEO90trhXboWAiUh9dxQeOlvSWLW-o20K-J08fJvC813wg9PujwdtI-RJAXqYr7o-
+gdiXRUl9tbKgpxJDAcnNjuCFwWq
 }
 
 AzureEntityColoring(AzureVirtualMachineClassic)
+!define AzureVirtualMachineClassic(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureVirtualMachineClassic, AzureVirtualMachineClassic)
 !define AzureVirtualMachineClassic(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureVirtualMachineClassic, AzureVirtualMachineClassic)
 !define AzureVirtualMachineClassic(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureVirtualMachineClassic, AzureVirtualMachineClassic)
+!procedure AzureVirtualMachineClassic($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureVirtualMachineClassic, $stereo=AzureVirtualMachineClassic, $tags, $link)
+ !endprocedure
+!procedure AzureVirtualMachineClassic($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureVirtualMachineClassic, $tags, $link, AzureVirtualMachineClassic)
+!endprocedure

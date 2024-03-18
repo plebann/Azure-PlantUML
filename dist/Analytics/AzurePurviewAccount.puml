@@ -1,11 +1,19 @@
 sprite $AzurePurviewAccount [70x70/16z] {
-xTD7SkKu48JXB0_EtF--BO8CmXIUNRNXjvR-o894_05kjnk9kNk4koaJlY6-ZS8Ods7RLWf_ql3y-wwCJr2aX14-fAaX-9HiCyM5Y5YO22-a1md2WTNYuYPu
-YCeSSLIa7XCdhEcZQyHZWR52_yq45rw412jbYZXwaZk61KkHaPNP_3WCW8T8GI8f4qD6wetHHJP6nl4i8o8qZL5KnA9eg2JKHOunPRw7xGSw_30ZkcjZsXIr
-7QEZgH9THCUNeND9bJwIKRJ8CGR3GNPIzCeYmtgfmuwAjIdfADcIq4Rgu5OHwoctCObsg6QkYlf0demHxM1NdbLeEIQWrXoPE5-NVS1r1-KFhlvqplZvb_QU
-OMUovtC4P1qvBwyvJGUnrLYAh3DGx2mkrpyp0oXJ96UKqFWOOJEJwM4Ooupr6OcTCQhpwS0vaZEC7brLjLsjv4ZEc611sxVv_w561kQzt27pGwiKPE8Z4-eQ
-wZvN32jiFZDL-T4IhPAkILSbkLBmcBvNuU6QZFqL0y2CvBCvWhUG-JECDx75GqPu6wd7WWlXCwms9PJm5HAnIeG8Vu3RxVOB
+xTE7hXiX48NXCnrltlzz4s25W75NItBtkyNzrmpouXzmkLn8rDqZt4sPy0tniWfZV8RjTa_m9ms_xOehunFaAM643sbg23ubPOye1Y9YOIAya9O9GiTgCRW9
+7g8qYACXzTWuFJ-Hl8ruPCwuXuxRSIn_We4z4i4zvLWvXliT0p9BaPL5YOWIPTmwOS5jfLb18cKNIqRQZZ55ReoCurb6H0W0JnL5GomA39GoXQP87wRi-x2P
+AIPS7cL4gtKOHQLMCIQQAZ55T3qPwfDqwI9PnHaPms1Po4wAMSaPi0vji5wnQPHzARabeTtOoNEbKyx333gXbXaLzOKy6KPqWgeygz3TOGAgPdR-zKoSfyk-
+Q1i9vGkklLldvN4krPUR6IgJciyHq9oHS_EMqxGGMulb242MCb1K5iFuCZE0iaLoHWaOV8smcSbsC8oKQUQCj8unclFem3cICumPZQfQrIefaZAfCqTQ1R-E
+_iFOgCzCi27phbMQWanyPK9JGzttYk4UDj-Pglmn4bDbR9EOFv0h1O_fUnLUjidONr40p4W-6qVm5Z9_Xl4cDe_w4v5l3UyZzRZ31HzYjIsXXA-GY5KgGeH_
+mELo-Gq
 }
 
 AzureEntityColoring(AzurePurviewAccount)
+!define AzurePurviewAccount(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzurePurviewAccount, AzurePurviewAccount)
 !define AzurePurviewAccount(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzurePurviewAccount, AzurePurviewAccount)
 !define AzurePurviewAccount(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzurePurviewAccount, AzurePurviewAccount)
+!procedure AzurePurviewAccount($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzurePurviewAccount, $stereo=AzurePurviewAccount, $tags, $link)
+ !endprocedure
+!procedure AzurePurviewAccount($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzurePurviewAccount, $tags, $link, AzurePurviewAccount)
+!endprocedure

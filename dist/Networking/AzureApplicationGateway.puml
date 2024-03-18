@@ -1,12 +1,19 @@
 sprite $AzureApplicationGateway [70x70/16z] {
-rT87hYud341X1Z0stl-28__a3ZeHKhXENZjgKymtjVn9TTNsVo1WiWYOF48cZv398tccAsffX4mQ8PD7p0nC0Z7rQ5gAMOYvZ-4h0_CznATO44Ea3p2to8Zr
-hXA4o1X3mTmXAkfH43hvKFU8oOWd2YICs5OmDuXERSzJkmnx6GDpWwYlMN6VNynKC1U8UVdKOlcGqPy-NU-OflzKgaUVPSFrYccws_SIrRXFLp0NY7ejaIv5
-OdCgc0j4NUjJdcQ-Kb7j0ym5ebDbkeaCj_utfQmT4JP4rbyNmukn0_ClIAdgaJvnDduOuGoPCx9-k2X6kuZqDONg6UbhIqeqFBBwj6ccUqxgaMdsLVziB-Iz
-csMzarAgVQKLoAkKzYAFcgf7qzexAoMKjmhaLKhTY8rIQYtTx6LgeR9laif6Geb2UPbN0QDGW6o531KzA1k10kQWjAEY1cLLgV35d1GvA59EIZjzQJ1Gf50X
-mhzkCr02WKA4ZDITKgcx1WJC8IW829XRXGZhzmeHrkyL8gpVAqHOlr20t39KY5mpL8ZSC5Hk43BuZP_oAJOxa6icXDq39CaGIJ94aWoH94CaoH19CXknNhwN
-xCi3oJ9v998imYIBC26IJO2a4o3fP7u2aaY0fEj0qZtbP_KN
+rT87pgGm343XDCTExd_WbSdeRGahZBBr_MK6S3xHqlzKLQt7I5E5EK5WJX2O4mJc13bXG4uOa1C6v9m1CRDx9ewOJcyOp7l4vknzhWpcFJA7c1DTf7MODqZt
+zLF52P7UkyB44HMTdXCwNbuKY4dtAtB43V-kC554XzQSIvDkC0OJHNIkMV7p-J13OOA8pNHLVNcNtd8RKsDCrH-LChrhMPyQOHmXpkMg-7cw0XD2T9RawLB4
+lmvzOa1GjEIKgysLYchh3mm83PKnJQHFQnzA2UO1qIwotZeVNenjp2EIYavFin_r5qQOWNb2rWld-MWJaRPFQRb7slhMajUdPoNNOQRCQIktJ3Nz_BJh-q8u
+csKnsL9XtXaGCxMhvbkILbbDTNh3AhEIKc4U1aINaWg8MK-fbDHCOOh_CS_P5AEbW9WhNZCpc1-NsCNehe2WmDme_ISA20hCZRAUtgvWet3kkyBJkr7aHf64
+iY4mA30e82WR0cCeC2WWA20x8wMGVg-KGdL3O6v3kQy2mBnHG08CIW212IiW8GObW52BAI111YM6m0GKa323iYC1XjSufol_sZOan5m2vGs9CW4amWIG21D0
+8am0YJ019CHaevRU9Qoi0IJ0720m1mZCCG83SiA0d30W9mp88JDij7HQ6o0dvVId-W8
 }
 
 AzureEntityColoring(AzureApplicationGateway)
+!define AzureApplicationGateway(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureApplicationGateway, AzureApplicationGateway)
 !define AzureApplicationGateway(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureApplicationGateway, AzureApplicationGateway)
 !define AzureApplicationGateway(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureApplicationGateway, AzureApplicationGateway)
+!procedure AzureApplicationGateway($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureApplicationGateway, $stereo=AzureApplicationGateway, $tags, $link)
+ !endprocedure
+!procedure AzureApplicationGateway($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureApplicationGateway, $tags, $link, AzureApplicationGateway)
+!endprocedure

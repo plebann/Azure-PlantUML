@@ -1,11 +1,18 @@
 sprite $AzureDatabaseMigrationService [70x70/16z] {
-xT87jfim48NXwIDb_mkE6I061ecM_loTzWh-pxK4T16BchkR2i9Dual6pnj1u2BsFOPmXNe3mNdcJNnjoTCrubq8Pw3t6PoH3a9l70sdZwJCcIbbYM6W9Vsn
-1rdJypbZtOJ4ZXJ96MYp4d8aPmWQo9kHd17O9wKToHc5NTgBv8USyUAId0aki44baHCNmEb5IopmFDR2zfdkzycJhEpoHQLSh-GCtwZaBsMrRQvuRM4OrGuz
-h1G8TAEIn_33YiD07bRguos1EkTIJ9aHOOJ4ebxQ1uCrCo5y8PehH3XWAwst8Vr3QIYml12CXbyuKbpsBqdhMZmh8yRH_2iXekLpoGV3yQ6M8RDP0wCyHMOw
-MLKylI_vZP4uHb4rymKpLU6Tan6Ob6yBhZZWJSLDXQPxMZvUOKQhYfaG1egBKX6E4LFSLnM17tHTCLDXJ8ZLNhoaAJdZ5iOpvSbqqBQjL8GbtLGsTwCXLmZM
-gAOjYuhaIbuIxEeMWpteLxPKWWPaAsUsL5U2hkCj3CSQMrBbRztosVBPyjdosK9mJ8ws69oX1riGJY7jR64uZsLt2nDSX4JCCc5cGcZw3W
+xT97bXin40DGL2Pz_mDx69ujSghJX9s-bg8WDDWunQBc4U6cX2_IUENotOn9yP14nWbFM1nWtETnI9ur-MuRZLE4EoZE-LT64LYivFaTIx8JhaLv9MYiB0Jd
+I6m_dyJuQOH6ANj86eDZNdO2v36C0nnfI1wZo6d9G_8OGygIa9D38VIqIVvVeTXm-KHlN80aBzh6Ey6WtkrdJfudg-Gb5VYlF4l9O-HXIlvGNilXHo_F28PI
+Znc6g4S27TTlfSmoyZ0bBwFVJAbFk-JuP9Tm4o72G2ngKOw7eVgPAzC7PiB0J8ru4gJvJHkt1D4FZ45KLNgKbFoIhAxwMHs41XsaVUVPBlimCd-KQp5R6mnR
+z6kAJKjAxEzByiPedr7DtEE5kvbAienYAdzUX54ZMqguZOiJNuvNOE8bnLsPEkuNPQhIIypmM58K_zYQucugz0ctVhwc522D2U_6fZBDeRrxIQc4F2PcIBVT
+bUzT62kkMvSbHPEKsMJZJxiuCXHdNVPT2kC0YPSRNMeDOvowtaLmBU_oDELwbz_gyjxblSjxb_SkZ6jwrSLnXrrq8Tp2Tj95S9zesaKO3n6pY4uYp8H3Vm4
 }
 
 AzureEntityColoring(AzureDatabaseMigrationService)
+!define AzureDatabaseMigrationService(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDatabaseMigrationService, AzureDatabaseMigrationService)
 !define AzureDatabaseMigrationService(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDatabaseMigrationService, AzureDatabaseMigrationService)
 !define AzureDatabaseMigrationService(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDatabaseMigrationService, AzureDatabaseMigrationService)
+!procedure AzureDatabaseMigrationService($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDatabaseMigrationService, $stereo=AzureDatabaseMigrationService, $tags, $link)
+ !endprocedure
+!procedure AzureDatabaseMigrationService($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDatabaseMigrationService, $tags, $link, AzureDatabaseMigrationService)
+!endprocedure

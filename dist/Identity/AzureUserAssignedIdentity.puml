@@ -1,0 +1,18 @@
+sprite $AzureUserAssignedIdentity [70x70/16z] {
+lTO7hY8n48JX2lRS_yOlbmcIbpOjxQz8-fo06MoZR16jwBywZhnI3qdg8KaTHAJUPtI_hM5Q21ZcBSJuos7UGRHxeeuypkMOaVUATOw4aKyP-I7cX8uOULkT
+eLE7SIdsa5HJjAkYC0ft5PPKLrHIjAkqlIx6_t16hEqByUzKKl2gYeBNlJuZL2hiR9z1jIQIcaXg8gc9f2QIcaXg8gcAr9c-CiQuLsIU8y_AkAvBvqYKXPmm
+Jb62X7bR2NBEH0ao2SrJ9agGYpHrE9ie2vdm4AumHtEvsnFGv5Lcd1wG8O0ULSQh1yIJy2WpNZqY5-6hpcoG7-MO2J99VoFVoWzeZp930Fv6G7vhKIv3L85P
+K_cUmS0Oz9qYZO6VPRv6bZBXyJWN3lEbSdS7nqnSTugowQKZOZuzfw2bAET6r9aSgtwKBL9d26-HEWDeYzGP2Wz8dS5Y9iOmZf0m-4bH1e9K2x8Oo5IGSa4M
+8ph8SM4IqKWz92b8ByxTh_WJ
+}
+
+AzureEntityColoring(AzureUserAssignedIdentity)
+!define AzureUserAssignedIdentity(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureUserAssignedIdentity, AzureUserAssignedIdentity)
+!define AzureUserAssignedIdentity(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureUserAssignedIdentity, AzureUserAssignedIdentity)
+!define AzureUserAssignedIdentity(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureUserAssignedIdentity, AzureUserAssignedIdentity)
+!procedure AzureUserAssignedIdentity($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureUserAssignedIdentity, $stereo=AzureUserAssignedIdentity, $tags, $link)
+ !endprocedure
+!procedure AzureUserAssignedIdentity($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureUserAssignedIdentity, $tags, $link, AzureUserAssignedIdentity)
+!endprocedure

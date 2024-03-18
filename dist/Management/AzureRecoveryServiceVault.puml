@@ -1,11 +1,18 @@
 sprite $AzureRecoveryServiceVault [70x70/16z] {
-xTPNekCm20LGG8Wo-z_lrDWUFLH9Fj_vI_7r5Qxmdcz8fHH2U4CHVH6cR8OsQgOGQK2P8b79X-HZM0SeCvC8zeaErJUgCEe5OG-AVSNFbmmRgAf5302l68Kb
-4kjYU68G5geD43mn17DYWN0XRF_0fqqOU_kH0cCSXn7fgo927rbB2SOffeCOjOQk_bHsgi0DYQYt9reV7uGNrdj4gCksvl-hLyRhQmO0D6_5wQF_OwOggkLV
-b_fi44CydiNqzskL1oE8Foba7eGonTrLMjLlnjuXCSKaCf_IC1SJEOy9NQJFPoo4Z1oaa4WcHg1HPSnyg8GgOpz6sk5YbHaVfJ3SY6N11Y4MZisC3jQ3OIdd
-Wt6wGaJIAOQ78Q8UYd0uINQesgLzKMGvKg27v525ZYeVY4494eigUaumlaGcr30MpK1eYMOGj3I5Fz955dF9fHJzo46o38xlAmaKtvqI8AYP1KLgXnI2H0n2
-b_g90WFLjnd14AdlKOGPgkOh9WNMa6OG3dtx1G
+xTP7WkGm28NX1qA0vlxtdTHEQenjoRNiRrVf5rJ6Ep-8IobCUA6eBLJuPMDH2UFO0fw9H0LZYjdxZ5Y2PzQ9y9nQghuOHSXMX6T8_JlPhnGymDKy4W1Bnd2B
+rKy9zWpXHlK4Oyymhga7AeMfluECJY9qTeuMv2Gq4Dao8XBiFMFa5JV2AVEEtTs9duo23J5pY2GPzGvX8ROzHMItqtexgcjZkLe0aBUUX0Yr_zpDJCqAuP-w
+Fo16MdmNy_-hJNT2qCEnl4VoOShMsDMsSMadD5PS8s-N3D-GguvdmYogunaFaSp0Hgmwar5qgkQyfKeO9VShqt14LQ-qh2BOiEWDJo8MNfihbkyJLycTHtYD
+g4vNd0OZQYqC8bXL7M2-wlyeYWufECCwgE94rGzaIAFnfOgDKuf_8YU4dQhD8FJKPZ1wDaK-CekYLpzIAVQH5ybdIFo_Ce7ZVwS92EhCGf7v84CqdY6SiZQY
+857ROyv8yTDnZ725gz_FeGNtYAyG1ltu0m
 }
 
 AzureEntityColoring(AzureRecoveryServiceVault)
+!define AzureRecoveryServiceVault(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureRecoveryServiceVault, AzureRecoveryServiceVault)
 !define AzureRecoveryServiceVault(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureRecoveryServiceVault, AzureRecoveryServiceVault)
 !define AzureRecoveryServiceVault(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureRecoveryServiceVault, AzureRecoveryServiceVault)
+!procedure AzureRecoveryServiceVault($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureRecoveryServiceVault, $stereo=AzureRecoveryServiceVault, $tags, $link)
+ !endprocedure
+!procedure AzureRecoveryServiceVault($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureRecoveryServiceVault, $tags, $link, AzureRecoveryServiceVault)
+!endprocedure

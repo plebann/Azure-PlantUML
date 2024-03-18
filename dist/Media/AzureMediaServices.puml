@@ -8,5 +8,12 @@ _Iy93cZpgwRwSNzXysrta25xN_jO5SN_vv559fJ5PGEBJdB-aL4LdHg__Hq6G0IRmQu_rIfMIl3zDOkH
 }
 
 AzureEntityColoring(AzureMediaServices)
+!define AzureMediaServices(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureMediaServices, AzureMediaServices)
 !define AzureMediaServices(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureMediaServices, AzureMediaServices)
 !define AzureMediaServices(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureMediaServices, AzureMediaServices)
+!procedure AzureMediaServices($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureMediaServices, $stereo=AzureMediaServices, $tags, $link)
+ !endprocedure
+!procedure AzureMediaServices($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureMediaServices, $tags, $link, AzureMediaServices)
+!endprocedure

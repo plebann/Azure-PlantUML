@@ -1,11 +1,18 @@
 sprite $AzureImageVersion [70x70/16z] {
-xT274fqW54LHkUTIzF__DnNVxE5144rFzbJRcYFRRvN5wsc4-B5I6YXbITdlAF-L4lrw6Yd9LxA14fSK_LXbgU-Y_5VyEoXkmVoUGkDpUgGerEpTyRd28TNn
-DOK6qmr51E1CbGG3Gv3vYWAZIGkAr3TCFbVEefbwS-JkwUoAqd7CVLM10-EEOX8Ev9x2ETLOLkYO-rF59FyEIZ0zLqAGcMufCBueS1OK65KnwKqnJPHgGAbp
-gCJ3fqgWKfrM0TDHO50nKwE0wIXXe5YZWA5IyxwYc1gbCbIOgF1tg821mg8r2esSIuxb84E5kK7H2oZxqUGT1UbK52i1WGoKdDwppueSnf2XqkOcmHWoKBf5
-6CCIb77vc21Nb393e3n1vagU8bIk8difEQSGWSoLdK8vtufR10AbNy46tAvAHQRAoyWrA42sD5DeK26oXV8DPOVHA40mQJYbv9xYGEOAXr11CwK0UQ00MLNO
-ek9BYcs3JDSBss_SHm
+xTE7qfuW48LXTyzIzFulEE4hPuYm8s3QNzuPkpxsxRzAmtZm43jcYewIfvHzHVbMSh3nu2dHPb972LCA_gnIcE71LMRwLkmtAAQYjgpGAE6M0dcbM5PCXRMt
+PICA3OO51TA6IGKglTIkbSWzLBmmeG1zGs53odDGxTuIp8pxk4eCiGn5wJXgfVS-qLTU5OLERHJbrR2Y00tOiiBBeJ6lq54Ioue2zXiKKTnNH5GLznJv6PJE
+d4A3YWADehXGQ51HnLa9XrqgKYbqJWePHv4I5OQJGgQhYAFeII5JAypw2a8yAsIerA5LU3jKo7WARujARQIKKyW7cLPXffK20ddV3qQcLHZU2iAB871cgAJO
+faM1UGQPli9C0Hf-vYWiL8PRh1I_T5mW8qg-HgZSGgYituwl-CYUSqfH0f4HPQ-5dAh_Y4Yjb1tQ8LVNa2BNlnGYL69AdO76h-j3KIfaYo-btziuLPI2CCbK
+sdOQZKAaBhgNabDFCIBN2Y-aKTYraedSKeWiAMnIiIb5DoV5UBBzn_q
 }
 
 AzureEntityColoring(AzureImageVersion)
+!define AzureImageVersion(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureImageVersion, AzureImageVersion)
 !define AzureImageVersion(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureImageVersion, AzureImageVersion)
 !define AzureImageVersion(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureImageVersion, AzureImageVersion)
+!procedure AzureImageVersion($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureImageVersion, $stereo=AzureImageVersion, $tags, $link)
+ !endprocedure
+!procedure AzureImageVersion($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureImageVersion, $tags, $link, AzureImageVersion)
+!endprocedure

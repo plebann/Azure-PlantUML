@@ -1,12 +1,19 @@
 sprite $AzureCloudServices [70x70/16z] {
-xTHdOkCu30NWXmxi_G-y4IMFQL99A4qltp-tPnHI-CtzGs8URzoLSGzhlB0RGUGnyQiv6gSCLtYymmchA3v0oo7vWTMOAIJSk_SSApn70aW-AJudEG50sQ6B
-Gr7BJ7jKQBRQamsja0aQCVhoAUCJsGbCbefX6yOwqCydev43Fx9524qCyIEoFD4-yNoCc8VuaUOPttTiQfx-ChKBPzwehLZuZQNsSwFL446JmKrwVnHujHB6
-XjEFbEnxDy8WyXGFjKINCWVfT8FtsDZN6yaRtJiIFtz8S0wwjtJ_N4KiaqxALXno4ED2vRaLof7F3mA3Pd1xqvbQueRKJO4-POo9ToyVdnnqpubjwTKXzBG2
-8wuP0r8Tsw-rQulBQhFG8ri4WDGi0HjJh3BsLgegMVC8pweKgJEAgASWW4kPsPC0pThbqFaeaVNWhN8FtfJsK-2XvX5dLzScZXJ3fdQXclK1crBwMgZMU7Rj
-6Lxcmb6BmgkZZnsLjAsiocdJ40kZriuwUV_iHgrAzEtXXTIgWFU5WLrRWEkLMWnIdJX6tCgiPJp_PNIzB3gxxAPHQ_hLUdqbD5bVHV4DOW87olzkIppvxH12
-H--515xHZN9ACI7BQncESwJciKZmw_dddt_-1m
+xTG5ckim30HWiKPx__ikE0N7RhwwUGp_CdGig4j_kFzOFV9JX0cT8vOxVYA88oVnQexbGqwlY3mGj8mpZ_5o218u-aXQanXaHFUxe1M1aH8fxeoUKqo8YD7X
+bQ5qp07ujKBtrPvyQ8LTgL7dsr-5da0dQR9KZFWmre4zdumb1a6Dg38rESIFsF70TYzn7R4CyKUbphKmuEQ1s4tjSBqpvxPYvKyEw-V6go5A3O8RHFzKa8MG
+xX_bbeA-T-Vd5wS_3iaDiakPWsowmRbztTQR4FvaMqSQkCjxZc3G_Sgslvkg0zmYz-perIJ7XUfzAunHp2y4JeQKziiGlbqajl3jKCP1J1vUFW5qOH5EH5mT
+ffvLqaXg9aHQ7T-kTLYBGxLPA5EZIjs_Tq3aOueNSckbgY26IpYge5gF66NT9HD96JC7cCXmFuouZe5GLz4gZ-HFKjPFGLhDnmHTNL-ofV3M1TKchTLroAUK
+lXQkDP5TUqwxkKZMeepgs7L7fMqhgp1jcjJJkRMp37hytCrQbRJxOKThLL3KdPA4jO2mLshn_Obv6N5hjfR9V6HslInwj0kth3NzQgE-4JMeRsBq7MAIBXXl
+TVODT1Tl9u6fOtKg96cFu_MSCfgmuxMCeCVOF7AHqk_dl__--m
 }
 
 AzureEntityColoring(AzureCloudServices)
+!define AzureCloudServices(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCloudServices, AzureCloudServices)
 !define AzureCloudServices(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCloudServices, AzureCloudServices)
 !define AzureCloudServices(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCloudServices, AzureCloudServices)
+!procedure AzureCloudServices($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCloudServices, $stereo=AzureCloudServices, $tags, $link)
+ !endprocedure
+!procedure AzureCloudServices($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCloudServices, $tags, $link, AzureCloudServices)
+!endprocedure

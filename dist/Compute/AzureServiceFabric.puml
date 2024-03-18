@@ -1,11 +1,18 @@
 sprite $AzureServiceFabric [70x70/16z] {
-rPPNOiGm24H3z_qld1wZnSe4AVtzf61c6MaDtFqdY9a-As6lV4P8xKItHSm7RBSIls6l6lO2xwZuXLzJOK_sBObVaDzIuRYmSqbnOKD4uuAjQf371EUzGYgw
-LqZ52QUUpKWo9IQ_Iab8MEq9VV9jURCfoCFDMqbuXJIR4VljZH2hldwevI4F2NIsHH_8mfDgrGUCigKDW4CaJv7I1DKBw4Br54bqsW7W2yDN5UVfkxlQlIHF
-fTljvmc-NKloPIfHmIhp15ryR-S94XN1AlE4rSOuJ-3L7ZrFi8LJ0Gc2BmZBIDReQ-F2t-ddBEPn7BtHHH5Fpxh9v67f3Xr1NmYg1uCD4OxsPg_ZIdN3q8Ob
-GoLZIzWGjeGVmfRwXlOjnJEDQWdi1EeVkgOoDmjYBpWibmmjbAHs8jr5MQi8Z2PurJOKJTGBC6huP1FJ0QzeSsMFaUOuru0q1x6jgj3tgMWiqfo_etE6qOIY
-eZ1gpPM2SBIttyXADE5ZnA1ZG-qbHMGInPKa-ghXr8W2I5GOTCoC_b4U
+rPQ7baCX24INQlx_XxTw7hRCAjbwJqaXp6CqWa__2MAcHoMiyeYGseMcHSmRB5k9T-IgOH_WZ8fF_9eAUv2t93uXlwN2PIApIMKY8Q9bmauroCi2vqmXCvef
+PCO9frxDI2AbBDxAa12msXlwvjjYPqEGcvst8Q526is8lTyHOjNwK8j5RXBeQelU48K7erLlC8gMrW0MaMhGvoQeFe0sL2-HG9ST01uOdbMSbsVtj7j9hCfk
+jrydUBgMuCjKoWXMMIVeuRbT9qWP4QooJl0ZG_SI-BH7hnFiO5L0Wc0_M4QYHZyR5twddxEObrkuX51LCE4vABj3HweLy0ZVDKIfQ52V1YlLXA649OkIqvR2
+KCeI_X6sX0tbBPLtDgebS2TG_zGrjNDpHkm3X-MIeGibgLtmxaLPHn4O3V1Lsr0qK1-0KSCh6vWs-8XkNjbBo-OurmBP7CHsgaBVfwBbaCtvspfd60seZ2YC
+skQLWb3KuGm8v2GQyAt5e6D3xIL4P175bGHQDV2VeKO192eCEcP4_oWl
 }
 
 AzureEntityColoring(AzureServiceFabric)
+!define AzureServiceFabric(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureServiceFabric, AzureServiceFabric)
 !define AzureServiceFabric(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureServiceFabric, AzureServiceFabric)
 !define AzureServiceFabric(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureServiceFabric, AzureServiceFabric)
+!procedure AzureServiceFabric($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureServiceFabric, $stereo=AzureServiceFabric, $tags, $link)
+ !endprocedure
+!procedure AzureServiceFabric($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureServiceFabric, $tags, $link, AzureServiceFabric)
+!endprocedure

@@ -1,0 +1,16 @@
+sprite $AzureCommand [70x70/16z] {
+xPStkWCX60F96NJ_qxveLOPAhlPZEgTPGFfjhzboAHy1ZsGEWKbBCW99ibpBjQHUhMpn0APNBG40Lb9tDF5B5YssuPTcnOmgVXbUil395SM-1F1mfDRvnSEH
+kcid3qUnCAeL9GkZGj8iVArQoSAeXfCiZ6e5oSAeu2KBemgYfU8Nf-reS1G4Yv_uPLefQKwJtZeKgRj5dm260ozC8yEPpWYMLpX3-fPYEDgtDvyIB0md6i7o
+2cTverZQjlI-zJUQFLhSllGJ6_hHOlUbnuvntb7TXjEmeHmiPr9v8zr_geBbMlIxpqSoFeBPSla6
+}
+
+AzureEntityColoring(AzureCommand)
+!define AzureCommand(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCommand, AzureCommand)
+!define AzureCommand(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCommand, AzureCommand)
+!define AzureCommand(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCommand, AzureCommand)
+!procedure AzureCommand($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCommand, $stereo=AzureCommand, $tags, $link)
+ !endprocedure
+!procedure AzureCommand($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCommand, $tags, $link, AzureCommand)
+!endprocedure

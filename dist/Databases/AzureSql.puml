@@ -1,12 +1,19 @@
 sprite $AzureSql [70x70/16z] {
-xTFPmgCm28RX3q82UFyNF6gmLdyPq-LabkUaQzw6QF55__r7n0l2-rZghj1dYHRgonsIG-2zJja2Punnqb85esfBgSfd4GtblN7qX76Fyi06z_P0Id2dxEjp
-X1jD1zIxhUYGcx-E3Z2pWWJ9I41jbOrKnvO7nPKo70ZZ4LDBqLZ4Vg_SH6nGEuOe6U6UO1VBty88OaTQ202LU2LCnA8n1O1cJrpGwMbSGdVSivmgRjx9rLPq
-YJ0JyBWIj7RBenA1JRdOofAkwrpnWZN6ht7BgfyGG1VtWMtm-7pzfljbHRU1pdlfwlhS5-lJfE8SAtQjtuQFoxZ_7ZYhADhrhItMpuqyO9PLdDLEN0WpDdS6
--BcYMKKEWSugzVsNuqJvNff6u60TgxhiQnhoSvbScryn0kgwfiJaLzTeygdpwaUrPvTANolRRKuUbIsmytAkWAMrFf4RPYo5C6jHuRAmvuhHZqhWcAphaKcn
-qUUAdW-hnRfYlfB-Mlfl9nM1-4chC_FDrF_8SG0Qx70k19XVsmzmoSYKSm0b3spgal6q8fZfONdwFSuoZWLjYPpRBFj2sIxgz055a0yY1doUSOHFXZ8SrNSY
-5J-qLnlAk5AQZyyYX1pn2C9VuR__VW4
+xTQ5ikCm38NX8rcs9B__0syD0VT6nHrO-2v3_iGqK_n6__r7n0tXSonv9uc-IvHSEdcxGp82g_nU9ns15UDrKa89hyebf9g-Y-YKFXkEtc4yHt5WW-UEG4Zm
+J5gk3n2UAFg2ZCTON_BawEWBJ8qH87abC6LSoq_lVwQuaZHcLrwFM7iBq6iHUom5aU3-eRo6w4YyITRTQcgVOKnYAqq4WDByIPY8HQqh08gTk61GMnJ2i3wp
+t5NSV92hHz4MOIPWNmdgtNHKV94k7gMbSn_N_85r3Z_FBQj-Xm2ws0UsmVxt_f_kbnLT1hGyotRayfY1_crGSKQsLHdRS5_6utxWgA8errjRRCmR-OIRgEAi
+TYyJRjZS6U1pHQEAs8aFeyFkQHrH_2n5Ps3HXvLTZclAWtcfLOlv1ICWzskITtorHjNhuDbNkNZJA_rQsROv-QbI5vxkAs0fPOp83JSyNukLMU7KM3qn_AXC
+F4UsANq2iD5web1V54ANp3iPFulL9gW8nE-KV6E-gUCWryvrCgyd19XVgrwdbf4QSm0f3cnootYD26vqkToZ_-CeusXeIyJSRg9_IEZOwnSKazJF6V1znZ5z
+CoZ5AjSFPFnGwfkKSIKLhwyo8SI8Nq7uA_pttoy
 }
 
 AzureEntityColoring(AzureSql)
+!define AzureSql(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureSql, AzureSql)
 !define AzureSql(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureSql, AzureSql)
 !define AzureSql(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureSql, AzureSql)
+!procedure AzureSql($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureSql, $stereo=AzureSql, $tags, $link)
+ !endprocedure
+!procedure AzureSql($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureSql, $tags, $link, AzureSql)
+!endprocedure

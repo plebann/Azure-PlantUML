@@ -5,5 +5,12 @@ CoM5JC8NP5XLfPjXFLGobkcck3NPh84gcNw5hBT7MJwwxKpU4aOeT2XPrW2gcz8_h57TcjokZ8gZRdt7
 }
 
 AzureEntityColoring(AzureEventGrid)
+!define AzureEventGrid(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureEventGrid, AzureEventGrid)
 !define AzureEventGrid(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureEventGrid, AzureEventGrid)
 !define AzureEventGrid(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureEventGrid, AzureEventGrid)
+!procedure AzureEventGrid($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureEventGrid, $stereo=AzureEventGrid, $tags, $link)
+ !endprocedure
+!procedure AzureEventGrid($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureEventGrid, $tags, $link, AzureEventGrid)
+!endprocedure

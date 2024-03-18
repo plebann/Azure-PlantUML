@@ -1,11 +1,18 @@
 sprite $AzureConditionalAccess [70x70/16z] {
-xTS7ZYGX38LXWZ6sxt_V3SXYPV5ANNWKDlqA4_iJeGEKFwNEOYlXdYGgMuXh0d73z4V-xRWrclu4PEvaJUnkECD-v4PmwBr1OcOwZ_GdtT_DPLWOo34SfLeU
-wqHZYjfAvqFxxpoejsC4veL5HOdQh-gvdAeg0WGWYU__E9Hvcm15vtNwMc4UW_bh2fF7Nr06xKPQSSHBAkoZS8npYZzsUobbEBAPaL7M0mEPLS8Q9HH_N33v
-XIAnfSXkAHB3od_5JiMYCVpPx_cFVALmwxXvfpJa4F6jqW12jsDn9nYV509AP0Wf59MEbHQCK-bHQKXPEOALMc9cYfMs3AIeMIanULReKPdWt8CL2asuHRiQ
-fiHX85XHNvQG88Kyh4Wv8ZFTCHh8KdItzpcaGGa3mOe290o6mq2W0i-RSJ0S4AIOQO5rsupmWB64LO69Coyoc-MXzbhnuoLkl6BYVF9p-d0zgMhs1f4IGcVm
-puYM3_N0OCHQoJ0OoJC64SmyXn7CP12yKpXjTrTOqFKbjYf4ocrYHpDtkOzHoTI3eRNagX9casw4sQHhiWPIonVhghtyINq7
+vTS7hYCn281X5uo1-zztYuMS8CZ89YfR_jVBV8BqANzB7KbMX3r9L1GJrWIYXZ0pwxVZrcZy6w2vexNOtJXZ7JDNne5p0qX4UBhuDztFTXbY1d7ZC3pirG76
+99OLpm_jl-E0tjm4yeffFaGihwg_E9cPo0cXH7hz3wVCwmA5xnK-LX37GFnEGT3m2sN0RgGLHRIaWZg5OfXJzDZjOKOPUkHcHaPP1neogvZBAA7eSSR40uMc
+ULlA_aaLyn-nOb9bjnIo_OSA3htrQ_eZNYdOUjoajyGhOfKMEG1ugtW6xXNdmE-UDu90iGn42bYbnqepXbUwLPfND4LYfHQR2CTAKyChB5AAZJuhy56PmUkU
+M07JT5UHgPgLq0mIAwmNYuaY1U19eU824QRrngnA1w-ilw__MjUpYuLtQ0Onoawu1878kzBXMJ4tt7WOD4YaY709wx8PmX66z59wYIDb3X9pYpErOqLVNiQD
+8yRkaz_9tFPzbKLE42gFDNba_9KSrmqJ8z9Abh58WaaWYtb8aGIJGFIQYkDsTmhhIfp4LWwHSXk9Q-PExcrGCdLZS2svAfbjqWspJRf6Qv1Qlgmpz_8tzHC
 }
 
 AzureEntityColoring(AzureConditionalAccess)
+!define AzureConditionalAccess(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureConditionalAccess, AzureConditionalAccess)
 !define AzureConditionalAccess(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureConditionalAccess, AzureConditionalAccess)
 !define AzureConditionalAccess(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureConditionalAccess, AzureConditionalAccess)
+!procedure AzureConditionalAccess($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureConditionalAccess, $stereo=AzureConditionalAccess, $tags, $link)
+ !endprocedure
+!procedure AzureConditionalAccess($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureConditionalAccess, $tags, $link, AzureConditionalAccess)
+!endprocedure

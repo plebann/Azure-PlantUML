@@ -1,12 +1,19 @@
 sprite $AzureStackOffer [70x70/16z] {
-rTI7Rgum38PXPn3RIU__UWycgaME5Rv_QFNjqEI1JFgpfLavo_H-jV7_rVSHjX23aU-PnZ4HPZw-GdJyd7NXzZaYPbX3fNsAyBY4w_-EmKYtfqlARPoMR1Y4
-o8amMSKuPm0IbK4pjHbs1Y1XG9rc1iePH6AwKH3IqghuYFe9ke8G8cVaRFpERfspA_mQuenOQWyVfV9SQP664Kva5KViOtuREXM469FjTngplY1oGCIJUzh7
-pnXTPXKWBI8nhG2XV2DQPecfQeQhKnov5ZmYfY0aEIAS0gEpZ16vScP5Pj58XipoVFNAb8XeHFXMTSIPj1gpHqGUqbkyGrf6I5GYOkFVLrQbR14gl4KI9NaH
-sHes06C0mkK1qRF3tW8G6tTvC5IkpGSGk3AI4I8CYAiAa4O58729vmLQdmokho7bmR15BXk43YEie4I4yWP95-BCyO1ibtYTYKOb45uz4TqWw-jvXrWb81i6
-hQuZc3bAC5W20fZZMgaLeHGGmB0j-8hiJZ5cLYJfh3k2cEknweWugjqHnCotPr6l10GnEXEzrwRX269qMtS4C-lIP6qD891XeaJKVWtD5CCCarNC00XWTWYk
-tPcY7I6OaOuHp604CnqYcEaOmSptY35V8yvW13EEVCjW15UFH7-mVm
+rTJRTfuW443X0PGPjE__l6Lq9NiP2bJ-g-mSxlmuglpUmbMgHNdVblLdstj42MOTMMUojfdLV_j7I3d_r0xJl8wO6zvPBAyYUbx2zH_cBNBuqod4V5RBO5uX
+LX4LBpa7CqPQvPIxuZiCCqJQ1Hrovw3LtYDQNYaWEJmKLdHK46M2YC2esVcrkzkzkwR_XtmpvXL_U4-RNYTTotD4WtZf6xacm-L56I3EnFgBKJj0l7s2a1jK
+ZhE-0eVTRHC4pBgLiaqGYH2Me_uJAN5wEWd4JwerKFf8O34QO31GXeXvC0rIQut0XaQ6XaajKbf4bROl12PWq12nuV6Izf0SAp8o1We8woTAJoPr4KdQHO84
+c37IDNm1C5r4KnyftkwZJ11Vzn2nw_ADaVd9M1mYOwNGDaOiZtQ4HiZz0Tr6Y6uJn6uaTGb7H587aTqDb24YiOC4zZIxsHWWxH4J7m1s5uEsYfGEyXnUMuJI
+086P7o_8dDbJGwWD4HWGaVGJaT0YOqQbCa-aUOjVCI1XZi3m8UAk6-XnW4oOQ_HeXOrea1bJxZ2yV1iW4wPqEq2cpFDeOidv9GB3qGIH_6MKA3HdKBpaXYDL
+N6CQP959Re2yACFO0RBEB2Cm856MoX0W2yn72Cod20p8EWFo8GEoNjg3_CB-0W
 }
 
 AzureEntityColoring(AzureStackOffer)
+!define AzureStackOffer(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureStackOffer, AzureStackOffer)
 !define AzureStackOffer(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureStackOffer, AzureStackOffer)
 !define AzureStackOffer(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureStackOffer, AzureStackOffer)
+!procedure AzureStackOffer($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureStackOffer, $stereo=AzureStackOffer, $tags, $link)
+ !endprocedure
+!procedure AzureStackOffer($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureStackOffer, $tags, $link, AzureStackOffer)
+!endprocedure

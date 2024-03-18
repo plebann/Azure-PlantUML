@@ -5,5 +5,12 @@ Zkf-gySJT2NmBfMbeWo9v1RByW2BnHS
 }
 
 AzureEntityColoring(AzureIPGroups)
+!define AzureIPGroups(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureIPGroups, AzureIPGroups)
 !define AzureIPGroups(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureIPGroups, AzureIPGroups)
 !define AzureIPGroups(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureIPGroups, AzureIPGroups)
+!procedure AzureIPGroups($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureIPGroups, $stereo=AzureIPGroups, $tags, $link)
+ !endprocedure
+!procedure AzureIPGroups($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureIPGroups, $tags, $link, AzureIPGroups)
+!endprocedure

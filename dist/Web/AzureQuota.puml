@@ -1,13 +1,20 @@
 sprite $AzureQuota [70x70/16z] {
-fPVHSkiW34IHa6JGvF-_zzO9OzorXDtSqxPFxHdj0iGk2uYhYAgPYbIcyWrL3H3-eu8535-8M2sdVkT0fVAzWzGcUkOFdfeeG2HBYO0Y5Idb4aN7OXvAAm77
-sfEK0v9RJ_rEWXfQIhxNI2x9DGeIJYNoGwB1VKEnH9YEMq923MCUbE0-fnfez98dS02YPt2vzI8HAX4a5yrY52aPaWuZQAabHv9X22Mole1Ed8QfQmd2OD6u
-s_dt76egHA9p82p5_8UX97Vdg9fZvt4yIdEVcdRu8DDn32GSfRflnDrzdrVSMpa1aO9QndRRtl-lxWnvi9bHJ1heCv52dY0INygj9ykOfRfts3EuOx1SdYia
-RnSLoBDpPw4orxPrTolR_WiGMAJCKiHtjf47gB1xSV__lWMuVFAGRYQfnQO5Pvdzs9YhfRCuqA57TlV2HqTnBzh0ydhzjdJtklVxYPQrUxKmvDbA-OGnTqfM
-UhjOAkOvMJZPTUgeiJ9fUvwHPG-Nd2D6ItlvbEW-nCZ5-w-u5YC1IpyLmpwQ8Fz0yM6qGewyjbCU6JsqVKoQe-01Q1Xf38DmSABdnQ3NONfP8s0PuR4PkvVW
-jTi3ZPIS6Zvyc5zOQMhySSyUQUonf1uB6eJgl7xmmCSWzb3psZWT15j9cl7cFnwtEarKrq-Pv9vuTdYyGTu-yPh7dhUeQqZmXkCflVj2edYxvjn99k8v2mbY
-dhAI89jdB2L8UsYvUV_SdbWMx-RhRb21Rx28v1QRYcoGzRunGAZSOJSMhUK9P0kBSdaAjT0oN_yUmjPzKYip4vKlO3acAly7grfhJop_
+fPS7ikCm34F5QfcJ-vztlnDDvC0KKnQ_bxm1ODLMY5XKpTnDLPZQBn9paFAN25OW_01YyxNaDmOYxGC_P3vbPtt14KJa82qX2eWbo6WDCMGKVgYe11WLPr5E
+0YavyXi4CLH2ViTe3gan1X1UGlHF2moE6yeXolHS9JJ5CEP128vpaWHZbpm90_Jg1n-tNI1ABHFf1LDOqRQIBiqeKgIjfGipX12j5w2JJcQaXg0OA9PtE_-V
+Kun093e7mb8y_ZIG516SLVCSUPnRwH4JqvyyoFIS1ffQaOYDU8yu_6f4RoT1fAIMCTos--ijWY4FDZEAMGPwE3B8aqJYIxboeWml4h73cC4HW-NoV49wPr63
+F8VUKQZDPzlt23yQyWPIU4WhIjCuj8qy887HY-F_THNWziX3jhakAJufw6NsuyDNNte9q0uzSaGqVdQKzs8TABVRAsMFaAFVHxHLkrSAGvxjU7r_V4-B9xrT
+A89vJXHUZ3eBn7YRwaUUaUK8jvX7Z9H-YmcnmyJ8nSUdl1OdnMTqAePZD47n4EMJqHi5whQTykZeeHysQLh12T0nqZ23ucH6puN1hcRsLak1Ci9ZC_uLHCVe
+l62qW4Xw-F2ugC98ljrpP1Z_62BdZGT3xLmVFF0On95YRXkNHl18vWccnnydN2Q9f3vbKiI2SuZ73VBjYTSZvzn1kwLARZYnrBv70O4TCmhLaBEqfjGGg2PN
+1K7rWb90FiOWexv_RfzGYhjvtGqYy0QBqZN51w8mKeyR1ocrT_8t59FsYSWBYd7xLDHJohZ-VIxsFQP4c9aAGW6QPvBsVs8px_qJoZy
 }
 
 AzureEntityColoring(AzureQuota)
+!define AzureQuota(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureQuota, AzureQuota)
 !define AzureQuota(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureQuota, AzureQuota)
 !define AzureQuota(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureQuota, AzureQuota)
+!procedure AzureQuota($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureQuota, $stereo=AzureQuota, $tags, $link)
+ !endprocedure
+!procedure AzureQuota($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureQuota, $tags, $link, AzureQuota)
+!endprocedure

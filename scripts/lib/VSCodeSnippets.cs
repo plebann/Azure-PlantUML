@@ -16,8 +16,9 @@ public static class VSCodeSnippets
             {
                 continue;
             }
-
-            snippets.Add($"{entityName}", new Snippet{
+            Console.WriteLine($"Processing {entityName}..");
+            snippets.Add($"{entityName}", new Snippet
+            {
                 prefix = $"{SplitCamelCase(entityName)}",
                 description = $"Add {SplitCamelCase(entityName)} to diagram",
                 body = new List<string>{
@@ -26,7 +27,8 @@ public static class VSCodeSnippets
                 }
             });
 
-            snippets.Add($"{entityName}_Descr", new Snippet{
+            snippets.Add($"{entityName}_Descr", new Snippet
+            {
                 prefix = $"{SplitCamelCase(entityName)} with Description",
                 description = $"Add {SplitCamelCase(entityName)} with Description to diagram",
                 body = new List<string>{

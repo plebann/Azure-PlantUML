@@ -1,12 +1,19 @@
 sprite $AzureRepos [70x70/16z] {
-xT87hjim383Xc9lC_UzRXOX1HncMrDs-FnFh0odhqeSU9pbUpiBhGAUCZ2ZoQnGTKVIJ08ZeCP0Z8hn1EARYrqfCzXBP8hiE5DdsNhaEzKxPDep9SEiSDZEV
-pipeE8YjAhQL0kiAV5BUc6RZYZ8HiJuHZ2ssjueVQqR6viSKxuaVUgTm3YAtRpzaY4WibCofeliGJLEl257saUnKOIBpZ8WUzc7F9BaJfHQHzEv9JT2yCyLg
-3-qKB-NNpEAyAywlpYN_oT0psX5vV4OQhORWw7sH_Eul7H7tzsNvxhAFA2w9Y7SP9Q8-fdWgrYiXEKcCAdpBUkIFKI9SQ54fmtAGAKLksS5GHbnJTY5NgTXd
-5BqHQU0XiHXNj9M6yeFXJHrMj6NUhKBQr2d5RlMh53AcD8AnMwM8OOK0e5kba24bGW5A4IjZIf5InCkOKQ9coLLMb2Y5h3F6bORiYdR2k1BFYiyfDR-a8d7I
-IyKVa6B6bJZ4iCTntXl5xaUY-Rkg483j72uh05YUBoe687NAjgWu00yeuniXGAmgl0-Z0BIiE02GcJKDV5a9WpsDTIKSqq2B9QKS4IbZGQb-hLBvAkANOzjY
-bv_VLzy
+xTC7ikCW383X67Nb_lTThB76mHjYO7lvNyaqVoDXyhW6zhp9u74NF0UwPNX4uP-Zo8WYduG20EO36G2K3a8-5RrNVBAtoERHSo2Fjhxo7AgdR1luPB1T7DAQ
+pQQg-3h88b9hb6Lc-pIBzfuRLuGGaUGhWg16EgPK8w9s884ZxYijGiBx_sOI041YV67KMiNKaf5Z2AsQs1a2S8wa9zCeKOwY5Y5YimzPnC5b7ULSX7SlutC2
+0BnJzDn3BeeDA8kp_CXpoNSK7BVlIDftr5Volb3ylruwhELzwIZ3TvTiH34EXEsIOY1YOug5ejRcpZ69ZogqznihRepVgBWhGJIXy9w-64AGaKqfXv2hB2gv
+2iEheJwkICtCSvMCpTs65QdfTHKKhzc4ehLs5TQTS9jGAa6bNINdc9a5IodDAecCAovbxrmbaHd5dLF9LIo95GN5ZsnMSJysGat2RLPnJqMQESOLDs-Ld6Jk
+N0B9S-7bMHA9A9dEptl5FQ8IjOoz-xigRfw87il8wm5tVrhb34lHvC1lwoZnR7gsgEXv79nJpIlMKPOtWlMDd78OAGLzLR7u8gfY_RHbnRLaukkA6uG1wcjA
+PioSngAI_MmbCr_C7atRKe-VqF--
 }
 
 AzureEntityColoring(AzureRepos)
+!define AzureRepos(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureRepos, AzureRepos)
 !define AzureRepos(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureRepos, AzureRepos)
 !define AzureRepos(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureRepos, AzureRepos)
+!procedure AzureRepos($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureRepos, $stereo=AzureRepos, $tags, $link)
+ !endprocedure
+!procedure AzureRepos($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureRepos, $tags, $link, AzureRepos)
+!endprocedure

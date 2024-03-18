@@ -1,0 +1,19 @@
+sprite $AzureDatabricksService [70x70/16z] {
+nPW9iYCn24DZlD__mBEJOlnAHUBCeh__TWG8KAVwaQ7CMHwVOknlw9znjFqBxPwZhlt4gdSSDlTtJ7l-yZv76RzI24cDSYT84t-dG6pazfuWH_ubboSD-fuy
+NGYGoiDJ_IQAmvOB0a2U1Nc4UZV1nlw1bpfPKTNTL3K4l9hmqejOkxl5_yLwk_cUGVdnomyMp-zYyIrqk5qxeGLngNdURcU9hBc-RCbmbb1XrciSVrXWULUU
+vYi0bjVbQM4TmVAYFBOyPx8uUk8DPRe1dInpDt4CwDu3iDWn_mQPTS5rFLbuBSW7GHZFMJnFj9A386uMpi8ZKPuX0kqM1AhHBobF4qNlViWCx_OfNDL_ohjd
+R9OjaJMhHK1d2MastXa6-kt5WmKdl3TJYKeMpnQpOl5tLjtjoTA5SkdTi_qsTQl28JgNY2SFzqwBR-pLFDmRZJZbCUOtuDuoq2mwNRgt1w_iXr_3M0lt5iiY
+LaoujrW1Ba3gtdm9YNFtRfHdJWhICFXb9WiR6RLxGpl88mEqmtUNI9l5eXs6TvxI8QgSIvCkUawQLyatuJNTDPUdZ6HVEKiekpLrPHJPHaRKWW1m26RElINq
+2kW58BH3cCgMe3qbbpAO2CWkQd1GESuvk3HShHnSOAvv3Zf48FnVJqxetlSOQ7g6-wTRNm4
+}
+
+AzureEntityColoring(AzureDatabricksService)
+!define AzureDatabricksService(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDatabricksService, AzureDatabricksService)
+!define AzureDatabricksService(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDatabricksService, AzureDatabricksService)
+!define AzureDatabricksService(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDatabricksService, AzureDatabricksService)
+!procedure AzureDatabricksService($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDatabricksService, $stereo=AzureDatabricksService, $tags, $link)
+ !endprocedure
+!procedure AzureDatabricksService($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDatabricksService, $tags, $link, AzureDatabricksService)
+!endprocedure

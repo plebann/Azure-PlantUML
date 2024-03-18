@@ -1,11 +1,18 @@
 sprite $AzureApplicationSecurityGroup [70x70/16z] {
-vT5N0gCm38JXSPCqvFxdtQ8K9s23mTltUwJyBiBV8XOraZGj4HTb8olBbnh-gwcpYnqbgL9vI71ACj9anKYB9nhY6zbGaZBM2TdOs4WzbYRqnPHpaUTafQs-
-BpcbqBZD9rDlz3l69y6dGD9yhd9CLSqyXa-HL3d9cfNJ_giAZzdhqz2lwBwHYb6nJtz1nNvc9PNKgTXm9PRlubGbv7ANm_LAAbMwND7ob6KPhRYFYZuxN3ug
-3yCLbLooBSjCnSdY_izAQ5L2ULKiZbImgRWeNc52fVLJuhZYaWWBC5WnSbjnEQ1T8HKhqgcuNgLW9L-f9A0p95hSPxKIqBiO3cXUYylZ5NDanaOWQMkytIss
-GH8DvMob09tD35T8eab8DYgk4Id0u6QMViNGaRbsU-96He_oqtBhPXHTuIFXZMeXAmleIvjzT3eHUmg75EnJ3b0S2CP35Z2VySXnPZxYcVc8P-OZdfcEEEsF
-U3eZE4kc8ouRFrZ25U4Zem4NoSnfgio7Z1b1V2C1aw9Pmj_aAm
+vT5N0gCm301HkKaQSl_pRY6O5EF4EDltqOldH_AtYCKSmAr4cPITEvwd6W3kjlB9ZW6cDsQ0oYd9mVM9WySJ3GLC6mReM2Ta1roFc0EMf2-cd8lMoMh7_hta
+b48JCIgtXqRRSIgLHm7mTQuwmCnzZScZ2AOd-M7b6prrT2hd_2qLtlFzrz2ls6jZ5PFNRA3YVt8bbNIcuaULMBwBXnKVh8HShdAOhwHoawOhLggiosXbzL2n
+sc5vg6o6AwQvP5-MJoehNPR_jnAEAg7i5OyZ5MaggwXhXIGt1dj5XYeYIPKYCbZnfbBb8BsAoHE5tYVfLA38apnJIIAT8U7nDOTsH5Nzo83jHvD67g_u2h8q
+0dY3ozNYBP031OOhTKAjSAe2o265CvKYXm9DPhbiseXBHxvcxevBzVGUoD9ZLCvtosMtlz-OT0NkB5kZMhZZGVeIkuT6qudoIc58aTUC0IPl1ESj3pARQIFp
+cJRIpyn7sinyfCsqaN4sCEBPZCfPEXDfPUU19vaH7Z8MP9AoKvcNsMJvH5003VAXw9xaR_8L
 }
 
 AzureEntityColoring(AzureApplicationSecurityGroup)
+!define AzureApplicationSecurityGroup(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureApplicationSecurityGroup, AzureApplicationSecurityGroup)
 !define AzureApplicationSecurityGroup(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureApplicationSecurityGroup, AzureApplicationSecurityGroup)
 !define AzureApplicationSecurityGroup(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureApplicationSecurityGroup, AzureApplicationSecurityGroup)
+!procedure AzureApplicationSecurityGroup($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureApplicationSecurityGroup, $stereo=AzureApplicationSecurityGroup, $tags, $link)
+ !endprocedure
+!procedure AzureApplicationSecurityGroup($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureApplicationSecurityGroup, $tags, $link, AzureApplicationSecurityGroup)
+!endprocedure

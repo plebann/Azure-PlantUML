@@ -1,12 +1,19 @@
 sprite $AzureCognitiveServices [70x70/16z] {
-xTA7bgCm38LX-Qhw_LzuAGQKnJ64dB9b_fbqvpl83lsJ_VHJ0OjEYJ0zJJnd_AtH-jY1UIzyXf1vDw7R5N-hk9NRo41nkuj4W2pUTO_n62iXT9t4bHBbUfv8
-okEPx8OIJECGTnGR6-A_AswgvlTtXYrQIN765FlDOqeBio9GTmNV6gbOH5TXNYtpkTZomPvs54XCATOijkWSntk5srnpaDWg0wI_Bs7WzYAsJFWLAf7gdn5i
-LrA6fFX8YJ0HyKXAzwWaXafEq5cu5WyK5OXcHgAN4DjQJn5W_a-d5TsyKAluIJ7eyiBs7o3YJRR6n2T5bmU7jF5U1Z9XyHD6o4f-s9GeQHCDO41lABhCOhjY
-vBNbaAWkyFgI4-gUe2rbTMLORPMeBKEibatvKAd6cBAwnMd5h0JMDaP199wKjL18r3rBrsBBlRgxGjhNsc5dfUbMZs9_4RmEs-PQtvk14CAk77bMj1uC0FQQ
-52DTB3efOZKLdA_BB6fMb9R5E9JQBQYUsnKdNjRWGd6oWL91uiPa5ueIZnG7JKczK43aVQNbQbwl52B2I6cD5QKf-r89MehJ-nyfGalbAyMfXI-KeBqIJvKe
-bD9dYjDhi0UAqAcYyPcYrA-8chkRYFSwtZOLqD_VJp_z0W
+xTA7jgiW48NXOK_b_L_u6YI4712DMUMs_vHKlyM0z5Vsl_ybiEYM2DFTnFkCxnb37pimduNF43AV9dIvv8UAMxgCB1ItgqW4oEAeQup5MWcXyoJEb4ZdyqId
+t9x9BYZ1j0vnHR6r8VvJSTtowpi3YrPJdB75Vl6OoXT7HQ3k2huqKhA8gSAyM-QFufalzdIYG69BKUfcfZ6EOuNhN8yWtVQkaN5Vmi3rHJmpuV5kRStF2DQK
+BaEd-4g9C17nw9JfKKcibLQl3FiJDnGLY4O9nqi98RQzcIA00DAj9gPvebhoGJ5eUM7j1aGSP7jCF2YAtP8ewTj09Ym-O8H1gG-GjiFMdJuOq0kAmlgrX97d
+caCYky3pMqx8BK7zAgihmt8jHQuPOhTiovTADiPMGpAtPrAKmDwJKH29zqef51AvPTwU5TkWxgwGUbazx5wfklLZjnV1PTXzhgh40mWXDEMLTqhewoa3OC-T
+OgJ5ea4Hort1tNCpYzmhIkNBU2bvcbCUQueJbxNWH36oXP91uiPa9ueIhnG7RKa-KK3aSwNcQfvFb20YB9JMKX7QiY-Le59yfmYLKlpKFr6SQkaB9QYL_AuI
+YRhqdcBq7ko68ZIKD3vJbEObKNDt4_5PhxTD9T6Vt__-zmi
 }
 
 AzureEntityColoring(AzureCognitiveServices)
+!define AzureCognitiveServices(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCognitiveServices, AzureCognitiveServices)
 !define AzureCognitiveServices(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCognitiveServices, AzureCognitiveServices)
 !define AzureCognitiveServices(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCognitiveServices, AzureCognitiveServices)
+!procedure AzureCognitiveServices($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCognitiveServices, $stereo=AzureCognitiveServices, $tags, $link)
+ !endprocedure
+!procedure AzureCognitiveServices($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCognitiveServices, $tags, $link, AzureCognitiveServices)
+!endprocedure

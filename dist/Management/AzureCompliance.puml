@@ -1,10 +1,17 @@
 sprite $AzureCompliance [70x70/16z] {
-xTG5OiCm38LXHvO5B_S_xw2WKi0mNlzYw0id_S0cqQs4gnJHxRoAqJq5NAVaQQtyhe2hb6dze1qKy8Seu74bc645FAm4Cww0XvLWnXNmi1BCk0BUK6XLeJi5
-FAm4Cww0XvLWnXLmgv9K3GjCgrB9cDc6GhPORbCIBohIg2GINM0gbLmCheMMt5g57ATiwbOA07WykViK0L3o8GccLI70EPyg3amzYhyZ4GFMePJOdTWfRbSC
-bczoIBi2wArYi1wbt2eAD2jKeNJkqNSTNG7u6YarPzhTRnN2xSOyNBpaxhjA4a1kZYsd3YKPO9mFiG6QkXHomBLm4GLWgL69PaIM-fNvvCop32ZH1odMhUGh
-nJzOUIfofM1GoNxu6LCe9QzM02mgXv6wg02eL78wf0CAUGumroiLTIfFXQafNbBQMr0C7TczGjQ1KFg1lG8
+xTG70gCW441HX05cllS_xvPq0p58Pll-LDkp6tx3bbBtAcb8ANK_an6blbEGCIKjhqhV5MH8MLuVj9E2k2Y8YuAuA8YBWhWeY8k2k2Y8YuAuA8YBWhWeY8k2
+k2Y8YuBqbRXt7IWjSrGfVUQW4ckjsfR2KwgwemJHNkMW4cAfsZQefAnOpR7dZYhHkAJBj981xFRadbCAaDEf0iYK4i4aNSe6ounYd91B0ZgXPCZfeG9oN54q
+RJBASGNgLb5qHibRfS9X9KuehdlaVtGBo2EIHywqgMsLo7PZceitghMAFIcXGDaSMmbRnSpUAq519PqIXHgcb6XWDKik5T0mePnQkQLXNbalphgMJvHBNefE
+A-b1CMVblr8U53vKafr-FbDY23QiO7ILqyZQLsWLkaeAfsfF0KQKQEa6fbcbRLxvhqWybFIKYLf5cKYRlTG998RViAy
 }
 
 AzureEntityColoring(AzureCompliance)
+!define AzureCompliance(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCompliance, AzureCompliance)
 !define AzureCompliance(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCompliance, AzureCompliance)
 !define AzureCompliance(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCompliance, AzureCompliance)
+!procedure AzureCompliance($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCompliance, $stereo=AzureCompliance, $tags, $link)
+ !endprocedure
+!procedure AzureCompliance($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCompliance, $tags, $link, AzureCompliance)
+!endprocedure

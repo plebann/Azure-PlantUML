@@ -23,18 +23,11 @@ jobs:
 
       - name: "Commit plantuml diagram changes"
         run: |
+          git switch "${{ github.event.pull_request.head.ref }}"
           git add '*.txt'
           git config --global user.name ${{ github.event.pull_request.user.login }}
           git commit -m "Update test.txt"
-          git push origin ${{ github.event.pull_request.head.ref }}
+          git push
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#
-#git branch
-#git switch "${{ github.event.pull_request.head.ref }}"
-# git add '*.puml'
-# git add '*.svg'
-# git config --global user.name ${{ github.event.pull_request.user.login }}
-# git commit -m "Update plantuml diagrams"
-# git push

@@ -12,6 +12,8 @@ jobs:
     name: Export Pulumi Stacks
     runs-on: ubuntu-latest
     steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
       - name: "Change test.txt content"
         run: |
           echo "$(uuidgen)" > test.txt

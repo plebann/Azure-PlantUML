@@ -19,12 +19,13 @@ jobs:
       - name: "Commit plantuml diagram changes"
         run: |
           git branch
-          git switch "${{ github.event.pull_request.head.ref }}"
-          git branch
-          git add '*.puml'
-          git add '*.svg'
-          git config --global user.name ${{ github.event.pull_request.user.login }}
-          git commit -m "Update plantuml diagrams"
-          git push
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# git switch "${{ github.event.pull_request.head.ref }}"
+# git branch
+# git add '*.puml'
+# git add '*.svg'
+# git config --global user.name ${{ github.event.pull_request.user.login }}
+# git commit -m "Update plantuml diagrams"
+# git push

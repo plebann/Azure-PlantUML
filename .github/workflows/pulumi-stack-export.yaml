@@ -15,19 +15,18 @@ jobs:
       - name: "Checkout code"
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: "Change test.txt content"
         run: |
           echo "$(uuidgen)" > test.txt
-
+      # git switch "${{ github.event.pull_request.head.ref }}"
       - name: "Commit plantuml diagram changes"
         run: |
-          git switch "${{ github.event.pull_request.head.ref }}"
+
           git add '*.txt'
           git config --global user.name ${{ github.event.pull_request.user.login }}
           git commit -m "Update test.txt"
           git push
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

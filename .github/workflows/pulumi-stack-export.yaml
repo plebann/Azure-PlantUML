@@ -11,8 +11,11 @@ jobs:
   job:
     name: Export Pulumi Stacks
     runs-on: ubuntu-latest
-    environment: dev
     steps:
+      - name: "Change test.txt content"
+        run: |
+          echo "$(uuidgen)" > test.txt
+
       - name: "Commit plantuml diagram changes"
         run: |
           git branch

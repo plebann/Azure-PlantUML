@@ -1,0 +1,27 @@
+name: Pulumi stack export
+on:
+  pull_request:
+
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  job:
+    name: Export Pulumi Stacks
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: "Commit plantuml diagram changes"
+        run: |
+          git branch
+          git switch "${{ github.event.pull_request.head.ref }}"
+          git branch
+          git add '*.puml'
+          git add '*.svg'
+          git config --global user.name ${{ github.event.pull_request.user.login }}
+          git commit -m "Update plantuml diagrams"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

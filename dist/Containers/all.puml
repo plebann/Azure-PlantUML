@@ -58,6 +58,23 @@ AzureEntityColoring(AzureContainerRegistry)
    AzureEntity($alias, $label, $color, $techn, $descr, AzureContainerRegistry, $tags, $link, AzureContainerRegistry)
 !endprocedure
 
+sprite $AzureDockerContainer [70x70/16z] {
+xSy7RWGX38LXfjX-tliVEB6iZ67hKDBvrQYV80reDbkgkYkiMqKx2Tg481XMh-2r2YJ8wX6YrONARqIg5m1SMKbSh1v5dUXHN6XLY4j2eQ48NYU640UYUgte
+ws18hW1D2XsAGXiLeLEA3zLY2pQIZstmIML_pvNTSiL6eeeH2aOe6A7mvoXJuH4AHYWOeM208lWJYlnD1ICKZ50mGa6behYZe58HkQDmbQBYI9VYHeD2X-96
+80rlqS9OKoXoMYaCMLCA1MSLI6viAMKAgfJC28LtQxFkZ7n8eG3UdgnGrjVjXn96gT3-EWebZ5oXauL2Iofof4u98nIgL3YCKAXE2IDlgInrDvkz0G
+}
+
+AzureEntityColoring(AzureDockerContainer)
+!define AzureDockerContainer(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureDockerContainer, AzureDockerContainer)
+!define AzureDockerContainer(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureDockerContainer, AzureDockerContainer)
+!define AzureDockerContainer(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureDockerContainer, AzureDockerContainer)
+!procedure AzureDockerContainer($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureDockerContainer, $stereo=AzureDockerContainer, $tags, $link)
+ !endprocedure
+!procedure AzureDockerContainer($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureDockerContainer, $tags, $link, AzureDockerContainer)
+!endprocedure
+
 sprite $AzureKubernetesService [70x70/16z] {
 xPO7bgGm44FNiVBzhxj-RboayK1l3kZbRo5Y2NzvGu_YTnuV2h2QOedd1LA1V7a15KMjIua8IrWMKbyOlAPFK_1b5ARkxa6nyx7G-KKG6XCg8-9m4pFbneNf
 o25DKm1Wv-OcdF4xAMx76V-3hkMvbkTQz3Gla3wUBohXyvbUPxTRdJFJu2rxhWJi_RAnnaeBzjwvL45HqvCrzpEeLyiDXJnhqylBo75oQ9xSVpoU6bdC60wt

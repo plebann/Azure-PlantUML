@@ -1103,6 +1103,22 @@
       "$0"
     ]
   },
+  "AzureDockerContainer": {
+    "prefix": "Azure Docker Container",
+    "description": "Add Azure Docker Container to diagram",
+    "body": [
+      "AzureDockerContainer(${1:alias}, \"${2:label}\", \"${3:technology}\")",
+      "$0"
+    ]
+  },
+  "AzureDockerContainer_Descr": {
+    "prefix": "Azure Docker Container with Description",
+    "description": "Add Azure Docker Container with Description to diagram",
+    "body": [
+      "AzureDockerContainer(${1:alias}, \"${2:label}\", \"${3:technology}\", \"${4:description}\")",
+      "$0"
+    ]
+  },
   "AzureKubernetesService": {
     "prefix": "Azure Kubernetes Service",
     "description": "Add Azure Kubernetes Service to diagram",
@@ -1148,6 +1164,22 @@
     "description": "Add Azure Cosmos Db with Description to diagram",
     "body": [
       "AzureCosmosDb(${1:alias}, \"${2:label}\", \"${3:technology}\", \"${4:description}\")",
+      "$0"
+    ]
+  },
+  "AzureCosmosDbConfiguration": {
+    "prefix": "Azure Cosmos Db Configuration",
+    "description": "Add Azure Cosmos Db Configuration to diagram",
+    "body": [
+      "AzureCosmosDbConfiguration(${1:alias}, \"${2:label}\", \"${3:technology}\")",
+      "$0"
+    ]
+  },
+  "AzureCosmosDbConfiguration_Descr": {
+    "prefix": "Azure Cosmos Db Configuration with Description",
+    "description": "Add Azure Cosmos Db Configuration with Description to diagram",
+    "body": [
+      "AzureCosmosDbConfiguration(${1:alias}, \"${2:label}\", \"${3:technology}\", \"${4:description}\")",
       "$0"
     ]
   },

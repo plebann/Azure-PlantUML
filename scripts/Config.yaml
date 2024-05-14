@@ -166,6 +166,8 @@ Categories:
         Target: AzureContainerApp
       - Source: App Service Environments
         Target: AzureServiceEnvironment
+      - Source: Azure Docker Container
+        Target: AzureDockerContainer
 
   - Name: Databases
     Services:
@@ -173,6 +175,8 @@ Categories:
         Target: AzureSqlDatabase
       - Source: Azure Cosmos DB
         Target: AzureCosmosDb
+      - Source: Azure Cosmos DB Configuration
+        Target: AzureCosmosDbConfiguration
       - Source: SQL Data Warehouses
         Target: AzureSqlDataWarehouse
       - Source: Data Factories

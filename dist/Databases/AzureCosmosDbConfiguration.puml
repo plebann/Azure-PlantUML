@@ -1,0 +1,15 @@
+sprite $AzureCosmosDbConfiguration [70x70/16z] {
+xT45ai0W44JH7ZpS_xxhNKlSVJwbo8i0vbB-hWeeih-JEQ98ukzaicXLvR_isAJZP6eX9hDGdso_JCfCq4Woy_YlHhEO6HOhggYYYYgg16R751TO2warf4Yj
+coWOKZ2Wm3WsUaVUCU1-YYhU_Orr2ZjPKKKLLG9RgR0nHHLnpCfYHMhTN6apA-x8CO_7AAh4lx5AYMoDWiZSs84wNSzJGP7zPRn7aVY_MGls2G
+}
+
+AzureEntityColoring(AzureCosmosDbConfiguration)
+!define AzureCosmosDbConfiguration(e_alias, e_label) AzureEntity(e_alias, e_label, AZURE_SYMBOL_COLOR, AzureCosmosDbConfiguration, AzureCosmosDbConfiguration)
+!define AzureCosmosDbConfiguration(e_alias, e_label, e_techn) AzureEntity(e_alias, e_label, e_techn, AZURE_SYMBOL_COLOR, AzureCosmosDbConfiguration, AzureCosmosDbConfiguration)
+!define AzureCosmosDbConfiguration(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureCosmosDbConfiguration, AzureCosmosDbConfiguration)
+!procedure AzureCosmosDbConfiguration($alias, $label, $techn, $descr,  $color, $tags, $link)
+ AzureEntity($alias, $label, $techn, $descr,  $color, $sprite=AzureCosmosDbConfiguration, $stereo=AzureCosmosDbConfiguration, $tags, $link)
+ !endprocedure
+!procedure AzureCosmosDbConfiguration($alias, $label, $techn, $descr="",  $tags="", $link="", $color="")
+   AzureEntity($alias, $label, $color, $techn, $descr, AzureCosmosDbConfiguration, $tags, $link, AzureCosmosDbConfiguration)
+!endprocedure
